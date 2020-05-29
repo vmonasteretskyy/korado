@@ -24,7 +24,7 @@
 	<link rel="stylesheet" type="text/css" href="./assets/styles/style.css">
 	<script>var onDom=[],onLoad=[],onResize=[];</script>
 </head>
-<body>
+<body class="first">
 
 <div id="top-nav">
 	<nav>
