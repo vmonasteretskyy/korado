@@ -22,7 +22,7 @@
 	<link rel="stylesheet" type="text/css" href="./assets/fonts/fontello/fontello.css">
 	<!-- <link rel="stylesheet" type="text/css" href="./assets/fonts/f2/fontello.css"> -->
 	<link rel="stylesheet" type="text/css" href="./assets/styles/style.css">
-	<script>var onLoaded=[],onResize=[];</script>
+	<script>var onDom=[],onLoad=[],onResize=[];</script>
 </head>
 <body>
 
