@@ -388,6 +388,7 @@
 		left: 2.5vw;
 	}
 	.left-elem:before {
+		height: 0.5208vw;
 		width: 0.5208vw;
 		left: 2.0833vw;
 	}
