@@ -22,8 +22,11 @@
 	<link rel="stylesheet" type="text/css" href="./assets/fonts/fontello/fontello.css">
 	<!-- <link rel="stylesheet" type="text/css" href="./assets/fonts/f2/fontello.css"> -->
 	<link rel="stylesheet" type="text/css" href="./assets/styles/style.css">
+	<link rel="stylesheet" type="text/css" href="./assets/styles/desc.css">
+	<link rel="stylesheet" type="text/css" href="./assets/styles/media.css">
 	<script>var onDom=[],onLoad=[],onResize=[];</script>
 </head>
+
 <body class="first">
 
 <div id="top-nav">

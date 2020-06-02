@@ -19,7 +19,7 @@
 	--breadcrumb: #A9A9A9;
 	/*-gradients-*/
 	--linear-grad: linear-gradient(180deg, #FFFFFF 0%, #FFFFFF 52%, rgba(255, 255, 255, 0) 100%);
-	--item-grad: linear-gradient(180deg, rgba(255, 255, 255, 0.45) 0%, #FFFFFF 17%, #FFFFFF 55%, rgba(255, 255, 255, 0) 100%);
+	--item-grad: linear-gradient(180deg, rgba(255, 255, 255, 0.45) 0%, #FFFFFF 16%, #FFFFFF 55%, rgba(255, 255, 255, 0) 100%);
 	--news-grad: linear-gradient(0deg, rgba(33, 34, 47, 0.84) 0%, rgba(196, 196, 196, 0) 100%);
 	--personal-grad: linear-gradient(180deg, #1C1D2C 0%, #1F2024 100%);
 	/*-box-shadows-*/
@@ -32,12 +32,16 @@
 		3px 2px 7px rgba(207, 79, 79, 0.15);
 }
 
-body {
-	margin: 0;
+html {
+	font-size: 20px;
 	font-family: "Akrobat";
 	font-weight: 600;
-	font-size: 20px;
 	color: var(--dark);
+}
+
+body {
+	margin: 0;
+	overflow: hidden;
 }
 
 a {
@@ -76,14 +80,14 @@ h1, h2, h3, h4, h5, h6, p {
 	margin: 0;
 }
 h1, .h1 {
-	font-size: 55px;
+	font-size: 2.75rem;
 	line-height: 1;
 	text-transform: uppercase;
 	font-weight: 900;
 }
 
 h2, .h2 {
-	font-size: 40px;
+	font-size: 2rem;
 	line-height: 1;
 	font-weight: normal;
 	text-transform: uppercase;
@@ -91,8 +95,8 @@ h2, .h2 {
 
 p, .p {
 	font-family: 'Roboto', sans-serif;
-	font-size: 18px;
-	line-height: 26px;
+	font-size: 0.9rem;
+	line-height: 1.44444;
 }
 
 /*-b-all--------------------------------------------*/
@@ -146,15 +150,16 @@ p, .p {
 	left: 0;
 	width: 100%;
 	color: rgba(232, 232, 232, 0.7);
-	line-height: 22px;
+	line-height: 1.1rem;
 	padding: 8px 23px;
 	box-sizing: border-box;
 	display: flex;
 	text-transform: uppercase;
 	background-color: var(--dark);
 	z-index: 100;
-	transition: transform 0.3s ease;
+	transition: transform 0.3s ease-in-out;
 	transform: translateY(-39px);
+	z-index: 100;
 }
 .first #top-nav {
 	transform: translateY(0);
@@ -171,7 +176,7 @@ p, .p {
 /*-b-top-bar----------*/
 #top-bar {
 	position: absolute;
-	top: 39px;
+	top: 0;
 	left: 0;
 	width: 100%;
 	display: flex;
@@ -182,17 +187,17 @@ p, .p {
 	justify-content: space-between;
 	box-sizing: border-box;
 	font-weight: 600;
-	font-size: 20px;
-	line-height: 22px;
+	line-height: 1.1;
 	color: #fff;
 	box-shadow: 0px 2px 20px rgba(33, 34, 47, 0.4);
 	text-transform: uppercase;
 	z-index: 100;
-	transition: transform 0.3s ease;
-	transform: translateY(-39px);
+	transition: transform 0.3s ease-in-out;
+	transform: translateY(0);
+	z-index: 100;
 }
 .first #top-bar {
-	transform: translateY(0);
+	transform: translateY(39px);
 }
 
 /*-menu-btn-*/
@@ -223,16 +228,16 @@ p, .p {
 #top-phone {
 	margin: 0 8.1771vw 0 0;
 	position: relative;
-	padding-left: 59px;
+	padding-left: 2.95rem;
 	box-sizing: border-box;
 	display: flex;
 	flex-direction: column;
 }
 #top-phone .icon-phone {
 	position: absolute;
-	top: 4.5px;
+	top: 0.225rem;
 	left: 0;
-	font-size: 37.5px;
+	font-size: 1.875rem;
 	color: var(--green);
 }
 
@@ -248,7 +253,7 @@ p, .p {
 	position: absolute;
 	top: 5px;
 	left: 0;
-	font-size: 36.3px;
+	font-size: 1.815rem;
 	color: var(--green);
 }
 #top-search span {
@@ -262,6 +267,15 @@ p, .p {
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
+}
+.logo {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.logo img {
+	object-fit: contain;
+	object-position: center;
 }
 a.logo {
 	transition: transform 0.3s ease-in-out;
@@ -283,9 +297,9 @@ a.logo:hover {
 	position: absolute;
 	top: 5px;
 	left: 0;
-	width: 36px;
-	height: 36px;
-	font-size: 36px;
+	width: 1.8rem;
+	height: 1.8rem;
+	font-size: 1.8rem;
 	color: var(--green);
 }
 #top-login span {
@@ -296,7 +310,7 @@ a.logo:hover {
 
 /*-top-cart-*/
 #top-cart {
-	margin: 0 0 0 12.3438vw;
+	margin: 0 0 0 237px;
 	position: relative;
 	padding: 22px 0 0 74px;
 }
@@ -304,7 +318,7 @@ a.logo:hover {
 	position: absolute;
 	top: 2.5px;
 	left: 0;
-	font-size: 36px;
+	font-size: 1.8rem;
 	color: var(--green);
 }
 #top-cart-amount {
@@ -318,7 +332,7 @@ a.logo:hover {
 	border-radius: 50%;
 	background-color: #fff;
 	color: var(--dark);
-	line-height: 20px;
+	line-height: 1rem;
 	text-align: center;
 }
 /*-e-top-bar----------*/
@@ -331,23 +345,24 @@ a.logo:hover {
 /*-b-left-bar---------------------------------------*/
 #left-bar {
 	position: absolute;
-	top: 88px;
+	top: 40px;
 	left: 0;
 	bottom: 0;
 	display: flex;
 	flex-direction: column;
 	box-sizing: border-box;
-	padding: 29px 0 0;
+	/* padding: 29px 0 0; */
+	padding: 77px 0 0;
 	width: 100px;
 	background-color: #fff;
 	box-shadow: var(--round-bs2);
 	overflow: hidden;
-	transition: width 0.3s ease-in-out;
-	z-index: 100;
-	transition: top 0.3s ease;
+	z-index: 99;
+	/* transform: translateY(0); */
+	transition: padding 0.3s ease-in-out, width 0.3s ease-in-out;
 }
 .first #left-bar {
-	top: 127px;
+	padding: 116px 0 0;
 }
 
 #left-bar:hover {
@@ -431,7 +446,8 @@ a.logo:hover {
 .left-elem-title {
 	position: relative;
 	z-index: 2;
-	max-width: 180px;
+	/* max-width: 54%; */
+	max-width: 60%;
 	text-transform: uppercase;
 	transition: color 0.3s ease-in-out;
 }
@@ -444,15 +460,15 @@ a.logo:hover {
 	bottom: 2px;
 	right: -20px;
 	transform: translateX(100%);
-	font-size: 17px;
+	font-size: 0.85rem;
 }
 
 /*-le-icon-size-*/
-.icon-radiator {font-size: 38.9px;}
-.icon-convector {font-size: 27.7px;}
-.icon-heatertt {font-size: 45px;}
-.icon-localvent {font-size: 45.6px;}
-.icon-tools {font-size: 43px;}
+.icon-radiator {font-size: 1.945rem;}
+.icon-convector {font-size: 1.385rem;}
+.icon-heatertt {font-size: 2.25rem;}
+.icon-localvent {font-size: 2.28rem;}
+.icon-tools {font-size: 2.15rem;}
 /*-e-left-bar---------------------------------------*/
 
 
@@ -543,13 +559,13 @@ a.logo:hover {
 }
 
 .rbe-nums-current {
-	font-size: 25px;
+	font-size: 1.25rem;
 }
 .rbe-nums-current:before {
 	content: counter(rbecounter);
 }
 .rbe-nums-all {
-	font-size: 16px;
+	font-size: 0.8rem;
 }
 .rbe-nums-all:before {
 	content: "/";
@@ -605,15 +621,17 @@ a.logo:hover {
 }
 /*-big-*/
 .rhomb-big {
-	top: 156px;
+	/* top: 156px; */
+	top: calc(50% - 50px);
 	left: 50%;
-	transform: translateX(-50%);
+	transform: translate(-50%, -50%);
 }
 /*-med-*/
 .rhomb-med {
-	top: 164px;
+	/* top: 164px; */
+	top: calc(50% - 236px);
 	left: 50%;
-	transform: translateX(-50%);
+	transform: translate(-50%, -50%);
 }
 .rhomb-bg, 
 .rhomb-bg:before, 
@@ -692,7 +710,7 @@ a.logo:hover {
 }
 .rhomb-big h1 {
 	position: relative;
-	font-size: 70px;
+	font-size: 3.5rem;
 	text-align: center;
 	text-shadow: var(--ts1);
 	margin: 0 0 66px;
@@ -714,8 +732,8 @@ a.logo:hover {
 }
 .rhomb-big h2 {
 	font-weight: 900;
-	font-size: 30px;
-	line-height: 40px;
+	font-size: 1.5rem;
+	line-height: 1.33333;
 	text-transform: uppercase;
 	text-shadow: var(--ts1);
 	max-width: 330px;
@@ -799,11 +817,13 @@ a.logo:hover {
 }
 .nvsfe1 h2 {
 	font-weight: 900;
-	font-size: 55px;
+	font-size: 2.75rem;
 	line-height: 1;
 	text-shadow: var(--ts1);
 	text-align: center;
 	margin: 0 0 21px;
+	display: flex;
+	justify-content: center;
 }
 .rhomb-ul li {
 	margin: 0 0 7px;
@@ -813,8 +833,8 @@ a.logo:hover {
 }
 .rhomb-ul a {
 	font-weight: bold;
-	font-size: 20px;
-	line-height: 40px;
+	font-size: 1rem;
+	line-height: 2;
 	text-transform: uppercase;
 }
 .rhomb-ul a:hover {
@@ -850,7 +870,7 @@ a.logo:hover {
 	text-transform: uppercase;
     font-family: "Akrobat";
 	font-weight: 600;
-	font-size: 20px;
+	font-size: 1rem;
 	line-height: 2;
 }
 /*-b-nvs2-------------*/
@@ -874,6 +894,9 @@ a.logo:hover {
 }
 .nvsfe2 {
 	width: 1125px;
+}
+.nvsfe2 .btn {
+	margin: 51px auto 0;
 }
 /*-e-nvs2-------------*/
 /*-e-section-3------------------*/
@@ -951,8 +974,8 @@ a.logo:hover {
 	margin: 0 0 55px;
 	font-family: "Akrobat";
 	font-weight: 600;
-	font-size: 20px;
-	line-height: 40px;
+	font-size: 1rem;
+	line-height: 2;
 	text-transform: uppercase;
 }
 .red {
@@ -976,7 +999,11 @@ a.logo:hover {
 	background-color: transparent;
 	background-image: var(--item-grad);
 	width: 360px;
-	min-height: 505px;
+	height: 550px;
+	transition: height 0.3s ease;
+}
+.item.main-item:hover {
+	height: 590px;
 }
 .item.main-item:last-child {
 	margin: 0;
@@ -987,7 +1014,7 @@ a.logo:hover {
 	left: -5px;
 	width: 125px;
 	height: 37px;
-	font-size: 17px;
+	font-size: 0.85rem;
 	font-weight: 800;
 	display: flex;
 	color: #fff;
@@ -1040,7 +1067,7 @@ a.logo:hover {
 	top: 342px;
 	right: 24px;
 	font-weight: 600;
-	font-size: 16px;
+	font-size: 0.8rem;
 	line-height: 1;
 	color: #3C3C3C;
 }
@@ -1051,33 +1078,64 @@ a.logo:hover {
 	right: 24px;
 	font-family: 'Roboto', sans-serif;
 	font-weight: bold;
-	font-size: 18px;
-	line-height: 26px;
-	height: 52px;
+	font-size: 0.9rem;
+	line-height: 1.44444;
+	height: 2.6rem;
 	overflow: hidden;
 }
+
 .item-price {
 	position: absolute;
 	top: 450px;
 	left: 24px;
+	display: flex;
+}
+.item-old-price {
+	margin: auto 12px 1px 0;
+	color: #DF4844;
+	font-weight: 700;
+	font-size: 0.8rem;
+	line-height: 1;
+	text-decoration-line: line-through;
+}
+.item-normal-price {
 	font-weight: 800;
-	font-size: 26px;
-	line-height: 23px;
+	font-size: 1.3rem;
+	line-height: 0.8846;
 }
-.item-price span {
-	font-size: 16px;
-	line-height: 17px;
+.item-normal-price span {
+	font-size: 0.8rem;
+	line-height: 1.0625;
 }
+
 .item-views {
 	position: absolute;
 	top: 459px;
 	right: 24px;
 	font-weight: 600;
-	font-size: 16px;
+	font-size: 0.8rem;
 	line-height: 1;
 	color: #3C3C3C;
 }
+.item-buy {
+	position: absolute;
+	top: 513px;
+	left: 50%;
+	transform: translateX(-50%);
+}
+.item.main-item .item-buy {
+	opacity: 0;
+	cursor: default;
+	pointer-events: none;
+	transition: opacity 0.3s ease;
+}
+.item.main-item:hover .item-buy {
+	opacity: 1;
+	cursor: pointer;
+	pointer-events: auto;
+}
 /*-e-main-items-------*/
+
 .main-more {
 	margin: 25px auto 0;
 }
@@ -1113,7 +1171,7 @@ a.logo:hover {
 	align-items: flex-end;
 }
 .neu-vslider-btn:before {
-	font-size: 14px;
+	font-size: 0.7rem;
 	flex-shrink: 0;
 }
 .neu-vslider-prev {
@@ -1145,8 +1203,8 @@ a.logo:hover {
 } */
 .neu-vslider-a {
 	flex-shrink: 0;
-	font-size: 20px;
-	line-height: 28px;
+	font-size: 1rem;
+	line-height: 1.4;
 	margin-bottom: 49px;
 	text-transform: uppercase;
 	cursor: pointer;
@@ -1208,8 +1266,8 @@ input {
 	box-sizing: border-box;
 	padding: 12px 25px 12px;
 	font-weight: bold;
-	font-size: 20px;
-	line-height: 22px;
+	font-size: 1rem;
+	line-height: 1.1;
 	text-transform: uppercase;
 	width: 352px;
 	height: 55px;
@@ -1229,7 +1287,7 @@ input:focus {
 	top: 10px;
 	left: 16px;
 	font-weight: bold;
-	font-size: 20px;
+	font-size: 1rem;
 	line-height: 1;
 	color: #828282;
 	background-color: #fff;
@@ -1238,9 +1296,9 @@ input:focus {
 }
 .input.focus label,
 input:focus + label {
-	transform: translate3D(0,-24px,0);
+	transform: translate3D(0,-1.2rem,0);
 	color: var(--dark);
-	font-size: 14px;
+	font-size: 0.7rem;
 	z-index: 1;
 }
 .input-error {
@@ -1252,7 +1310,7 @@ input:focus + label {
 	text-transform: uppercase;
 	pointer-events: none;
 	font-weight: bold;
-	font-size: 14px;
+	font-size: 0.7rem;
 }
 .input.invalid .input-error {
 	opacity: 1;

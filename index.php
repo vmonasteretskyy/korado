@@ -157,22 +157,27 @@
 
 						<div class="neu-vsfader-elem nvsfe2 active">
 							<p>1Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt dolor quasi accusantium labore tempore soluta quidem consectetur, odio, cum perspiciatis odit minima quos. Tempora voluptatem rerum vero iure! Harum, porro?</p>
+							<a href="" class="btn black">Больше</a>
 						</div>
 
 						<div class="neu-vsfader-elem nvsfe2">
 							<p>1Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt dolor quasi accusantium labore tempore soluta quidem consectetur, odio, cum perspiciatis odit minima quos. Tempora voluptatem rerum vero iure! Harum, porro?</p>
+							<a href="" class="btn black">Больше</a>
 						</div>
 
 						<div class="neu-vsfader-elem nvsfe2">
 							<p>1Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt dolor quasi accusantium labore tempore soluta quidem consectetur, odio, cum perspiciatis odit minima quos. Tempora voluptatem rerum vero iure! Harum, porro?</p>
+							<a href="" class="btn black">Больше</a>
 						</div>
 
 						<div class="neu-vsfader-elem nvsfe2">
 							<p>1Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt dolor quasi accusantium labore tempore soluta quidem consectetur, odio, cum perspiciatis odit minima quos. Tempora voluptatem rerum vero iure! Harum, porro?</p>
+							<a href="" class="btn black">Больше</a>
 						</div>
 
 						<div class="neu-vsfader-elem nvsfe2">
 							<p>1Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt dolor quasi accusantium labore tempore soluta quidem consectetur, odio, cum perspiciatis odit minima quos. Tempora voluptatem rerum vero iure! Harum, porro?</p>
+							<a href="" class="btn black">Больше</a>
 						</div>
 
 					</div>
@@ -217,8 +222,11 @@
 							</div>
 							<span class="item-reviews">2 отзыва</span>
 							<h4 class="item-title">Радиатор Koratherm Horizontal высотой 1000 мм</h4>
-							<span class="item-price">1350 <span>грн</span></span>
+							<div class="item-price">
+								<span class="item-normal-price">1350 <span>грн</span></span>
+							</div>
 							<span class="item-views">24 просмотра</span>
+							<button class="btn black item-buy" type="btn">Купить</button>
 						</div>
 						
 						<div class="item main-item">
@@ -234,8 +242,11 @@
 							</div>
 							<span class="item-reviews">2 отзыва</span>
 							<h4 class="item-title">Радиатор Koratherm Horizontal высотой 1000 мм</h4>
-							<span class="item-price">1350 <span>грн</span></span>
+							<div class="item-price">
+								<span class="item-normal-price">1350 <span>грн</span></span>
+							</div>
 							<span class="item-views">24 просмотра</span>
+							<button class="btn black item-buy" type="btn">Купить</button>
 						</div>
 						
 						<div class="item main-item">
@@ -251,8 +262,11 @@
 							</div>
 							<span class="item-reviews">2 отзыва</span>
 							<h4 class="item-title">Радиатор Koratherm Horizontal высотой 1000 мм</h4>
-							<span class="item-price">1350 <span>грн</span></span>
+							<div class="item-price">
+								<span class="item-normal-price">1350 <span>грн</span></span>
+							</div>
 							<span class="item-views">24 просмотра</span>
+							<button class="btn black item-buy" type="btn">Купить</button>
 						</div>
 
 					</div>
@@ -300,8 +314,12 @@
 							</div>
 							<span class="item-reviews">2 отзыва</span>
 							<h4 class="item-title">Радиатор Koratherm Horizontal высотой 1000 мм</h4>
-							<span class="item-price">1350 <span>грн</span></span>
+							<div class="item-price">
+								<span class="item-old-price">1970 <span>грн</span></span>
+								<span class="item-normal-price">1350 <span>грн</span></span>
+							</div>
 							<span class="item-views">24 просмотра</span>
+							<button class="btn black item-buy" type="btn">Купить</button>
 						</div>
 						
 						<div class="item main-item">
@@ -317,8 +335,12 @@
 							</div>
 							<span class="item-reviews">2 отзыва</span>
 							<h4 class="item-title">Радиатор Koratherm Horizontal высотой 1000 мм</h4>
-							<span class="item-price">1350 <span>грн</span></span>
+							<div class="item-price">
+								<span class="item-old-price">1970 <span>грн</span></span>
+								<span class="item-normal-price">1350 <span>грн</span></span>
+							</div>
 							<span class="item-views">24 просмотра</span>
+							<button class="btn black item-buy" type="btn">Купить</button>
 						</div>
 						
 						<div class="item main-item">
@@ -334,8 +356,12 @@
 							</div>
 							<span class="item-reviews">2 отзыва</span>
 							<h4 class="item-title">Радиатор Koratherm Horizontal высотой 1000 мм</h4>
-							<span class="item-price">1350 <span>грн</span></span>
+							<div class="item-price">
+								<span class="item-old-price">1970 <span>грн</span></span>
+								<span class="item-normal-price">1350 <span>грн</span></span>
+							</div>
 							<span class="item-views">24 просмотра</span>
+							<button class="btn black item-buy" type="btn">Купить</button>
 						</div>
 
 					</div>

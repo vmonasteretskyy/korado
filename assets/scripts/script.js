@@ -4,17 +4,20 @@ var Info = {
 	mob: false,
 }
 document.addEventListener("DOMContentLoaded", function(e) {
+	Info.vw = window.innerWidth;
+	Info.vh = window.innerHeight;
+	Info.vw < 768 ? Info.mob = true : Info.mob = false;
 	if (onDom.length != 0) {
 		for (var i = 0; i < onDom.length; i++) {
 			onDom[i]();
 		}
 	}
 	window.addEventListener("resize", function(e) {
+		Info.vw = window.innerWidth;
+		Info.vh = window.innerHeight;
+		Info.vw < 768 ? Info.mob = true : Info.mob = false;
 		if (onResize.length != 0) {
 			for (var i = 0; i < onResize.length; i++) {
-				Info.vw = window.innerWidth;
-				Info.vh = window.innerHeight;
-				Info.vw < 768 ? Info.mob = true : Info.mob = false;
 				onResize[i]();
 			}
 		}	
@@ -41,9 +44,9 @@ onDom.push(function() {
 
 		nextBtnClass: "rhomb-btn",
 	});
-	onResize.push(function() {
-		PS.resize();
-	})
+})
+onResize.push(function() {
+	PS.resize();
 })
 
 var nvsf1 = undefined;
@@ -64,10 +67,12 @@ onDom.push(function() {
 		marginBottom: 49,
 	});
 })
-
 onLoad.push(function(){
 	nvsf1.resize();
 });
+onResize.push(function() {
+	nvsf1.resize();
+})
 
 // var nvsf2 = undefined;
 // onDom.push(function() {

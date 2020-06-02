@@ -109,7 +109,7 @@ class PageScroll {
 	resize() {
 		this.h = this.elems[0].getBoundingClientRect().height;
 		this.hp = this.pagRect.getBoundingClientRect().height;
-		if (this.loc) return;
+		// if (this.loc) return;
 		this.transform();
 	}
 
@@ -351,6 +351,7 @@ class NVSliderFader {
 	}
 	
 	resize() {
+		this.marB = this.params.marginBottom * (Info.vh / 937);
 		this.h = this.elem.getBoundingClientRect().height;
 		this.ah = new Array(this.amount);
 		for (var i = 0; i < this.amount; i++) {
@@ -437,6 +438,10 @@ class NVSliderFader {
 		this.trans.style.transform = "translate3D(0," + trTo + "px,0)";
 		this.faderElems[this.prev].classList.remove('active');
 		this.faderElems[this.now].classList.add('active');
+
+		if (this.btnLink) {
+			this.btnLink.href = this.elemsA[1][this.now].getAttribute("data-href");
+		}
 
 		setTimeout(function(){
 			parent.animating = false;
