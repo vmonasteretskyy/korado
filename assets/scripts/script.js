@@ -2,10 +2,13 @@ var Info = {
 	vw: 0,
 	vh: 0,
 	mob: false,
+	coef: 1,
 }
 document.addEventListener("DOMContentLoaded", function(e) {
 	Info.vw = window.innerWidth;
 	Info.vh = window.innerHeight;
+	Info.coef = Math.min(Info.vw * 0.0104166667, Info.vh * 0.0213219616) / 20;
+	console.log(Info.vw * 0.0104166667, Info.vh * 0.0213219616)
 	Info.vw < 768 ? Info.mob = true : Info.mob = false;
 	if (onDom.length != 0) {
 		for (var i = 0; i < onDom.length; i++) {
@@ -15,6 +18,7 @@ document.addEventListener("DOMContentLoaded", function(e) {
 	window.addEventListener("resize", function(e) {
 		Info.vw = window.innerWidth;
 		Info.vh = window.innerHeight;
+		Info.coef = Math.min(Info.vw * 0.0104166667, Info.vh * 0.0213219616) / 20;
 		Info.vw < 768 ? Info.mob = true : Info.mob = false;
 		if (onResize.length != 0) {
 			for (var i = 0; i < onResize.length; i++) {

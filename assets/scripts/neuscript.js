@@ -351,7 +351,7 @@ class NVSliderFader {
 	}
 	
 	resize() {
-		this.marB = this.params.marginBottom * (Info.vh / 937);
+		this.marB = this.params.marginBottom * Info.coef;
 		this.h = this.elem.getBoundingClientRect().height;
 		this.ah = new Array(this.amount);
 		for (var i = 0; i < this.amount; i++) {
