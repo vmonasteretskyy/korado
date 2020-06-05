@@ -428,7 +428,7 @@ class NVSliderFader {
 	detectDirection(direction) {
 		console.log("direction", direction)
 		if (this.animating) return;
-		if (direction == 1 || direction == 2) {
+		if (direction == 1 || direction == 4) {
 			if (this.now > 0) {
 				this.prev = this.now;
 				this.now--;
@@ -441,7 +441,7 @@ class NVSliderFader {
 				this.transform();
 			}
 		} 
-		if (direction == 3 || direction == 4) {
+		if (direction == 3 || direction == 2) {
 			if (this.now < this.amount - 1) {
 				this.prev = this.now;
 				this.now++;
@@ -548,11 +548,11 @@ class NVSliderFader {
 					handler(4);
 				}					   
 			} else {
-				if ( yDiff > 0 ) {
-					handler(3);
-				} else if (yDiff < 0) { 
-					handler(1);
-				}																 
+				// if ( yDiff > 0 ) {
+				// 	handler(3);
+				// } else if (yDiff < 0) { 
+				// 	handler(1);
+				// }																 
 			}		
 			xDown = null;
 			yDown = null;									 

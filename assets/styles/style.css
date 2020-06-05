@@ -669,48 +669,38 @@ a.logo:hover {
 	right: 0;
 	left: 0;
 	bottom: 1.45rem;
-	height: 2px;
+	height: 1px;
 	background-color: var(--dark);
 }
 
 .nvs-bar-rectangle {
 	position: absolute;
 	left: 0;
-	bottom: 1.45rem;
-	width: 20vw;
+	bottom: calc(1.45rem - 2.5px);
+	width: 20%;
 	height: 5px;
 	background-color: var(--dark);
 	transition: transform 0.6s ease-in-out;
-	transform: translateY(2px);
 }
 
 .nvs-bar-elems {
+	width: 100%;
+	display: flex;
 	counter-reset: nvscounter;
 }
 .nvs-bar-elem {
+	min-height: 4rem;
+	width: 20%;
 	position: relative;
 	display: flex;
-	height: 115px;
+	justify-content: center;
+	align-items: flex-end;
 	flex-shrink: 0;
 	counter-increment: nvscounter;
-	padding: 0 95px 0 0;
-	justify-content: flex-end;
-	align-items: center;
-	cursor: pointer;
 }
 .nvs-bar-elem.active {
 	pointer-events: none;
 	cursor: default;
-}
-
-.nvs-bar-elem-nums {
-	position: absolute;
-	top: 50%;
-	right: 10px;
-	text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-	line-height: 1.2;
-	letter-spacing: 0.02em;
-	transform: translateY(-50%);
 }
 
 .nvs-nums-current {
@@ -720,14 +710,15 @@ a.logo:hover {
 	content: counter(nvscounter);
 }
 .nvs-nums-all {
+	margin: .45rem 0 0;
 	font-size: 0.8rem;
 }
 .nvs-nums-all:before {
 	content: "/";
 }
 /*-active-*/
-.nvs-bar-elem.active .nvs-bar-elem-nums {
-	transform: translateY(-4rem);
+.nvs-bar-elem.active {
+	transform: translateY(-2rem);
 }
 /*-e-right-bar-nvs-bar------------------------------*/
 

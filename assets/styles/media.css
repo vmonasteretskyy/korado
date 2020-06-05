@@ -513,7 +513,7 @@
 		/* top: 87px; */
 		top: 9.4rem;
 		max-height: 10rem;
-		max-width: 15.75rem;
+		max-width: 16.4063vw;
 	}
 	
 	.item-stars {
@@ -656,25 +656,25 @@
 
 
 @media screen and (max-width: 1024px) {
-	.main-wrap-text {
-		left: 30vw;
+	.main-wrap-text,
+	.main-wrap-promo {
+		left: 15vw;
 	}
 	.neu-vsfader.nvsf3,
-	.neu-vsfader.nvsf4,
-	.main-wrap-promo {
-		left: 10vw;
+	.neu-vsfader.nvsf4 {
+		left: 15vw;
 	}
 	.neu-vsfader.nvsf3,
 	.neu-vsfader.nvsf4 {
 		top: 20rem;
 	}
 	.main-wrap-items {
-		width: 80vw;
+		width: 70vw;
 		flex-wrap: wrap;
 		justify-content: space-between;
 	}
 	.item.main-item {
-		width: 25vw;
+		width: 22vw;
 		margin: 0 0 2rem;
 	}	
 }

@@ -131,6 +131,33 @@
 			</div>
 
 			<a class="btn black nvsf1-btnlnk" id="nvsf1-btn" href="">Смотреть</a>
+
+			<div class="nvs-bar" id="nvs-bar1">
+				<div class="nvs-bar-line" id="nvs-bar-line1"></div>
+				<div class="nvs-bar-rectangle" id="nvs-bar-rectangle1"></div>
+				<div class="nvs-bar-elems">
+					<div class="nvs-bar-elem active">
+						<span class="nvs-nums-current"></span>
+						<span class="nvs-nums-all"></span>
+					</div>
+					<div class="nvs-bar-elem">
+						<span class="nvs-nums-current"></span>
+						<span class="nvs-nums-all"></span>
+					</div>
+					<div class="nvs-bar-elem">
+						<span class="nvs-nums-current"></span>
+						<span class="nvs-nums-all"></span>
+					</div>
+					<div class="nvs-bar-elem">
+						<span class="nvs-nums-current"></span>
+						<span class="nvs-nums-all"></span>
+					</div>
+					<div class="nvs-bar-elem">
+						<span class="nvs-nums-current"></span>
+						<span class="nvs-nums-all"></span>
+					</div>
+				</div>
+			</div>
 		</section>
 
 		<!-- 3 -->
@@ -180,6 +207,33 @@
 							<a href="" class="btn black">Больше</a>
 						</div>
 
+					</div>
+				</div>
+			</div>
+
+			<div class="nvs-bar" id="nvs-bar2">
+				<div class="nvs-bar-line" id="nvs-bar-line2"></div>
+				<div class="nvs-bar-rectangle" id="nvs-bar-rectangle2"></div>
+				<div class="nvs-bar-elems">
+					<div class="nvs-bar-elem active">
+						<span class="nvs-nums-current"></span>
+						<span class="nvs-nums-all"></span>
+					</div>
+					<div class="nvs-bar-elem">
+						<span class="nvs-nums-current"></span>
+						<span class="nvs-nums-all"></span>
+					</div>
+					<div class="nvs-bar-elem">
+						<span class="nvs-nums-current"></span>
+						<span class="nvs-nums-all"></span>
+					</div>
+					<div class="nvs-bar-elem">
+						<span class="nvs-nums-current"></span>
+						<span class="nvs-nums-all"></span>
+					</div>
+					<div class="nvs-bar-elem">
+						<span class="nvs-nums-current"></span>
+						<span class="nvs-nums-all"></span>
 					</div>
 				</div>
 			</div>
@@ -300,40 +354,24 @@
 				<div class="nvs-bar-rectangle" id="nvs-bar-rectangle3"></div>
 				<div class="nvs-bar-elems">
 					<div class="nvs-bar-elem active">
-						<div class="nvs-bar-elem-nums">
-							<span class="nvs-nums-current"></span>
-							<span class="nvs-nums-all"></span>
-						</div>
+						<span class="nvs-nums-current"></span>
+						<span class="nvs-nums-all"></span>
 					</div>
 					<div class="nvs-bar-elem">
-						<div class="nvs-bar-elem-nums">
-							<span class="nvs-nums-current"></span>
-							<span class="nvs-nums-all"></span>
-						</div>
+						<span class="nvs-nums-current"></span>
+						<span class="nvs-nums-all"></span>
 					</div>
 					<div class="nvs-bar-elem">
-						<div class="nvs-bar-elem-nums">
-							<span class="nvs-nums-current"></span>
-							<span class="nvs-nums-all"></span>
-						</div>
+						<span class="nvs-nums-current"></span>
+						<span class="nvs-nums-all"></span>
 					</div>
 					<div class="nvs-bar-elem">
-						<div class="nvs-bar-elem-nums">
-							<span class="nvs-nums-current"></span>
-							<span class="nvs-nums-all"></span>
-						</div>
+						<span class="nvs-nums-current"></span>
+						<span class="nvs-nums-all"></span>
 					</div>
 					<div class="nvs-bar-elem">
-						<div class="nvs-bar-elem-nums">
-							<span class="nvs-nums-current"></span>
-							<span class="nvs-nums-all"></span>
-						</div>
-					</div>
-					<div class="nvs-bar-elem">
-						<div class="nvs-bar-elem-nums">
-							<span class="nvs-nums-current"></span>
-							<span class="nvs-nums-all"></span>
-						</div>
+						<span class="nvs-nums-current"></span>
+						<span class="nvs-nums-all"></span>
 					</div>
 				</div>
 			</div>
@@ -461,40 +499,24 @@
 				<div class="nvs-bar-rectangle" id="nvs-bar-rectangle4"></div>
 				<div class="nvs-bar-elems">
 					<div class="nvs-bar-elem active">
-						<div class="nvs-bar-elem-nums">
-							<span class="nvs-nums-current"></span>
-							<span class="nvs-nums-all"></span>
-						</div>
+						<span class="nvs-nums-current"></span>
+						<span class="nvs-nums-all"></span>
 					</div>
 					<div class="nvs-bar-elem">
-						<div class="nvs-bar-elem-nums">
-							<span class="nvs-nums-current"></span>
-							<span class="nvs-nums-all"></span>
-						</div>
+						<span class="nvs-nums-current"></span>
+						<span class="nvs-nums-all"></span>
 					</div>
 					<div class="nvs-bar-elem">
-						<div class="nvs-bar-elem-nums">
-							<span class="nvs-nums-current"></span>
-							<span class="nvs-nums-all"></span>
-						</div>
+						<span class="nvs-nums-current"></span>
+						<span class="nvs-nums-all"></span>
 					</div>
 					<div class="nvs-bar-elem">
-						<div class="nvs-bar-elem-nums">
-							<span class="nvs-nums-current"></span>
-							<span class="nvs-nums-all"></span>
-						</div>
+						<span class="nvs-nums-current"></span>
+						<span class="nvs-nums-all"></span>
 					</div>
 					<div class="nvs-bar-elem">
-						<div class="nvs-bar-elem-nums">
-							<span class="nvs-nums-current"></span>
-							<span class="nvs-nums-all"></span>
-						</div>
-					</div>
-					<div class="nvs-bar-elem">
-						<div class="nvs-bar-elem-nums">
-							<span class="nvs-nums-current"></span>
-							<span class="nvs-nums-all"></span>
-						</div>
+						<span class="nvs-nums-current"></span>
+						<span class="nvs-nums-all"></span>
 					</div>
 				</div>
 			</div>
