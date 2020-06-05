@@ -1,4 +1,4 @@
-@media screen and (max-height: 937px) and (min-height: 480px) and (min-width: 1024px) {
+@media screen and (min-height: 480px) and (min-width: 1025px) {
 	html {
 		font-size: min(1.04166667vw, 2.13219616vh);
 	}
@@ -168,7 +168,7 @@
 	
 	
 	
-	/*-b-right-bar--------------------------------------*/
+	/*-b-right-bar-nvs-bar------------------------------*/
 	#right-bar {
 		top: 50%;
 		/* top: 171px; */
@@ -355,7 +355,7 @@
 	.top-img-bg {
 		/* top: 88px; */
 		left: 5rem;
-		width: 91rem;
+		width: calc(100% - 5rem);
 		/* height: 436px; */
 		height: 26.2rem;
 	}
@@ -618,3 +618,31 @@
 }
 
 
+
+
+
+
+
+
+
+
+
+@media screen and (min-width: 1024px) {		
+	.nvsfe1 h2 a {
+		pointer-events: none;
+	}
+}
+@media screen and (max-width: 1024px) {		
+	#main-vslider {
+		display: none;
+	}
+}
+@media screen and (min-width: 768px) {
+	.item.main-item:nth-child(n + 4) {
+		display: none;
+	}
+	.item.main-item:nth-child(3) {
+		margin: 0;
+	}
+
+}

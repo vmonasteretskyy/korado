@@ -3,13 +3,15 @@ var Info = {
 	vh: 0,
 	mob: false,
 	coef: 1,
+	isMenu: false,
+	isEclipse: false,
 }
 document.addEventListener("DOMContentLoaded", function(e) {
 	Info.vw = window.innerWidth;
 	Info.vh = window.innerHeight;
 	Info.coef = Math.min(Info.vw * 0.0104166667, Info.vh * 0.0213219616) / 20;
 	console.log(Info.vw * 0.0104166667, Info.vh * 0.0213219616)
-	Info.vw < 768 ? Info.mob = true : Info.mob = false;
+	Info.vw < 1024 ? Info.mob = true : Info.mob = false;
 	if (onDom.length != 0) {
 		for (var i = 0; i < onDom.length; i++) {
 			onDom[i]();
@@ -64,10 +66,12 @@ onDom.push(function() {
 		prevArrId: "nvsf1-prev",
 		nextArrId: "nvsf1-next",
 
+		touchElemId: "nvsft1",
+
 		faderParentClass: "nvsf1",
 		faderElemsClass: "nvsfe1",
 
-		btnLinkId: "nvsf1-btn",
+		btnLinkClass: "nvsf1-btnlnk",
 		marginBottom: 49,
 	});
 })
@@ -102,7 +106,6 @@ onResize.push(function() {
 // });
 
 onDom.push(function() {
-	console.log("III");
 	var inputs = document.getElementsByClassName("input");
 	if (!inputs || inputs.length == 0) return;
 	for (let i = 0; i < inputs.length; i++) {
@@ -119,5 +122,20 @@ onDom.push(function() {
 			}
 		}
 		
+	}
+})
+
+onDom.push(function() {
+	//Menu
+	var btn = document.getElementById("menu-btn");
+	var menu = document.getElementById("menu");
+	btn.onclick = function() {
+		if (!Info.isMenu) {
+			menu.classList.add("active");
+			Info.isMenu = true;
+		} else {
+			menu.classList.remove("active");
+			Info.isMenu = false;
+		}
 	}
 })

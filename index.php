@@ -45,7 +45,7 @@
 				<button class="neu-vslider-btn neu-vslider-next icon-triangle-s-b" id="nvsf1-next" type="button"></button>
 			</div>
 
-			<div class="rhomb-wrap rhomb-med">
+			<div class="rhomb-wrap rhomb-med nvsft" id="nvsft1">
 				<div class="rhomb-bg">
 					<div class="rhomb-bg-lwhite"></div>
 					<div class="rhomb-bg-lblack"></div>
@@ -130,7 +130,7 @@
 				</div>
 			</div>
 
-			<a class="btn black" id="nvsf1-btn" href="">Смотреть</a>
+			<a class="btn black nvsf1-btnlnk" id="nvsf1-btn" href="">Смотреть</a>
 		</section>
 
 		<!-- 3 -->
@@ -268,11 +268,74 @@
 							<span class="item-views">24 просмотра</span>
 							<button class="btn black item-buy" type="btn">Купить</button>
 						</div>
+						
+						<div class="item main-item">
+							<div class="item-notification new">Новинка</div>
+							<button class="item-heart icon-heart" type="button"></button>
+							<img src="./assets/img/items/koratherm-horizontal1.jpg" alt="">
+							<div class="item-stars">
+								<div class="item-is icon-star"></div>
+								<div class="item-is icon-star"></div>
+								<div class="item-is icon-star"></div>
+								<div class="item-is icon-star"></div>
+								<div class="item-is icon-star-empty"></div>
+							</div>
+							<span class="item-reviews">2 отзыва</span>
+							<h4 class="item-title">Радиатор Koratherm Horizontal высотой 1000 мм</h4>
+							<div class="item-price">
+								<span class="item-normal-price">1350 <span>грн</span></span>
+							</div>
+							<span class="item-views">24 просмотра</span>
+							<button class="btn black item-buy" type="btn">Купить</button>
+						</div>
 
 					</div>
 					<a class="btn black main-more" id="nvsfe3-btn" href="">Еще новинки</a>
 				</div>
 
+			</div>
+
+			<div class="nvs-bar" id="nvs-bar3">
+				<div class="nvs-bar-line" id="nvs-bar-line3"></div>
+				<div class="nvs-bar-rectangle" id="nvs-bar-rectangle3"></div>
+				<div class="nvs-bar-elems">
+					<div class="nvs-bar-elem active">
+						<div class="nvs-bar-elem-nums">
+							<span class="nvs-nums-current"></span>
+							<span class="nvs-nums-all"></span>
+						</div>
+					</div>
+					<div class="nvs-bar-elem">
+						<div class="nvs-bar-elem-nums">
+							<span class="nvs-nums-current"></span>
+							<span class="nvs-nums-all"></span>
+						</div>
+					</div>
+					<div class="nvs-bar-elem">
+						<div class="nvs-bar-elem-nums">
+							<span class="nvs-nums-current"></span>
+							<span class="nvs-nums-all"></span>
+						</div>
+					</div>
+					<div class="nvs-bar-elem">
+						<div class="nvs-bar-elem-nums">
+							<span class="nvs-nums-current"></span>
+							<span class="nvs-nums-all"></span>
+						</div>
+					</div>
+					<div class="nvs-bar-elem">
+						<div class="nvs-bar-elem-nums">
+							<span class="nvs-nums-current"></span>
+							<span class="nvs-nums-all"></span>
+						</div>
+					</div>
+					<div class="nvs-bar-elem">
+						<div class="nvs-bar-elem-nums">
+							<span class="nvs-nums-current"></span>
+							<span class="nvs-nums-all"></span>
+						</div>
+					</div>
+				</div>
 			</div>
 
 		</section>
@@ -363,12 +426,79 @@
 							<span class="item-views">24 просмотра</span>
 							<button class="btn black item-buy" type="btn">Купить</button>
 						</div>
+						
+						<div class="item main-item">
+							<div class="item-notification sale">Акція</div>
+							<button class="item-heart icon-heart" type="button"></button>
+							<img src="./assets/img/items/koratherm-horizontal1.jpg" alt="">
+							<div class="item-stars">
+								<div class="item-is icon-star"></div>
+								<div class="item-is icon-star"></div>
+								<div class="item-is icon-star"></div>
+								<div class="item-is icon-star"></div>
+								<div class="item-is icon-star-empty"></div>
+							</div>
+							<span class="item-reviews">2 отзыва</span>
+							<h4 class="item-title">Радиатор Koratherm Horizontal высотой 1000 мм</h4>
+							<div class="item-price">
+								<span class="item-old-price">1970 <span>грн</span></span>
+								<span class="item-normal-price">1350 <span>грн</span></span>
+							</div>
+							<span class="item-views">24 просмотра</span>
+							<button class="btn black item-buy" type="btn">Купить</button>
+						</div>
 
 					</div>
 					<a class="btn black main-more" id="nvsfe4-btn" href="">Еще новинки</a>
 				</div>
 
 			</div>
+
+
+
+			<div class="nvs-bar" id="nvs-bar4">
+				<div class="nvs-bar-line" id="nvs-bar-line4"></div>
+				<div class="nvs-bar-rectangle" id="nvs-bar-rectangle4"></div>
+				<div class="nvs-bar-elems">
+					<div class="nvs-bar-elem active">
+						<div class="nvs-bar-elem-nums">
+							<span class="nvs-nums-current"></span>
+							<span class="nvs-nums-all"></span>
+						</div>
+					</div>
+					<div class="nvs-bar-elem">
+						<div class="nvs-bar-elem-nums">
+							<span class="nvs-nums-current"></span>
+							<span class="nvs-nums-all"></span>
+						</div>
+					</div>
+					<div class="nvs-bar-elem">
+						<div class="nvs-bar-elem-nums">
+							<span class="nvs-nums-current"></span>
+							<span class="nvs-nums-all"></span>
+						</div>
+					</div>
+					<div class="nvs-bar-elem">
+						<div class="nvs-bar-elem-nums">
+							<span class="nvs-nums-current"></span>
+							<span class="nvs-nums-all"></span>
+						</div>
+					</div>
+					<div class="nvs-bar-elem">
+						<div class="nvs-bar-elem-nums">
+							<span class="nvs-nums-current"></span>
+							<span class="nvs-nums-all"></span>
+						</div>
+					</div>
+					<div class="nvs-bar-elem">
+						<div class="nvs-bar-elem-nums">
+							<span class="nvs-nums-current"></span>
+							<span class="nvs-nums-all"></span>
+						</div>
+					</div>
+				</div>
+			</div>
+
 		</section>
 
 		<!-- 6 -->

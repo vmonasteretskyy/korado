@@ -29,6 +29,27 @@
 
 <body class="first">
 
+<div id="menu">
+	<nav id="menu-nav">
+		<ul class="menu-ul">
+			<li class="menu-li"><a href="">Каталог</a></li>
+			<li class="menu-li"><a href="">Информация</a></li>
+			<li class="menu-li"><a href="">Техническая информация</a></li>
+			<li class="menu-li"><a href="">Фотогалерея</a></li>
+			<li class="menu-li"><a href="">Видео обзоры</a></li>
+			<li class="menu-li"><a href="">Прайс-лист продукции</a></li>
+			<li class="menu-li"><a href="">Условия соглашения</a></li>
+		</ul>
+	</nav>
+	<div id="menu-left">
+		<a>Акционные товары</a>
+		<a>Уценка</a>
+	</div>
+	<div id="menu-right">
+		<a>Получить промо-код</a>
+	</div>
+</div>
+
 <div id="top-nav">
 	<nav>
 		<ul>
