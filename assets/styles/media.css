@@ -365,27 +365,28 @@
 	/*-ul-*/
 	
 	/*-b-section-2------------------*/
-	/*-b-nvs1-------------*/
-	.nvsfe1 {
+	/*-b-nvs2-------------*/
+	.nvsfe2 {
 		height: 24.5rem;
 		width: 16.5rem;
 	}
-	.nvsfe1 h2 {
+	.nvsfe2 h2 {
 		margin: 0 0 1.05rem;
 		/* font-size: 2.5rem; */
 	}
 	.rhomb-ul li {
 		margin: 0 0 0.35rem;
 	}
-	/*-e-nvs1-------------*/
-	#nvsf1-btn {
+	/*-e-nvs2-------------*/
+	#nvsf2-btn {
 		/* top: 25.75rem; */
 		/* top: calc(50% + 2.3rem); */
-		top: calc(50% + 21rem);
+		/* top: calc(50% + 21rem);
 		right: unset;
 		left: 50vw;
 		transform: translateX(-50%);
-		width: 10rem;
+		width: 10rem; */
+		display: none;
 		/* top: max(25.46875vw,52.132196vh); */
 	}
 	/*-e-section-2------------------*/
@@ -401,36 +402,6 @@
 	.main-wrap-text {
 		top: 31.15rem;
 	}
-	/*-b-nvs2-------------*/
-	.nvsh2 {
-	
-	}
-	.nvst2 {
-	
-	}
-	.nvs2 {
-	
-	}
-	
-	.nvsa2 {
-	
-	}
-	
-	/*-hider-*/
-	.nvsf2 {
-	
-	}
-	.nvsfe2 {
-		width: 60vw;
-	}
-	.nvsfe2 .btn {
-		margin: 2.55rem auto 0;
-	}
-	/*-e-nvs2-------------*/
-	/*-e-section-3------------------*/
-	
-	/*-e-section-4------------------*/
-	/**/
 	/*-b-nvs3-------------*/
 	.nvsh3 {
 	
@@ -447,12 +418,20 @@
 	}
 	
 	/*-hider-*/
+	.nvsf3 {
+	
+	}
 	.nvsfe3 {
+		width: 70vw;
+	}
+	.nvsfe3 .btn {
+		margin: 2.55rem auto 0;
 	}
 	/*-e-nvs3-------------*/
-	/*-e-section-4------------------*/
+	/*-e-section-3------------------*/
 	
-	/*-e-section-5------------------*/
+	/*-e-section-4------------------*/
+	/**/
 	/*-b-nvs4-------------*/
 	.nvsh4 {
 	
@@ -471,7 +450,29 @@
 	/*-hider-*/
 	.nvsfe4 {
 	}
-	/*-b-nvs4-------------*/
+	/*-e-nvs4-------------*/
+	/*-e-section-4------------------*/
+	
+	/*-e-section-5------------------*/
+	/*-b-nvs5-------------*/
+	.nvsh5 {
+	
+	}
+	.nvst5 {
+	
+	}
+	.nvs5 {
+	
+	}
+	
+	.nvsa5 {
+	
+	}
+	
+	/*-hider-*/
+	.nvsfe5 {
+	}
+	/*-b-nvs5-------------*/
 	/*-e-section-5------------------*/
 	
 	/*-b-section-6------------------*/
@@ -660,13 +661,13 @@
 	.main-wrap-promo {
 		left: 15vw;
 	}
-	.neu-vsfader.nvsf3,
-	.neu-vsfader.nvsf4 {
+	.neu-vsfader.nvsf4,
+	.neu-vsfader.nvsf5 {
 		left: 15vw;
 	}
-	.neu-vsfader.nvsf3,
-	.neu-vsfader.nvsf4 {
-		top: 20rem;
+	.neu-vsfader.nvsf4,
+	.neu-vsfader.nvsf5 {
+		top: 10rem;
 	}
 	.main-wrap-items {
 		width: 70vw;

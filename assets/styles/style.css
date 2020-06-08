@@ -50,6 +50,10 @@ a {
 	color: inherit;
 } 
 
+b {
+	font-weight: 900;
+}
+
 ul {
 	list-style: none;
 	padding: 0;
@@ -677,10 +681,9 @@ a.logo:hover {
 	position: absolute;
 	left: 0;
 	bottom: calc(1.45rem - 2.5px);
-	width: 20%;
 	height: 5px;
 	background-color: var(--dark);
-	transition: transform 0.6s ease-in-out;
+	transition: transform 0.3s ease;
 }
 
 .nvs-bar-elems {
@@ -690,13 +693,14 @@ a.logo:hover {
 }
 .nvs-bar-elem {
 	min-height: 4rem;
-	width: 20%;
+	flex-grow: 1;
 	position: relative;
 	display: flex;
 	justify-content: center;
 	align-items: flex-end;
 	flex-shrink: 0;
 	counter-increment: nvscounter;
+	transition: transform 0.3s ease;
 }
 .nvs-bar-elem.active {
 	pointer-events: none;
@@ -957,15 +961,15 @@ a.logo:hover {
 }
 
 /*-b-section-2------------------*/
-/*-b-nvs1-------------*/
-.nvsfe1 {
+/*-b-nvs2-------------*/
+.nvsfe2 {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	height: 490px;
 	width: 330px;
 }
-.nvsfe1 h2 {
+.nvsfe2 h2 {
 	font-weight: 900;
 	font-size: 2.75rem;
 	line-height: 1;
@@ -990,14 +994,21 @@ a.logo:hover {
 .rhomb-ul a:hover {
 	font-weight: 900;
 }
-/*-e-nvs1-------------*/
-#nvsf1-btn {
+/*-e-nvs2-------------*/
+#nvsf2-btn {
 	position: absolute;
 	/* top: 515px; */
 	top: calc(50% + 46px);
 	right: 280px;
 	z-index: 2;
 	transform: translateY(-50%);
+}
+
+#nvsf2-prev {
+	margin: 0 0 12px;
+}
+#nvsf2-next {
+	margin: 12px 0 0;
 }
 /*-e-section-2------------------*/
 
@@ -1020,42 +1031,21 @@ a.logo:hover {
 }
 .main-wrap-text p {
 	text-transform: uppercase;
-    font-family: "Akrobat";
+	font-family: "Akrobat";
 	font-weight: 600;
 	font-size: 1rem;
 	line-height: 2;
 }
-/*-b-nvs2-------------*/
-.nvsh2 {
 
-}
-.nvst2 {
-
-}
-.nvs2 {
-
-}
-
-.nvsa2 {
-
-}
-
-/*-hider-*/
-.nvsf2 {
-
-}
-.nvsfe2 {
-	width: 1125px;
-}
-.nvsfe2 .btn {
-	margin: 51px auto 0;
-}
-/*-e-nvs2-------------*/
-/*-e-section-3------------------*/
-
-/*-e-section-4------------------*/
-/**/
 /*-b-nvs3-------------*/
+.nvsww3 {
+	position: absolute;
+	top: calc(50% + 247px);
+	left: 227px;
+	display: flex;
+	flex-direction: column;
+	transform: translateY(-50%);
+}
 .nvsh3 {
 
 }
@@ -1069,22 +1059,36 @@ a.logo:hover {
 .nvsa3 {
 
 }
-
+#nvsf3-prev {
+	margin: 0 0 -12px;
+}
+#nvsf3-next {
+	margin: -12px 0 0;
+}
 /*-hider-*/
-.neu-vsfader.nvsf3 {
-	position: absolute;
-	top: 232px;
-	left: 440px;
+.nvsf3 {
+
 }
 .nvsfe3 {
-	display: flex;
-	flex-direction: column;
+	width: 1125px;
+}
+.nvsfe3 .btn {
+	margin: 51px auto 0;
 }
 /*-e-nvs3-------------*/
-/*-e-section-4------------------*/
+/*-e-section-3------------------*/
 
-/*-e-section-5------------------*/
+/*-e-section-4------------------*/
+/**/
 /*-b-nvs4-------------*/
+.nvsww4 {
+	position: absolute;
+	top: calc(50% + 47px);
+	left: 227px;
+	display: flex;
+	flex-direction: column;
+	transform: translateY(-50%);
+}
 .nvsh4 {
 
 }
@@ -1109,7 +1113,44 @@ a.logo:hover {
 	display: flex;
 	flex-direction: column;
 }
+/*-e-nvs4-------------*/
+/*-e-section-4------------------*/
+
+/*-e-section-5------------------*/
 /*-b-nvs4-------------*/
+.nvsww5 {
+	position: absolute;
+	top: calc(50% + 47px);
+	left: 227px;
+	display: flex;
+	flex-direction: column;
+	transform: translateY(-50%);
+}
+.nvsh5 {
+
+}
+.nvst5 {
+
+}
+.nvs5 {
+
+}
+
+.nvsa5 {
+
+}
+
+/*-hider-*/
+.neu-vsfader.nvsf5 {
+	position: absolute;
+	top: 232px;
+	left: 440px;
+}
+.nvsfe5 {
+	display: flex;
+	flex-direction: column;
+}
+/*-b-nvs5-------------*/
 /*-e-section-5------------------*/
 
 /*-b-section-6------------------*/
@@ -1314,19 +1355,12 @@ a.logo:hover {
 	display: flex;
 	justify-content: center;
 }
-.neu-vslider-prev {
-	margin: 0 0 12px;
-}
 .neu-vslider-next {
-	margin: 12px 0 0;
 	align-items: flex-end;
 }
 .neu-vslider-btn:before {
 	font-size: 0.7rem;
 	flex-shrink: 0;
-}
-.neu-vslider-prev {
-
 }
 
 .neu-vslider-hider {
@@ -1335,6 +1369,23 @@ a.logo:hover {
 	flex-direction: column;
 	overflow: hidden;
 	width: 200px;
+}
+.nvshgrad:before,
+.nvshgrad:after {
+	content: "";
+	position: absolute;
+	left: 0;
+	right: 0;
+	height: 1rem;
+	z-index: 10;
+}
+.nvshgrad:before {
+	top: -1px;
+	background-image: linear-gradient(0deg, #ffffff00 0%, #ffffffff 100%);
+}
+.nvshgrad:after {
+	bottom: -1px;
+	background-image: linear-gradient(180deg, #ffffff00 0%, #ffffffff 100%);
 }
 .neu-vslider-trans {
 	position: relative;
@@ -1383,7 +1434,7 @@ a.logo:hover {
 	pointer-events: none;
 	transition: opacity 0.3s ease 0s;
 }
-.nvsf1 .neu-vsfader-elem {
+.nvsf2 .neu-vsfader-elem {
 	left: 50%;
 	transform: translateX(-50%);
 }
