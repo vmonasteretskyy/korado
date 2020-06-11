@@ -52,7 +52,7 @@ onDom.push(function() {
 	});
 })
 onResize.push(function() {
-	if (PS) {
+	if (PS && Info.vw > 767) {
 		PS.resize();
 	}
 })
@@ -241,13 +241,48 @@ onDom.push(function() {
 	//Menu
 	var btn = document.getElementById("menu-btn");
 	var menu = document.getElementById("menu");
+	var close = document.getElementById("close-menu");
 	btn.onclick = function() {
 		if (!Info.isMenu) {
 			menu.classList.add("active");
 			Info.isMenu = true;
+			if (Info.vw < 768) {
+				document.body.style.overflow = "hidden";
+			}
 		} else {
 			menu.classList.remove("active");
 			Info.isMenu = false;
+			if (Info.vw < 768) {
+				document.body.style.overflow = "scroll";
+			}
 		}
 	}
-})
+	close.onclick = function() {
+		if (Info.isMenu) {
+			menu.classList.remove("active");
+			Info.isMenu = false;
+			document.body.style.overflow = "scroll";
+		}
+	}
+});
+
+
+onDom.push(function() {
+	var hiders = document.getElementsByClassName("menu-list-hider");
+	var btns = document.getElementsByClassName("menu-list-btn");
+	var lists = document.getElementsByClassName("menu-list");
+	var amount = hiders.length;
+	if (!hiders || hiders.length == 0) return;
+	
+	for (var i = 0; i < amount; i++) {
+		const ci = i;
+		hiders[ci].style.height = lists[ci].getBoundingClientRect().height / 20 + "rem";
+	}
+	for (var i = 0; i < amount; i++) {
+		const ci = i;
+		btns[ci].onclick = function() {
+			this.classList.toggle("opened");
+			hiders[ci].classList.toggle("hidden");
+		}
+	}
+});

@@ -89,10 +89,15 @@
 		padding-left: 2.95rem;
 		max-width: 8rem;
 	}
+
+	/*-top-currency-*/
+	#top-currency {
+		margin: auto 0 auto 5.65rem;
+	}
 	
 	/*-top-cart-*/
 	#top-cart {
-		margin: 0 0 0 11.85rem;
+		margin: 0 0 0 5.25rem;
 		padding: 1.1rem 0 0 3.7rem;
 	}
 	.icon-cart {
@@ -648,27 +653,45 @@
 
 
 @media screen and (min-width: 1025px) {	
-	.mob {
-		display: none;
-	}	
 	.nvsfe1 h2 a {
 		pointer-events: none;
+	}
+	.nvsftitle {
+		display: none;
+	}
+	.bmob {
+		display: none;
 	}
 }
 @media screen and (max-width: 1024px) {		
 	#main-vslider {
 		display: none;
 	}
+	.desc {
+		display: none;
+	}
+	.nvsftitle, h3 {
+		font-weight: 700;
+		flex-shrink: 0;
+		font-size: 1.5714rem;
+		line-height: 1.4;
+		margin-bottom: 1.8rem;
+	}
+	.nvs-bar {
+		bottom: 6vh;
+	}
+	.nvsf4:before,
+	.nvsf5:before {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 70vw;
+		height: 30rem;
+	}
 }
 @media screen and (min-width: 768px) {
-	.lmob {
+	.mob {
 		display: none;
 	}
-	.item.main-item:nth-child(n + 4) {
-		display: none;
-	}
-	.item.main-item:nth-child(3) {
-		margin: 0;
-	}
-
 }

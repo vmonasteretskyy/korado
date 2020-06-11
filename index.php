@@ -19,7 +19,7 @@
 		</section>
 
 		<!-- 2 -->
-		<section class="scroll-elem">
+		<section class="scroll-elem" name="main-second">
 			<div class="bg">
 				<div class="bg1 white025" style="background-image: url(./assets/img/main/bg2.jpg)"></div>
 			</div>
@@ -132,7 +132,7 @@
 
 			<a class="btn black nvsf2-btnlnk" id="nvsf2-btn" href="">Смотреть</a>
 
-			<div class="nvs-bar mob" id="nvs-bar2">
+			<div class="nvs-bar bmob" id="nvs-bar2">
 				<div class="nvs-bar-line" id="nvs-bar-line2"></div>
 				<div class="nvs-bar-rectangle" id="nvs-bar-rectangle2"></div>
 				<div class="nvs-bar-elems">
@@ -177,7 +177,7 @@
 			<div class="main-wrap">
 				<div class="top-img-bg" style="background-image: url(./assets/img/main/bg3.jpg)"></div>
 
-				<div class="nvsww3 lmob">
+				<div class="nvsww3 desc">
 					<button class="neu-vslider-btn neu-vslider-prev icon-triangle-s-t" id="nvsf3-prev" type="button"></button>
 					<div class="neu-vslider-hider nvshgrad nvsh3">
 						<div class="neu-vslider-trans nvst3">
@@ -194,29 +194,34 @@
 				</div>
 
 				<div class="main-wrap-text">
-					<div class="neu-vsfader nvsf3">
+					<div class="neu-vsfader nvsf3" id="nvsft3">
 
 						<div class="neu-vsfader-elem nvsfe3 active">
+							<h3 class="bmob">О Нас</h3>
 							<p>1Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt dolor quasi accusantium labore tempore soluta quidem consectetur, odio, cum perspiciatis odit minima quos. Tempora voluptatem rerum vero iure! Harum, porro?</p>
 							<a href="" class="btn black">Больше</a>
 						</div>
 
 						<div class="neu-vsfader-elem nvsfe3">
+							<h3 class="bmob">О бренде</h3>
 							<p>1Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt dolor quasi accusantium labore tempore soluta quidem consectetur, odio, cum perspiciatis odit minima quos. Tempora voluptatem rerum vero iure! Harum, porro?</p>
 							<a href="" class="btn black">Больше</a>
 						</div>
 
 						<div class="neu-vsfader-elem nvsfe3">
+							<h3 class="bmob">Техническая информация</h3>
 							<p>1Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt dolor quasi accusantium labore tempore soluta quidem consectetur, odio, cum perspiciatis odit minima quos. Tempora voluptatem rerum vero iure! Harum, porro?</p>
 							<a href="" class="btn black">Больше</a>
 						</div>
 
 						<div class="neu-vsfader-elem nvsfe3">
+							<h3 class="bmob">TestCategory4</h3>
 							<p>1Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt dolor quasi accusantium labore tempore soluta quidem consectetur, odio, cum perspiciatis odit minima quos. Tempora voluptatem rerum vero iure! Harum, porro?</p>
 							<a href="" class="btn black">Больше</a>
 						</div>
 
 						<div class="neu-vsfader-elem nvsfe3">
+							<h3 class="bmob">TestCategory5</h3>
 							<p>1Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt dolor quasi accusantium labore tempore soluta quidem consectetur, odio, cum perspiciatis odit minima quos. Tempora voluptatem rerum vero iure! Harum, porro?</p>
 							<a href="" class="btn black">Больше</a>
 						</div>
@@ -225,7 +230,7 @@
 				</div>
 			</div>
 
-			<div class="nvs-bar mob" id="nvs-bar3">
+			<div class="nvs-bar bmob" id="nvs-bar3">
 				<div class="nvs-bar-line" id="nvs-bar-line3"></div>
 				<div class="nvs-bar-rectangle" id="nvs-bar-rectangle3"></div>
 				<div class="nvs-bar-elems">
@@ -254,15 +259,15 @@
 		</section>
 
 		<!-- 4 -->
-		<section class="scroll-elem">
+		<section class="scroll-elem main-items-section">
 			<div class="bg">
 				<div class="bg1 white025" style="background-image: url(./assets/img/main/bg4.jpg)"></div>
 			</div>
 
 			
-			<div class="nvsww4 lmob">
+			<div class="nvsww4 desc">
 				<button class="neu-vslider-btn neu-vslider-prev icon-triangle-s-t" id="nvsf4-prev" type="button"></button>
-				<div class="neu-vslider-hider nvshgrad nvsh4">
+				<div class="neu-vslider-hider nvsh4">
 					<div class="neu-vslider-trans nvst4">
 						<ul class="neu-vslider nvs4">
 							<li class="neu-vslider-a nvsa4" data-href="h1">Локальные вентиляционные установки <b>Korado</b></li>
@@ -277,10 +282,11 @@
 			</div>
 
 
-			<div class="neu-vsfader nvsf4">
+			<div class="neu-vsfader nvsf4" id="nvsft4">
 
 				<!-- beg-elem -->
 				<div class="neu-vsfader-elem nvsfe4 active">
+					<span class="nvsftitle">Локальные вентиляционные установки <b>Korado</b></span>
 					<div class="main-wrap-items">
 						
 						<div class="item main-item">
@@ -343,7 +349,7 @@
 							<button class="btn black item-buy" type="btn">Купить</button>
 						</div>
 						
-						<div class="item main-item">
+						<!-- <div class="item main-item">
 							<div class="item-notification new">Новинка</div>
 							<button class="item-heart icon-heart" type="button"></button>
 							<img src="./assets/img/items/koratherm-horizontal1.jpg" alt="">
@@ -361,7 +367,7 @@
 							</div>
 							<span class="item-views">24 просмотра</span>
 							<button class="btn black item-buy" type="btn">Купить</button>
-						</div>
+						</div> -->
 
 					</div>
 					<a class="btn black main-more" id="nvsfe3-btn" href="">Еще новинки</a>
@@ -369,6 +375,7 @@
 				<!-- end-elem -->
 				<!-- beg-elem -->
 				<div class="neu-vsfader-elem nvsfe4">
+					<span class="nvsftitle">О бренде</span>
 					<div class="main-wrap-items">
 
 						<div class="item main-item">
@@ -431,7 +438,7 @@
 							<button class="btn black item-buy" type="btn">Купить</button>
 						</div>
 
-						<div class="item main-item">
+						<!-- <div class="item main-item">
 							<div class="item-notification new">Новинка</div>
 							<button class="item-heart icon-heart" type="button"></button>
 							<img src="./assets/img/items/koratherm-horizontal1.jpg" alt="">
@@ -449,7 +456,7 @@
 							</div>
 							<span class="item-views">24 просмотра</span>
 							<button class="btn black item-buy" type="btn">Купить</button>
-						</div>
+						</div> -->
 
 					</div>
 					<a class="btn black main-more" id="nvsfe3-btn" href="">Еще новинки</a>
@@ -457,6 +464,7 @@
 				<!-- end-elem -->
 				<!-- beg-elem -->
 				<div class="neu-vsfader-elem nvsfe4">
+					<span class="nvsftitle">Техническая информация</span>
 					<div class="main-wrap-items">
 
 						<div class="item main-item">
@@ -518,8 +526,8 @@
 							<span class="item-views">24 просмотра</span>
 							<button class="btn black item-buy" type="btn">Купить</button>
 						</div>
-
-						<div class="item main-item">
+						
+						<!-- <div class="item main-item">
 							<div class="item-notification new">Новинка</div>
 							<button class="item-heart icon-heart" type="button"></button>
 							<img src="./assets/img/items/koratherm-horizontal1.jpg" alt="">
@@ -537,7 +545,7 @@
 							</div>
 							<span class="item-views">24 просмотра</span>
 							<button class="btn black item-buy" type="btn">Купить</button>
-						</div>
+						</div> -->
 
 					</div>
 					<a class="btn black main-more" id="nvsfe3-btn" href="">Еще новинки</a>
@@ -545,6 +553,7 @@
 				<!-- end-elem -->
 				<!-- beg-elem -->
 				<div class="neu-vsfader-elem nvsfe4">
+					<span class="nvsftitle">TestCategory4</span>
 					<div class="main-wrap-items">
 
 						<div class="item main-item">
@@ -606,8 +615,8 @@
 							<span class="item-views">24 просмотра</span>
 							<button class="btn black item-buy" type="btn">Купить</button>
 						</div>
-
-						<div class="item main-item">
+						
+						<!-- <div class="item main-item">
 							<div class="item-notification new">Новинка</div>
 							<button class="item-heart icon-heart" type="button"></button>
 							<img src="./assets/img/items/koratherm-horizontal1.jpg" alt="">
@@ -625,7 +634,7 @@
 							</div>
 							<span class="item-views">24 просмотра</span>
 							<button class="btn black item-buy" type="btn">Купить</button>
-						</div>
+						</div> -->
 
 					</div>
 					<a class="btn black main-more" id="nvsfe3-btn" href="">Еще новинки</a>
@@ -633,6 +642,7 @@
 				<!-- end-elem -->
 				<!-- beg-elem -->
 				<div class="neu-vsfader-elem nvsfe4">
+					<span class="nvsftitle">TestCategory5</span>
 					<div class="main-wrap-items">
 
 						<div class="item main-item">
@@ -694,8 +704,8 @@
 							<span class="item-views">24 просмотра</span>
 							<button class="btn black item-buy" type="btn">Купить</button>
 						</div>
-
-						<div class="item main-item">
+						
+						<!-- <div class="item main-item">
 							<div class="item-notification new">Новинка</div>
 							<button class="item-heart icon-heart" type="button"></button>
 							<img src="./assets/img/items/koratherm-horizontal1.jpg" alt="">
@@ -713,7 +723,7 @@
 							</div>
 							<span class="item-views">24 просмотра</span>
 							<button class="btn black item-buy" type="btn">Купить</button>
-						</div>
+						</div> -->
 
 					</div>
 					<a class="btn black main-more" id="nvsfe3-btn" href="">Еще новинки</a>
@@ -721,7 +731,7 @@
 				<!-- end-elem -->
 			</div>
 
-			<div class="nvs-bar mob" id="nvs-bar4">
+			<div class="nvs-bar bmob" id="nvs-bar4">
 				<div class="nvs-bar-line" id="nvs-bar-line4"></div>
 				<div class="nvs-bar-rectangle" id="nvs-bar-rectangle4"></div>
 				<div class="nvs-bar-elems">
@@ -751,12 +761,12 @@
 		</section>
 
 		<!-- 5 -->
-		<section class="scroll-elem">
+		<section class="scroll-elem main-items-section">
 			<div class="bg">
 				<div class="bg1 white025" style="background-image: url(./assets/img/main/bg5.jpg)"></div>
 			</div>
 			
-			<div class="nvsww5 lmob">
+			<div class="nvsww5 desc">
 				<button class="neu-vslider-btn neu-vslider-prev icon-triangle-s-t" id="nvsf5-prev" type="button"></button>
 				<div class="neu-vslider-hider nvsh5">
 					<div class="neu-vslider-trans nvst5">
@@ -772,14 +782,15 @@
 				<button class="neu-vslider-btn neu-vslider-next icon-triangle-s-b" id="nvsf5-next" type="button"></button>
 			</div>
 
-			<div class="neu-vsfader nvsf5">
+			<div class="neu-vsfader nvsf5" id="nvsft5">
 
 				<!-- beg-elem -->
 				<div class="neu-vsfader-elem nvsfe5 active">
+					<span class="nvsftitle">Локальные вентиляционные установки <b>Korado</b></span>
 					<div class="main-wrap-items">
 						
 						<div class="item main-item">
-							<div class="item-notification sale">Акція</div>
+							<div class="item-notification sale">Акция</div>
 							<button class="item-heart icon-heart" type="button"></button>
 							<img src="./assets/img/items/koratherm-horizontal1.jpg" alt="">
 							<div class="item-stars">
@@ -800,7 +811,7 @@
 						</div>
 						
 						<div class="item main-item">
-							<div class="item-notification sale">Акція</div>
+							<div class="item-notification sale">Акция</div>
 							<button class="item-heart icon-heart" type="button"></button>
 							<img src="./assets/img/items/koratherm-horizontal1.jpg" alt="">
 							<div class="item-stars">
@@ -821,7 +832,7 @@
 						</div>
 						
 						<div class="item main-item">
-							<div class="item-notification sale">Акція</div>
+							<div class="item-notification sale">Акция</div>
 							<button class="item-heart icon-heart" type="button"></button>
 							<img src="./assets/img/items/koratherm-horizontal1.jpg" alt="">
 							<div class="item-stars">
@@ -841,8 +852,8 @@
 							<button class="btn black item-buy" type="btn">Купить</button>
 						</div>
 						
-						<div class="item main-item">
-							<div class="item-notification sale">Акція</div>
+						<!-- <div class="item main-item">
+							<div class="item-notification sale">Акция</div>
 							<button class="item-heart icon-heart" type="button"></button>
 							<img src="./assets/img/items/koratherm-horizontal1.jpg" alt="">
 							<div class="item-stars">
@@ -860,7 +871,7 @@
 							</div>
 							<span class="item-views">24 просмотра</span>
 							<button class="btn black item-buy" type="btn">Купить</button>
-						</div>
+						</div> -->
 
 					</div>
 					<a class="btn black main-more" id="nvsfe5-btn" href="">Еще новинки</a>
@@ -868,10 +879,11 @@
 				<!-- end-elem -->
 				<!-- beg-elem -->
 				<div class="neu-vsfader-elem nvsfe5">
+					<span class="nvsftitle">О бренде</span>
 					<div class="main-wrap-items">
 						
 						<div class="item main-item">
-							<div class="item-notification sale">Акція</div>
+							<div class="item-notification sale">Акция</div>
 							<button class="item-heart icon-heart" type="button"></button>
 							<img src="./assets/img/items/koratherm-horizontal1.jpg" alt="">
 							<div class="item-stars">
@@ -892,7 +904,7 @@
 						</div>
 						
 						<div class="item main-item">
-							<div class="item-notification sale">Акція</div>
+							<div class="item-notification sale">Акция</div>
 							<button class="item-heart icon-heart" type="button"></button>
 							<img src="./assets/img/items/koratherm-horizontal1.jpg" alt="">
 							<div class="item-stars">
@@ -913,7 +925,7 @@
 						</div>
 						
 						<div class="item main-item">
-							<div class="item-notification sale">Акція</div>
+							<div class="item-notification sale">Акция</div>
 							<button class="item-heart icon-heart" type="button"></button>
 							<img src="./assets/img/items/koratherm-horizontal1.jpg" alt="">
 							<div class="item-stars">
@@ -933,8 +945,8 @@
 							<button class="btn black item-buy" type="btn">Купить</button>
 						</div>
 						
-						<div class="item main-item">
-							<div class="item-notification sale">Акція</div>
+						<!-- <div class="item main-item">
+							<div class="item-notification sale">Акция</div>
 							<button class="item-heart icon-heart" type="button"></button>
 							<img src="./assets/img/items/koratherm-horizontal1.jpg" alt="">
 							<div class="item-stars">
@@ -952,7 +964,7 @@
 							</div>
 							<span class="item-views">24 просмотра</span>
 							<button class="btn black item-buy" type="btn">Купить</button>
-						</div>
+						</div> -->
 
 					</div>
 					<a class="btn black main-more" id="nvsfe5-btn" href="">Еще новинки</a>
@@ -960,10 +972,11 @@
 				<!-- end-elem -->
 				<!-- beg-elem -->
 				<div class="neu-vsfader-elem nvsfe5">
+					<span class="nvsftitle">Техническая информация</span>
 					<div class="main-wrap-items">
 						
 						<div class="item main-item">
-							<div class="item-notification sale">Акція</div>
+							<div class="item-notification sale">Акция</div>
 							<button class="item-heart icon-heart" type="button"></button>
 							<img src="./assets/img/items/koratherm-horizontal1.jpg" alt="">
 							<div class="item-stars">
@@ -984,7 +997,7 @@
 						</div>
 						
 						<div class="item main-item">
-							<div class="item-notification sale">Акція</div>
+							<div class="item-notification sale">Акция</div>
 							<button class="item-heart icon-heart" type="button"></button>
 							<img src="./assets/img/items/koratherm-horizontal1.jpg" alt="">
 							<div class="item-stars">
@@ -1005,7 +1018,7 @@
 						</div>
 						
 						<div class="item main-item">
-							<div class="item-notification sale">Акція</div>
+							<div class="item-notification sale">Акция</div>
 							<button class="item-heart icon-heart" type="button"></button>
 							<img src="./assets/img/items/koratherm-horizontal1.jpg" alt="">
 							<div class="item-stars">
@@ -1025,8 +1038,8 @@
 							<button class="btn black item-buy" type="btn">Купить</button>
 						</div>
 						
-						<div class="item main-item">
-							<div class="item-notification sale">Акція</div>
+						<!-- <div class="item main-item">
+							<div class="item-notification sale">Акция</div>
 							<button class="item-heart icon-heart" type="button"></button>
 							<img src="./assets/img/items/koratherm-horizontal1.jpg" alt="">
 							<div class="item-stars">
@@ -1044,7 +1057,7 @@
 							</div>
 							<span class="item-views">24 просмотра</span>
 							<button class="btn black item-buy" type="btn">Купить</button>
-						</div>
+						</div> -->
 
 					</div>
 					<a class="btn black main-more" id="nvsfe5-btn" href="">Еще новинки</a>
@@ -1052,10 +1065,11 @@
 				<!-- end-elem -->
 				<!-- beg-elem -->
 				<div class="neu-vsfader-elem nvsfe5">
+					<span class="nvsftitle">TestCategory4</span>
 					<div class="main-wrap-items">
 						
 						<div class="item main-item">
-							<div class="item-notification sale">Акція</div>
+							<div class="item-notification sale">Акция</div>
 							<button class="item-heart icon-heart" type="button"></button>
 							<img src="./assets/img/items/koratherm-horizontal1.jpg" alt="">
 							<div class="item-stars">
@@ -1076,7 +1090,7 @@
 						</div>
 						
 						<div class="item main-item">
-							<div class="item-notification sale">Акція</div>
+							<div class="item-notification sale">Акция</div>
 							<button class="item-heart icon-heart" type="button"></button>
 							<img src="./assets/img/items/koratherm-horizontal1.jpg" alt="">
 							<div class="item-stars">
@@ -1097,7 +1111,7 @@
 						</div>
 						
 						<div class="item main-item">
-							<div class="item-notification sale">Акція</div>
+							<div class="item-notification sale">Акция</div>
 							<button class="item-heart icon-heart" type="button"></button>
 							<img src="./assets/img/items/koratherm-horizontal1.jpg" alt="">
 							<div class="item-stars">
@@ -1117,8 +1131,8 @@
 							<button class="btn black item-buy" type="btn">Купить</button>
 						</div>
 						
-						<div class="item main-item">
-							<div class="item-notification sale">Акція</div>
+						<!-- <div class="item main-item">
+							<div class="item-notification sale">Акция</div>
 							<button class="item-heart icon-heart" type="button"></button>
 							<img src="./assets/img/items/koratherm-horizontal1.jpg" alt="">
 							<div class="item-stars">
@@ -1136,7 +1150,7 @@
 							</div>
 							<span class="item-views">24 просмотра</span>
 							<button class="btn black item-buy" type="btn">Купить</button>
-						</div>
+						</div> -->
 
 					</div>
 					<a class="btn black main-more" id="nvsfe5-btn" href="">Еще новинки</a>
@@ -1144,10 +1158,11 @@
 				<!-- end-elem -->
 				<!-- beg-elem -->
 				<div class="neu-vsfader-elem nvsfe5">
+					<span class="nvsftitle">TestCategory5</span>
 					<div class="main-wrap-items">
 						
 						<div class="item main-item">
-							<div class="item-notification sale">Акція</div>
+							<div class="item-notification sale">Акция</div>
 							<button class="item-heart icon-heart" type="button"></button>
 							<img src="./assets/img/items/koratherm-horizontal1.jpg" alt="">
 							<div class="item-stars">
@@ -1168,7 +1183,7 @@
 						</div>
 						
 						<div class="item main-item">
-							<div class="item-notification sale">Акція</div>
+							<div class="item-notification sale">Акция</div>
 							<button class="item-heart icon-heart" type="button"></button>
 							<img src="./assets/img/items/koratherm-horizontal1.jpg" alt="">
 							<div class="item-stars">
@@ -1189,7 +1204,7 @@
 						</div>
 						
 						<div class="item main-item">
-							<div class="item-notification sale">Акція</div>
+							<div class="item-notification sale">Акция</div>
 							<button class="item-heart icon-heart" type="button"></button>
 							<img src="./assets/img/items/koratherm-horizontal1.jpg" alt="">
 							<div class="item-stars">
@@ -1209,8 +1224,8 @@
 							<button class="btn black item-buy" type="btn">Купить</button>
 						</div>
 						
-						<div class="item main-item">
-							<div class="item-notification sale">Акція</div>
+						<!-- <div class="item main-item">
+							<div class="item-notification sale">Акция</div>
 							<button class="item-heart icon-heart" type="button"></button>
 							<img src="./assets/img/items/koratherm-horizontal1.jpg" alt="">
 							<div class="item-stars">
@@ -1228,7 +1243,7 @@
 							</div>
 							<span class="item-views">24 просмотра</span>
 							<button class="btn black item-buy" type="btn">Купить</button>
-						</div>
+						</div> -->
 
 					</div>
 					<a class="btn black main-more" id="nvsfe5-btn" href="">Еще новинки</a>
@@ -1239,7 +1254,7 @@
 
 
 
-			<div class="nvs-bar mob" id="nvs-bar5">
+			<div class="nvs-bar bmob" id="nvs-bar5">
 				<div class="nvs-bar-line" id="nvs-bar-line5"></div>
 				<div class="nvs-bar-rectangle" id="nvs-bar-rectangle5"></div>
 				<div class="nvs-bar-elems">

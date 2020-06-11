@@ -10,8 +10,17 @@ class PageScroll {
 
 		nextBtnClass: undefined,
 	}) {
-		var parent = this;
 		this.params = params;
+		if (Info.vw < 768) {
+			console.log(this.params)
+			this.nextBtn = document.getElementsByClassName(this.params.nextBtnClass)[0];
+			this.nextBtn.onclick = function() {
+				var top = document.getElementsByName("main-second")[0].offsetTop;
+   				window.scrollTo(0, top);  
+			}
+			return;
+		};
+		var parent = this;
 		this.container = document.getElementsByClassName(this.params.containertClass)[0];
 		this.elems = document.getElementsByClassName(this.params.elemsClass);
 
@@ -26,6 +35,7 @@ class PageScroll {
 		this.prev = 0;
 		this.now = 0;
 		this.animating = false;
+		this.active = false;
 
 		this.loc = +sessionStorage.getItem('scrollNow');
 		this.resize();
@@ -33,6 +43,7 @@ class PageScroll {
 			this.now = this.loc;
 			this.transform();
 		}
+
 
 		for (var i = 0; i < this.amount; i++) {
 			const ci = i;
@@ -58,14 +69,14 @@ class PageScroll {
 			}
 		}
 
-		this.detectTouch(this.container, function(direction) {
-			if (parent.animating) return;
-			parent.detectDirection(direction);
-		});
-		this.preventDefaultScroll(function(direction) {
-			if (parent.animating) return;
-			parent.detectDirection(direction);
-		});
+		if (parent.animating) return;
+		if (parent.active) return;
+		// this.detectTouch(this.container, function(direction) {
+		// 	parent.detectDirection(direction);
+		// }, true);
+		// this.preventDefaultScroll(function(direction) {
+		// 	parent.detectDirection(direction);
+		// }, true);
 	}
 
 	detectDirection(direction) {
@@ -87,6 +98,7 @@ class PageScroll {
 	}
 
 	transform() {
+		if (!this.active) return;
 		var parent = this;
 		this.animating = true;
 		this.container.style.transform = "translate3D(0," + (-this.h * this.now) + "px,0)";
@@ -107,13 +119,35 @@ class PageScroll {
 	}
 
 	resize() {
-		this.h = this.elems[0].getBoundingClientRect().height;
-		this.hp = this.pagRect.getBoundingClientRect().height;
-		// if (this.loc) return;
-		this.transform();
+		var parent = this;
+		if (Info.vw > 767) {
+			this.active = true;
+			this.h = this.elems[0].getBoundingClientRect().height;
+			this.hp = this.pagRect.getBoundingClientRect().height;
+
+			this.detectTouch(this.container, function(direction) {
+			parent.detectDirection(direction);
+			}, true);
+			this.preventDefaultScroll(function(direction) {
+				parent.detectDirection(direction);
+			}, true);
+			// if (this.loc) return;
+			this.transform();
+		} else {
+			this.active = false;
+
+			this.detectTouch(this.container, function(direction) {
+				parent.detectDirection(direction);
+				}, false);
+
+			this.preventDefaultScroll(function(direction) {
+				parent.detectDirection(direction);
+			}, false);
+
+		}
 	}
 
-	detectTouch(elem, handler) {
+	detectTouch(elem, handler, enable) {
 		if (elem != document && !(elem instanceof Element)) {
 			console.warn("Can't init touches: element is not ad document or istance of Element ");
 			return;
@@ -122,9 +156,15 @@ class PageScroll {
 			console.warn("Can't init touches: handler is not a function");
 			return;
 		}
-		elem.addEventListener('touchstart', handleTouchStart, false);		
-		elem.addEventListener('touchmove', handleTouchMove, false);	
-		elem.addEventListener('touchend', handleTouchEnd, false);
+		if (enable) {
+			elem.addEventListener('touchstart', handleTouchStart, false);		
+			elem.addEventListener('touchmove', handleTouchMove, false);	
+			elem.addEventListener('touchend', handleTouchEnd, false);
+		} else {
+			elem.removeEventListener('touchstart', handleTouchStart, false);		
+			elem.removeEventListener('touchmove', handleTouchMove, false);	
+			elem.removeEventListener('touchend', handleTouchEnd, false);
+		}
 	
 		var xDown = null;														
 		var yDown = null;
@@ -174,10 +214,16 @@ class PageScroll {
 		};
 	}
 
-	preventDefaultScroll(handler) {
+	preventDefaultScroll(handler, enable) {
 		var parent = this;
-		window.addEventListener("mousewheel", wheel, false);
-		window.addEventListener("DOMMouseScroll", wheel, false);
+		if (enable) {
+			window.addEventListener("mousewheel", wheel, false);
+			window.addEventListener("DOMMouseScroll", wheel, false);
+		} else {
+			window.removeEventListener("mousewheel", wheel, false);
+			window.removeEventListener("DOMMouseScroll", wheel, false);
+		}
+		
 		// var keys = [32,33,34,35,36,37,38,39,40];
 		var keyCode = 0;
 		document.onkeydown = function(e) {
@@ -616,3 +662,18 @@ class NVSliderFader {
 		};
 	}
 } 
+
+
+
+
+
+
+// class Accordion {
+// 	constructor(params = {
+// 		hider: undefined,
+// 		btn: undefined,
+// 	}) {
+// 		this.hider = params.hider;
+// 		this.btn = params.btn;
+// 	}
+// }

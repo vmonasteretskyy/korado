@@ -30,10 +30,22 @@
 <body class="first">
 
 <div id="menu">
+	<button id="close-menu" class="mob">
+		Закрыть
+	</button>
 	<nav id="menu-nav">
 		<ul class="menu-ul">
 			<li class="menu-li"><a href="">Каталог</a></li>
-			<li class="menu-li"><a href="">Информация</a></li>
+			<li class="menu-li">
+				<a href="">Информация</a>
+				<button class="menu-list-btn icon-triangle-t" type="button"></button>
+				<div class="menu-list-hider hidden">
+					<ul class="menu-list">
+						<li><a href="">Акционные товары</a></li>
+						<li><a href="">Акционные товары</a></li>
+					</ul>
+				</div>
+			</li>
 			<li class="menu-li"><a href="">Техническая информация</a></li>
 			<li class="menu-li"><a href="">Фотогалерея</a></li>
 			<li class="menu-li"><a href="">Видео обзоры</a></li>
@@ -41,6 +53,31 @@
 			<li class="menu-li"><a href="">Условия соглашения</a></li>
 		</ul>
 	</nav>
+
+
+
+	<div id="menu-mob-btns" class="mob">
+		<button id="menu-search" type="button">
+			<div class="icon icon-search"></div>
+			<span>Поиск по каталогу</span>
+		</button>
+		<button id="menu-login" type="button">
+			<div class="icon icon-login"></div>
+			<span>Личный кабинет</span>
+		</button>
+		<div class="menu-currency">
+			<button class="menu-currency-btn active">UAH</button>
+			<button class="menu-currency-btn">USD</button>
+			<button class="menu-currency-btn">EUR</button>
+		</div>
+		<button id="menu-cart" type="button">
+			<div class="icon icon-cart"></div>
+			<span>Корзина</span>
+		</button>
+	</div>
+
+
+
 	<div id="menu-left">
 		<a>Акционные товары</a>
 		<a>Уценка</a>
@@ -48,6 +85,16 @@
 	<div id="menu-right">
 		<a>Получить промо-код</a>
 	</div>
+
+	<nav id="menu-top-nav">
+		<ul>
+			<li><a href="">Контактная информация</a></li>
+			<li><a href="">Заказать обратный звонок</a></li>
+			<li><a href="">Время работы</a></li>
+			<li><a href="">Доставка и оплата</a></li>
+			<li><a href="">Консультация специалиста</a></li>
+		</ul>
+	</nav>
 </div>
 
 <div id="top-nav">
@@ -85,6 +132,13 @@
 		<div class="icon icon-login"></div>
 		<span>Приветствую, войдите в кабинет</span>
 	</button>
+	<div id="top-currency">
+		<div id="top-currency-img" style="background-image: url(./assets/img/currency/uah.svg)"></div>
+		<div id="top-currency-col">
+			<button class="top-currency-btn" type="button">USD</button>
+			<button class="top-currency-btn" type="button">EUR</button>
+		</div>
+	</div>
 	<button id="top-cart" type="button">
 		<div class="icon icon-cart"></div>
 		<span id="top-cart-amount">0</span>
