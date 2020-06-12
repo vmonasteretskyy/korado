@@ -170,7 +170,6 @@
 		top: 6.35rem;
 	}
 	
-	
 	.left-elem .icon {
 		left: 2.4rem;
 	}
@@ -891,6 +890,13 @@
 		padding: 96px 0 0;
 		font-weight: 500;
 	}
+
+	.left-elem .icon {
+		left: 50%;
+	}
+	.bgoffsetleftmob {
+		background-position: calc(50% - 80px) center;
+	}
 	/*-e-header-------------------------------*/
 
 	/*-b-left-bar-----------------------------*/
@@ -926,7 +932,7 @@
 
 	.main .scroll-elem {
 		height: unset;
-		min-height: 100vh;
+		min-height: max(680px, 100vh);
 	}
 	.main .scroll-elem:first-child {
 		height: 720px;

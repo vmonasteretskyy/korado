@@ -597,7 +597,7 @@ a.logo {
 	position: relative;
 	z-index: 2;
 	/* max-width: 54%; */
-	max-width: 60%;
+	max-width: 74%;
 	text-transform: uppercase;
 	transition: color 0.3s ease-in-out;
 }

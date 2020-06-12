@@ -261,7 +261,7 @@
 		<!-- 4 -->
 		<section class="scroll-elem main-items-section">
 			<div class="bg">
-				<div class="bg1 white025" style="background-image: url(./assets/img/main/bg4.jpg)"></div>
+				<div class="bg1 white025 bgoffsetleftmob" style="background-image: url(./assets/img/main/bg4.jpg)"></div>
 			</div>
 
 			
