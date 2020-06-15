@@ -1085,10 +1085,14 @@
 	/*-e-section-4-5------*/
 
 	.main-wrap-promo {
-		top: calc(30vh + 40px);
-		left: 20px;
+		position: relative;
+		margin: calc(30vh + 40px) 20px 40px;
+		/* top: calc(30vh + 40px); */
+		top: unset;
+		left: unset;
+		/* left: 20px; */
 		text-align: justify;
-		max-width: calc(100vw - 40px);
+		/* max-width: calc(100vw - 40px); */
 	}
 	.main-wrap-promo h2 {
 		text-align: left;
@@ -1121,7 +1125,7 @@
 	
 	/*-b-get-promo----------------------------*/
 	#get-promo {
-		padding-bottom: 4rem;
+		/* padding-bottom: 4rem; */
 	}
 	#get-promo .btn {
 		width: 100%;
