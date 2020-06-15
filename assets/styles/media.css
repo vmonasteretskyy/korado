@@ -1118,6 +1118,15 @@
 		/* min-width: 30px;
 		width: calc(100vw - 40px); */
 	}
+	
+	/*-b-get-promo----------------------------*/
+	#get-promo {
+		padding-bottom: 4rem;
+	}
+	#get-promo .btn {
+		width: 100%;
+	}
+	/*-e-get-promo----------------------------*/
 	/*-e-index------------------------------------------*/
 }
 
