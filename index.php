@@ -1,5 +1,85 @@
 <?php include 'header.php'; ?>
 
+
+
+<div id="left-bar">
+	<a class="left-elem" href="">
+		<div class="left-elem-bg"></div>
+		<div class="icon icon-radiator"></div>
+		<span class="left-elem-title icon-triangle-r">Радиаторы</span>
+	</a>
+	<a class="left-elem" href="">
+		<div class="left-elem-bg"></div>
+		<div class="icon icon-convector"></div>
+		<span class="left-elem-title icon-triangle-r">Конвекторы</span>
+	</a>
+	<a class="left-elem" href="">
+		<div class="left-elem-bg"></div>
+		<div class="icon icon-heatertt"></div>
+		<span class="left-elem-title icon-triangle-r">Полотенцесушители</span>
+	</a>
+	<a class="left-elem" href="">
+		<div class="left-elem-bg"></div>
+		<div class="icon icon-localvent"></div>
+		<span class="left-elem-title icon-triangle-r">Локальные вентиляционные установки</span>
+	</a>
+	<a class="left-elem" href="">
+		<div class="left-elem-bg"></div>
+		<div class="icon icon-tools"></div>
+		<span class="left-elem-title icon-triangle-r">Запасные части к оборудованию</span>
+	</a>
+</div>
+
+<div id="right-bar">
+	<div id="right-bar-line"></div>
+	<div id="right-bar-rectangle"></div>
+	<div id="right-bar-elems">
+		<!-- ромб зверху -->
+		<div class="right-bar-elem active">
+			<span class="right-bar-elem-text">Главная</span>
+			<div class="right-bar-elem-nums">
+				<span class="rbe-nums-current"></span>
+				<span class="rbe-nums-all"></span>
+			</div>
+		</div>
+		<div class="right-bar-elem">
+			<span class="right-bar-elem-text">Продукция</span>
+			<div class="right-bar-elem-nums">
+				<span class="rbe-nums-current"></span>
+				<span class="rbe-nums-all"></span>
+			</div>
+		</div>
+		<div class="right-bar-elem">
+			<span class="right-bar-elem-text">Информация</span>
+			<div class="right-bar-elem-nums">
+				<span class="rbe-nums-current"></span>
+				<span class="rbe-nums-all"></span>
+			</div>
+		</div>
+		<div class="right-bar-elem">
+			<span class="right-bar-elem-text">Новинки</span>
+			<div class="right-bar-elem-nums">
+				<span class="rbe-nums-current"></span>
+				<span class="rbe-nums-all"></span>
+			</div>
+		</div>
+		<div class="right-bar-elem">
+			<span class="right-bar-elem-text">Акционные товары</span>
+			<div class="right-bar-elem-nums">
+				<span class="rbe-nums-current"></span>
+				<span class="rbe-nums-all"></span>
+			</div>
+		</div>
+		<div class="right-bar-elem">
+			<span class="right-bar-elem-text">Получить промо-код</span>
+			<div class="right-bar-elem-nums">
+				<span class="rbe-nums-current"></span>
+				<span class="rbe-nums-all"></span>
+			</div>
+		</div>
+	</div>
+</div>
+
 <section class="main scroll-hider">
 	<div class="scroll-parent">
 
@@ -1310,4 +1390,9 @@
 	</div>
 </section>
 
-<?php include 'footer.php'; ?>
+<script src="./assets/scripts/neuscript.js"></script>
+<script src="./assets/scripts/script.js"></script>
+</body>
+</html>
+
+<!-- NO FOOTER -->

@@ -50,10 +50,12 @@ onDom.push(function() {
 
 		nextBtnClass: "rhomb-btn",
 	});
-})
-onResize.push(function() {
-	if (PS && Info.vw > 767) {
-		PS.resize();
+	if (PS.allowResize) {
+		onResize.push(function() {
+			if (Info.vw > 767) {
+				PS.resize();
+			}
+		});
 	}
 })
 
@@ -86,15 +88,13 @@ onDom.push(function() {
 		toShow: 5,
 		centerMode: true,
 	});
-})
-onLoad.push(function(){
-	if (nvsf2) {
-		nvsf2.resize();
-	}
-});
-onResize.push(function() {
-	if (nvsf2) {
-		nvsf2.resize();
+	if (nvsf2.allowResize) {
+		onLoad.push(function(){
+			nvsf2.resize();
+		});
+		onResize.push(function() {
+			nvsf2.resize();
+		});
 	}
 })
 
@@ -127,15 +127,13 @@ onDom.push(function() {
 		toShow: 3,
 		centerMode: true,
 	});
-})
-onLoad.push(function(){
-	if (nvsf3) {
-		nvsf3.resize();
-	}
-});
-onResize.push(function() {
-	if (nvsf3) {
-		nvsf3.resize();
+	if (nvsf3.allowResize) {
+		onLoad.push(function(){
+			nvsf3.resize();
+		});
+		onResize.push(function() {
+			nvsf3.resize();
+		});
 	}
 })
 
@@ -168,16 +166,13 @@ onDom.push(function() {
 		toShow: 4,
 		centerMode: true,
 	});
-})
-onLoad.push(function(){
-	console.log(nvsf4)
-	if (nvsf4) {
-		nvsf4.resize();
-	}
-});
-onResize.push(function() {
-	if (nvsf4) {
-		nvsf4.resize();
+	if (nvsf4.allowResize) {
+		onLoad.push(function(){
+			nvsf4.resize();
+		});
+		onResize.push(function() {
+			nvsf4.resize();
+		});
 	}
 })
 
@@ -210,12 +205,14 @@ onDom.push(function() {
 		toShow: 4,
 		centerMode: true,
 	});
-})
-onLoad.push(function(){
-	nvsf5.resize();
-});
-onResize.push(function() {
-	nvsf5.resize();
+	if (nvsf5.allowResize) {
+		onLoad.push(function(){
+			nvsf5.resize();
+		});
+		onResize.push(function() {
+			nvsf5.resize();
+		});
+	}
 })
 
 

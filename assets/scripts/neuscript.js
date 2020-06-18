@@ -11,6 +11,9 @@ class PageScroll {
 		nextBtnClass: undefined,
 	}) {
 		this.params = params;
+		this.container = document.getElementsByClassName(this.params.containertClass)[0];
+		if (!this.container) return;
+		this.allowResize = true;
 		if (Info.vw < 768) {
 			console.log(this.params)
 			this.nextBtn = document.getElementsByClassName(this.params.nextBtnClass)[0];
@@ -21,7 +24,6 @@ class PageScroll {
 			return;
 		};
 		var parent = this;
-		this.container = document.getElementsByClassName(this.params.containertClass)[0];
 		this.elems = document.getElementsByClassName(this.params.elemsClass);
 
 		this.pag = document.getElementById(this.params.paginationId);
@@ -309,6 +311,8 @@ class NVSliderFader {
 		var parent = this;
 		this.params = params;
 		this.marB = this.params.marginBottom;
+		if (!this.parent) return;
+		this.allowResize = true;
 
 		this.parent = document.getElementsByClassName(this.params.parentClass)[0];
 		this.trans = document.getElementsByClassName(this.params.transitionClass)[0];
