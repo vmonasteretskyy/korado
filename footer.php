@@ -9,6 +9,7 @@
 	</div>
 </footer>
 
+<script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
 <script src="./assets/scripts/neuscript.js"></script>
 <script src="./assets/scripts/script.js"></script>
 </body>

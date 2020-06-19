@@ -283,3 +283,21 @@ onDom.push(function() {
 		}
 	}
 });
+
+var catalogSwiper = undefined;
+onDom.push(function() {
+	if (document.getElementsByClassName("ctlg-news").length == 0) return;
+	catalogSwiper = new Swiper ('.swiper-container', {
+		// Optional parameters
+		loop: true,
+		speed: 500,
+		spaceBetween: 30,
+		slidesPerView: 3,
+
+		// Navigation arrows
+		navigation: {
+		  prevEl: '.ctlg-news-prev',
+		  nextEl: '.ctlg-news-next',
+		},
+	})
+})

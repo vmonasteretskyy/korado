@@ -43,6 +43,9 @@ html {
 
 body {
 	margin: 0;
+	overflow: hidden scroll;
+}
+body.home {
 	overflow: hidden;
 }
 
@@ -127,6 +130,12 @@ p, .p {
 	opacity: 0.25;
 }
 
+.link {
+	color: var(--green);
+	text-transform: uppercase;
+	font-weight: 700;
+}
+
 .btn {
 	font-family: inherit;
 	cursor: pointer;
@@ -166,7 +175,7 @@ p, .p {
 }
 .btn.transparent.black:hover {
 	border-color: var(--green);
-	color: var(--green);
+	color: #fff;
 }
 .btn.transparent.green:hover {
 	background-color: var(--green);
@@ -1810,6 +1819,140 @@ input:focus + label {
 	grid-row: span 2;
 	grid-column: span 2;
 }
+
+/*-b-ctlg-news------------------*/
+.ctlg-news {
+	display: flex;
+	flex-direction: column;
+}
+.ctlg-news .wrap {
+	display: flex;
+	max-width: 1458px;
+	width: 100%;
+	margin: 0 auto;
+}
+.ctlg-news h2 {
+	font-weight: 700;
+	margin: 157px 0 54px;
+}
+
+.ctlg-swiper-wrap {
+	position: relative;
+	margin: 0 auto 0;
+	flex-shrink: 0;
+}
+.ctlg-news .swiper-container {
+	width: 1458px;
+	height: 450px;
+	margin: 0;
+}
+.ctlg-n-el {
+	position: relative;
+	width: 466px;
+	height: 450px;
+}
+.ctlg-n-el-img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	object-position: center;
+}
+.ctlg-n-el-content {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: #ffffff7f;
+	display: flex;
+	flex-direction: column;
+	box-sizing: border-box;
+	padding: 12px 52px;
+	transform: translateY(289px);
+	transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+}
+.ctlg-n-el:hover .ctlg-n-el-content {
+	transform: translateY(0);
+	background-color: #21222fc9;
+	color: #fff;
+}
+
+.ctlg-n-el-date {
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 26px;
+	margin: 0 0 13.3px;
+}
+.ctlg-n-el h4 {
+	margin: 0 0 20px;
+	font-size: 20px;
+	line-height: 26px;
+	text-transform: uppercase;
+}
+.ctlg-n-el p {
+	font-weight: 400;
+	margin: 0 0 16px;
+	font-size: 16px;
+	line-height: 22px;
+	opacity: 0;
+	transition: opacity 0.3s ease;
+}
+.ctlg-n-el:hover p {
+	opacity: 1;
+}
+.ctlg-n-el .link {
+	opacity: 0;
+	transition: opacity 0.3s ease;
+}
+.ctlg-n-el:hover .link {
+	opacity: 1;
+}
+
+.ctlg-news-arr {
+	position: absolute;
+	top: 128px;
+	width: 55px;
+	height: 194px;
+	background-color: #fff;
+	transition: background-color 0.3s ease;
+	z-index: 3;
+	box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.09);
+}
+.ctlg-news-arr:before {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	color: var(--dark);
+	transition: color 0.3s ease;
+}
+.ctlg-news-prev {
+	left: 0;
+	transform: translateX(-50%);
+}
+.ctlg-news-prev:before {
+	transform: translate(-50%, -50%) rotate(180deg);
+}
+.ctlg-news-next {
+	right: 0;
+	transform: translateX(50%);
+}
+.ctlg-news-next:before {
+	transform: translate(-50%, -50%);
+}
+
+.ctlg-news-arr:hover {
+	background-color: var(--dark);
+}
+.ctlg-news-arr:hover:before {
+	color: #fff;
+}
+.ctlg-news > .btn {
+	margin: 60px auto 253px;
+}
+/*-e-ctlg-news------------------*/
 /*-e-catalog-ctlg-----------------------------------*/
 
 
