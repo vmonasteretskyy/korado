@@ -77,6 +77,45 @@
 		<button type="button" class="ctlg-news-arr ctlg-news-next icon-arr-r"></button>
 	</div>
 
+	<!-- <div class="nvs-bar bmob" id="nvs-bar-c1">
+		<div class="nvs-bar-line" id="nvs-bar-line-c1"></div>
+		<div class="nvs-bar-rectangle" id="nvs-bar-rectangle-c1"></div>
+		<div class="nvs-bar-elems">
+			<div class="nvs-bar-elem nvse-c1 active">
+				<span class="nvs-nums-current"></span>
+				<span class="nvs-nums-all"></span>
+			</div>
+			<div class="nvs-bar-elem nvse-c1">
+				<span class="nvs-nums-current"></span>
+				<span class="nvs-nums-all"></span>
+			</div>
+			<div class="nvs-bar-elem nvse-c1">
+				<span class="nvs-nums-current"></span>
+				<span class="nvs-nums-all"></span>
+			</div>
+			<div class="nvs-bar-elem nvse-c1">
+				<span class="nvs-nums-current"></span>
+				<span class="nvs-nums-all"></span>
+			</div>
+			<div class="nvs-bar-elem nvse-c1">
+				<span class="nvs-nums-current"></span>
+				<span class="nvs-nums-all"></span>
+			</div>
+			<div class="nvs-bar-elem nvse-c1">
+				<span class="nvs-nums-current"></span>
+				<span class="nvs-nums-all"></span>
+			</div>
+			<div class="nvs-bar-elem nvse-c1">
+				<span class="nvs-nums-current"></span>
+				<span class="nvs-nums-all"></span>
+			</div>
+			<div class="nvs-bar-elem nvse-c1">
+				<span class="nvs-nums-current"></span>
+				<span class="nvs-nums-all"></span>
+			</div>
+		</div>
+	</div> -->
+
 	<a class="btn transparent black" href="">Все новости</a>
 </section>
 

@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="initial-scale=1, minimum-scale=1, maximum-scale=1">
+	<meta name="description" content="">
+	<title>Korado - V</title>
+	<!-- <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon"> -->
+	<!-- Open Graph -->
+	<meta name="og:type" content="website">
+	<meta name="og:title" content="Korado - V">
+	<meta name="og:description" content="Системы отопления">
+	<meta name="og:url" content="">
+	<meta name="og:site_name" content="Korado - V">
+	<meta name="og:locale" content="uk_UA">
+	<meta name="og:image" content="./assets/img/logo_x2.png">
+	<!-- Open Graph -->
+	<!-- <meta name="theme-color" content="#000000"> -->
+	<link rel="stylesheet" type="text/css" href="./assets/fonts/akrobat/akrobat.css">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="./assets/fonts/fontello/fontello.css">
+	<!-- <link rel="stylesheet" type="text/css" href="./assets/fonts/f2/fontello.css"> -->
+	<link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
+	<link rel="stylesheet" type="text/css" href="./assets/styles/style.css">
+	<link rel="stylesheet" type="text/css" href="./assets/styles/desc.css">
+	<link rel="stylesheet" type="text/css" href="./assets/styles/media.css">
+	<script>var onDom=[],onLoad=[],onResize=[];</script>
+</head>
+
+
+<!-- if (homepage) {add "home first" to body classlist} -->
+<!-- <body class="home first"> -->
+<body>
+
+<div id="menu">
+	<button id="close-menu" class="mob">
+		Закрыть
+	</button>
+	<nav id="menu-nav">
+		<ul class="menu-ul">
+			<li class="menu-li"><a href="">Каталог</a></li>
+			<li class="menu-li">
+				<a href="">Информация</a>
+				<button class="menu-list-btn icon-triangle-t" type="button"></button>
+				<div class="menu-list-hider hidden">
+					<ul class="menu-list">
+						<li><a href="">Акционные товары</a></li>
+						<li><a href="">Акционные товары</a></li>
+					</ul>
+				</div>
+			</li>
+			<li class="menu-li"><a href="">Техническая информация</a></li>
+			<li class="menu-li"><a href="">Фотогалерея</a></li>
+			<li class="menu-li"><a href="">Видео обзоры</a></li>
+			<li class="menu-li"><a href="">Прайс-лист продукции</a></li>
+			<li class="menu-li"><a href="">Условия соглашения</a></li>
+		</ul>
+	</nav>
+
+
+
+	<div id="menu-mob-btns" class="mob">
+		<button id="menu-search" type="button">
+			<div class="icon icon-search"></div>
+			<span>Поиск по каталогу</span>
+		</button>
+		<button id="menu-login" type="button">
+			<div class="icon icon-login"></div>
+			<span>Личный кабинет</span>
+		</button>
+		<div class="menu-currency">
+			<button class="menu-currency-btn active">UAH</button>
+			<button class="menu-currency-btn">USD</button>
+			<button class="menu-currency-btn">EUR</button>
+		</div>
+		<button id="menu-cart" type="button">
+			<div class="icon icon-cart"></div>
+			<span>Корзина</span>
+		</button>
+	</div>
+
+
+
+	<div id="menu-left">
+		<a>Акционные товары</a>
+		<a>Уценка</a>
+	</div>
+	<div id="menu-right">
+		<a>Получить промо-код</a>
+	</div>
+
+	<nav id="menu-top-nav" class="mob">
+		<ul>
+			<li><a href="">Контактная информация</a></li>
+			<li><a href="">Заказать обратный звонок</a></li>
+			<li><a href="">Время работы</a></li>
+			<li><a href="">Доставка и оплата</a></li>
+			<li><a href="">Консультация специалиста</a></li>
+		</ul>
+	</nav>
+</div>
+
+<header>
+	<!-- top-nav exists only on home page -->
+	<!-- <div id="top-nav">
+		<nav>
+			<ul>
+				<li><a href="">Контактная информация</a></li>
+				<li><a href="">Заказать обратный звонок</a></li>
+				<li><a href="">Время работы</a></li>
+				<li><a href="">Доставка и оплата</a></li>
+				<li><a href="">Консультация специалиста</a></li>
+			</ul>
+		</nav>
+	</div> -->
+
+	<div id="top-bar">
+		<button id="menu-btn" type="button">
+			<div class="menu-btn-line"></div>
+			<div class="menu-btn-line"></div>
+			<div class="menu-btn-line"></div>
+			<span>Меню</span>
+		</button>
+		<div id="top-phone">
+			<div class="icon icon-phone"></div>
+			<a href="tel:+380937463646">(093) 746 36 46</a>
+			<a href="tel:+380937463646">(093) 746 36 46</a>
+		</div>
+		<button id="top-search" type="button">
+			<div class="icon icon-search"></div>
+			<span>Поиск по каталогу</span>
+		</button>
+		<a class="logo" href="">
+			<img src="./assets/img/logo.svg">
+		</a>
+		<button id="top-login" type="button">
+			<div class="icon icon-login"></div>
+			<span>Приветствую, войдите в кабинет</span>
+		</button>
+		<div id="top-currency">
+			<div id="top-currency-img" style="background-image: url(./assets/img/currency/uah.svg)"></div>
+			<div id="top-currency-col">
+				<button class="top-currency-btn" type="button">USD</button>
+				<button class="top-currency-btn" type="button">EUR</button>
+			</div>
+		</div>
+		<button id="top-cart" type="button">
+			<div class="icon icon-cart"></div>
+			<span id="top-cart-amount">0</span>
+			<span id="top-cart-sum">0.00 грн</span>
+		</button>
+	</div>
+</header>
+
+<section class="breadcrumb-sect">
+	<div class="wrap">
+		<ul class="breadcrumb">
+			<li><a class="icon-home" href="/"></a></li>
+			<li class="icon-arr-r"><a href="">Каталог</a></li>
+			<li class="icon-arr-r"><a href="">Радиаторы</a></li>
+		</ul>
+	</div>
+</section>
+
+<section class="subcats">
+	<div class="wrap">
+
+		<div class="subcat">
+			<img src="./assets/img/category/sc1.jpg" alt="">
+			<h4>Дизайнерские радиаторы</h4>
+			<a href="" class="btn black">Смотреть</a>
+		</div>
+
+		<div class="subcat">
+			<img src="./assets/img/category/sc2.jpg" alt="">
+			<h4>Радиаторы классические</h4>
+			<a href="" class="btn black">Смотреть</a>
+		</div>
+
+		<div class="subcat">
+			<img src="./assets/img/category/sc3.jpg" alt="">
+			<h4>Оригинальное цветовое решение для радиаторов</h4>
+			<a href="" class="btn black">Смотреть</a>
+		</div>
+
+		<div class="subcat">
+			<img src="./assets/img/category/sc4.jpg" alt="">
+			<h4>Радиаторы с гладкой лицевой панелью</h4>
+			<a href="" class="btn black">Смотреть</a>
+		</div>
+
+		<div class="subcat">
+			<img src="./assets/img/category/sc5.jpg" alt="">
+			<h4>Радиаторы без приватных скоб</h4>
+			<a href="" class="btn black">Смотреть</a>
+		</div>
+
+		<div class="subcat">
+			<img src="./assets/img/category/sc6.jpg" alt="">
+			<h4>Радиаторы для реконструкций</h4>
+			<a href="" class="btn black">Смотреть</a>
+		</div>
+
+		<div class="subcat">
+			<img src="./assets/img/category/sc7.jpg" alt="">
+			<h4>Радиаторы с высоким требаванием к гигиене и чистоте</h4>
+			<a href="" class="btn black">Смотреть</a>
+		</div>
+
+		<div class="subcat">
+			<img src="./assets/img/category/sc8.jpg" alt="">
+			<h4>Оцинкованые радиаторы</h4>
+			<a href="" class="btn black">Смотреть</a>
+		</div>
+
+		<div class="subcat">
+			<img src="./assets/img/category/sc9.jpg" alt="">
+			<h4>Радиаторы с високим требованием к гигиене и чистоте</h4>
+			<a href="" class="btn black">Смотреть</a>
+		</div>
+
+		<div class="subcat">
+			<img src="./assets/img/category/sc10.jpg" alt="">
+			<h4>Радиаторы с плохой передней панелью</h4>
+			<a href="" class="btn black">Смотреть</a>
+		</div>
+
+		<div class="subcat">
+			<img src="./assets/img/category/sc11.jpg" alt="">
+			<h4>Крепежные комлекты к стальным радиаторам</h4>
+			<a href="" class="btn black">Смотреть</a>
+		</div>
+		
+	</div>
+</section>
+
+<section class="cat-fixed-bg">
+	<div class="fixed-bg" style="background-image: url(./assets/img/category/bg.jpg);"></div>
+
+	<!-- b-promo-goods -->
+	<section class="cat-items">
+		<h2>Акционные товары</h2>
+		<div class="items-wrap">
+
+			<div class="item">
+				<div class="item-notification sale">Акция</div>
+				<button class="item-heart icon-heart" type="button"></button>
+				<img src="./assets/img/items/koratherm-horizontal1.jpg" alt="">
+				<div class="item-stars">
+					<div class="item-is icon-star"></div>
+					<div class="item-is icon-star"></div>
+					<div class="item-is icon-star"></div>
+					<div class="item-is icon-star"></div>
+					<div class="item-is icon-star-empty"></div>
+				</div>
+				<span class="item-reviews">2 отзыва</span>
+				<h4 class="item-title">Радиатор Koratherm Horizontal высотой 1000 мм</h4>
+				<div class="item-price">
+					<span class="item-old-price">1970 <span>грн</span></span>
+					<span class="item-normal-price">1350 <span>грн</span></span>
+				</div>
+				<span class="item-views">24 просмотра</span>
+				<button class="btn black item-buy" type="btn">Купить</button>
+			</div>	
+			
+			<div class="item">
+				<div class="item-notification sale">Акция</div>
+				<button class="item-heart icon-heart" type="button"></button>
+				<img src="./assets/img/items/koratherm-horizontal1.jpg" alt="">
+				<div class="item-stars">
+					<div class="item-is icon-star"></div>
+					<div class="item-is icon-star"></div>
+					<div class="item-is icon-star"></div>
+					<div class="item-is icon-star"></div>
+					<div class="item-is icon-star-empty"></div>
+				</div>
+				<span class="item-reviews">2 отзыва</span>
+				<h4 class="item-title">Радиатор Koratherm Horizontal высотой 1000 мм</h4>
+				<div class="item-price">
+					<span class="item-old-price">1970 <span>грн</span></span>
+					<span class="item-normal-price">1350 <span>грн</span></span>
+				</div>
+				<span class="item-views">24 просмотра</span>
+				<button class="btn black item-buy" type="btn">Купить</button>
+			</div>	
+			
+			<div class="item">
+				<div class="item-notification sale">Акция</div>
+				<button class="item-heart icon-heart" type="button"></button>
+				<img src="./assets/img/items/koratherm-horizontal1.jpg" alt="">
+				<div class="item-stars">
+					<div class="item-is icon-star"></div>
+					<div class="item-is icon-star"></div>
+					<div class="item-is icon-star"></div>
+					<div class="item-is icon-star"></div>
+					<div class="item-is icon-star-empty"></div>
+				</div>
+				<span class="item-reviews">2 отзыва</span>
+				<h4 class="item-title">Радиатор Koratherm Horizontal высотой 1000 мм</h4>
+				<div class="item-price">
+					<span class="item-normal-price">1350 <span>грн</span></span>
+				</div>
+				<span class="item-views">24 просмотра</span>
+				<button class="btn black item-buy" type="btn">Купить</button>
+			</div>	
+			
+			<div class="item">
+				<div class="item-notification sale">Акция</div>
+				<button class="item-heart icon-heart" type="button"></button>
+				<img src="./assets/img/items/koratherm-horizontal1.jpg" alt="">
+				<div class="item-stars">
+					<div class="item-is icon-star"></div>
+					<div class="item-is icon-star"></div>
+					<div class="item-is icon-star"></div>
+					<div class="item-is icon-star"></div>
+					<div class="item-is icon-star-empty"></div>
+				</div>
+				<span class="item-reviews">2 отзыва</span>
+				<h4 class="item-title">Радиатор Koratherm Horizontal высотой 1000 мм</h4>
+				<div class="item-price">
+					<span class="item-old-price">1970 <span>грн</span></span>
+					<span class="item-normal-price">1350 <span>грн</span></span>
+				</div>
+				<span class="item-views">24 просмотра</span>
+				<button class="btn black item-buy" type="btn">Купить</button>
+			</div>		
+
+		</div>
+		<a class="btn transparent black" href="">Еще акции</a>
+	</section>
+	<!-- e-promo-goods -->
+	<!-- b-news-goods -->
+	<section class="cat-items">
+		<h2>Акционные товары</h2>
+		<div class="items-wrap">
+
+			<div class="item">
+				<div class="item-notification new">Новинка</div>
+				<button class="item-heart icon-heart" type="button"></button>
+				<img src="./assets/img/items/koratherm-horizontal1.jpg" alt="">
+				<div class="item-stars">
+					<div class="item-is icon-star"></div>
+					<div class="item-is icon-star"></div>
+					<div class="item-is icon-star"></div>
+					<div class="item-is icon-star"></div>
+					<div class="item-is icon-star-empty"></div>
+				</div>
+				<span class="item-reviews">2 отзыва</span>
+				<h4 class="item-title">Радиатор Koratherm Horizontal высотой 1000 мм</h4>
+				<div class="item-price">
+					<span class="item-normal-price">1350 <span>грн</span></span>
+				</div>
+				<span class="item-views">24 просмотра</span>
+				<button class="btn black item-buy" type="btn">Купить</button>
+			</div>	
+			
+			<div class="item">
+				<div class="item-notification new">Новинка</div>
+				<button class="item-heart icon-heart" type="button"></button>
+				<img src="./assets/img/items/koratherm-horizontal1.jpg" alt="">
+				<div class="item-stars">
+					<div class="item-is icon-star"></div>
+					<div class="item-is icon-star"></div>
+					<div class="item-is icon-star"></div>
+					<div class="item-is icon-star"></div>
+					<div class="item-is icon-star-empty"></div>
+				</div>
+				<span class="item-reviews">2 отзыва</span>
+				<h4 class="item-title">Радиатор Koratherm Horizontal высотой 1000 мм</h4>
+				<div class="item-price">
+					<span class="item-normal-price">1350 <span>грн</span></span>
+				</div>
+				<span class="item-views">24 просмотра</span>
+				<button class="btn black item-buy" type="btn">Купить</button>
+			</div>	
+			
+			<div class="item">
+				<div class="item-notification new">Новинка</div>
+				<button class="item-heart icon-heart" type="button"></button>
+				<img src="./assets/img/items/koratherm-horizontal1.jpg" alt="">
+				<div class="item-stars">
+					<div class="item-is icon-star"></div>
+					<div class="item-is icon-star"></div>
+					<div class="item-is icon-star"></div>
+					<div class="item-is icon-star"></div>
+					<div class="item-is icon-star-empty"></div>
+				</div>
+				<span class="item-reviews">2 отзыва</span>
+				<h4 class="item-title">Радиатор Koratherm Horizontal высотой 1000 мм</h4>
+				<div class="item-price">
+					<span class="item-normal-price">1350 <span>грн</span></span>
+				</div>
+				<span class="item-views">24 просмотра</span>
+				<button class="btn black item-buy" type="btn">Купить</button>
+			</div>	
+			
+			<div class="item">
+				<div class="item-notification new">Новинка</div>
+				<button class="item-heart icon-heart" type="button"></button>
+				<img src="./assets/img/items/koratherm-horizontal1.jpg" alt="">
+				<div class="item-stars">
+					<div class="item-is icon-star"></div>
+					<div class="item-is icon-star"></div>
+					<div class="item-is icon-star"></div>
+					<div class="item-is icon-star"></div>
+					<div class="item-is icon-star-empty"></div>
+				</div>
+				<span class="item-reviews">2 отзыва</span>
+				<h4 class="item-title">Радиатор Koratherm Horizontal высотой 1000 мм</h4>
+				<div class="item-price">
+					<span class="item-normal-price">1350 <span>грн</span></span>
+				</div>
+				<span class="item-views">24 просмотра</span>
+				<button class="btn black item-buy" type="btn">Купить</button>
+			</div>		
+
+		</div>
+		<a class="btn transparent black" href="">Еще новинки</a>
+	</section>
+	<!-- e-news-goods -->
+	<!-- b-markdown-goods -->
+	<section class="cat-items">
+		<h2>Уцененный товар</h2>
+		<div class="items-wrap">
+
+			<div class="item">
+				<div class="item-notification markdown">Уценка</div>
+				<button class="item-heart icon-heart" type="button"></button>
+				<img src="./assets/img/items/koratherm-horizontal1.jpg" alt="">
+				<div class="item-stars">
+					<div class="item-is icon-star"></div>
+					<div class="item-is icon-star"></div>
+					<div class="item-is icon-star"></div>
+					<div class="item-is icon-star"></div>
+					<div class="item-is icon-star-empty"></div>
+				</div>
+				<span class="item-reviews">2 отзыва</span>
+				<h4 class="item-title">Радиатор Koratherm Horizontal высотой 1000 мм</h4>
+				<div class="item-price">
+					<span class="item-old-price">1970 <span>грн</span></span>
+					<span class="item-normal-price">1350 <span>грн</span></span>
+				</div>
+				<span class="item-views">24 просмотра</span>
+				<button class="btn black item-buy" type="btn">Купить</button>
+			</div>	
+			
+			<div class="item">
+				<div class="item-notification markdown">Уценка</div>
+				<button class="item-heart icon-heart" type="button"></button>
+				<img src="./assets/img/items/koratherm-horizontal1.jpg" alt="">
+				<div class="item-stars">
+					<div class="item-is icon-star"></div>
+					<div class="item-is icon-star"></div>
+					<div class="item-is icon-star"></div>
+					<div class="item-is icon-star"></div>
+					<div class="item-is icon-star-empty"></div>
+				</div>
+				<span class="item-reviews">2 отзыва</span>
+				<h4 class="item-title">Радиатор Koratherm Horizontal высотой 1000 мм</h4>
+				<div class="item-price">
+					<span class="item-old-price">1970 <span>грн</span></span>
+					<span class="item-normal-price">1350 <span>грн</span></span>
+				</div>
+				<span class="item-views">24 просмотра</span>
+				<button class="btn black item-buy" type="btn">Купить</button>
+			</div>	
+			
+			<div class="item">
+				<div class="item-notification markdown">Уценка</div>
+				<button class="item-heart icon-heart" type="button"></button>
+				<img src="./assets/img/items/koratherm-horizontal1.jpg" alt="">
+				<div class="item-stars">
+					<div class="item-is icon-star"></div>
+					<div class="item-is icon-star"></div>
+					<div class="item-is icon-star"></div>
+					<div class="item-is icon-star"></div>
+					<div class="item-is icon-star-empty"></div>
+				</div>
+				<span class="item-reviews">2 отзыва</span>
+				<h4 class="item-title">Радиатор Koratherm Horizontal высотой 1000 мм</h4>
+				<div class="item-price">
+					<span class="item-old-price">1970 <span>грн</span></span>
+					<span class="item-normal-price">1350 <span>грн</span></span>
+				</div>
+				<span class="item-views">24 просмотра</span>
+				<button class="btn black item-buy" type="btn">Купить</button>
+			</div>	
+			
+			<div class="item">
+				<div class="item-notification markdown">Уценка</div>
+				<button class="item-heart icon-heart" type="button"></button>
+				<img src="./assets/img/items/koratherm-horizontal1.jpg" alt="">
+				<div class="item-stars">
+					<div class="item-is icon-star"></div>
+					<div class="item-is icon-star"></div>
+					<div class="item-is icon-star"></div>
+					<div class="item-is icon-star"></div>
+					<div class="item-is icon-star-empty"></div>
+				</div>
+				<span class="item-reviews">2 отзыва</span>
+				<h4 class="item-title">Радиатор Koratherm Horizontal высотой 1000 мм</h4>
+				<div class="item-price">
+					<span class="item-old-price">1970 <span>грн</span></span>
+					<span class="item-normal-price">1350 <span>грн</span></span>
+				</div>
+				<span class="item-views">24 просмотра</span>
+				<button class="btn black item-buy" type="btn">Купить</button>
+			</div>		
+
+		</div>
+		<a class="btn transparent black" href="">Еще Уцененный товар</a>
+	</section>
+	<!-- e-markdown-goods -->
+</section>
+
+<section class="cat-relprod">
+	<div class="wrap">
+		<h2>Смежные категории</h2>
+		<div class="items-wrap">
+
+			<div class="subcat">
+				<img src="./assets/img/category/rsc1.jpg" alt="">
+				<h4>Конвекторы</h4>
+				<a href="" class="btn black">Смотреть</a>
+			</div>
+			<div class="subcat">
+				<img src="./assets/img/category/rsc2.jpg" alt="">
+				<h4>Полотенцесушители</h4>
+				<a href="" class="btn black">Смотреть</a>
+			</div>
+			<div class="subcat">
+				<img src="./assets/img/category/rsc3.jpg" alt="">
+				<h4>Запасные части к оборудованию</h4>
+				<a href="" class="btn black">Смотреть</a>
+			</div>
+			<div class="subcat">
+				<img src="./assets/img/category/rsc4.jpg" alt="">
+				<h4>Локальные вентиляционные установки</h4>
+				<a href="" class="btn black">Смотреть</a>
+			</div>
+
+		</div>
+	</div>
+</section>
+
+
+<footer>
+	<div id="footerhand" style="background-image: url(./assets/img/footer-hand.png);"></div>
+	<div id="frow1">
+		<p>Вы можете обратиться к нашим экспертам за помощью</p>
+		<button type="button" class="btn transparent green">Заказать консультацию</button>
+	</div>
+	<div id="frow2">
+		<span id="copyright">Copyright © KORADO-V. Все права защищены</span>
+	</div>
+</footer>
+
+<script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
+<script src="./assets/scripts/neuscript.js"></script>
+<script src="./assets/scripts/script.js"></script>
+</body>
+</html>

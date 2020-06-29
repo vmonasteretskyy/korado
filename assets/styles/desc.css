@@ -1,6 +1,8 @@
 @media screen and (min-height: 480px) and (min-width: 1025px) {
 	html {
-		font-size: min(1.04166667vw, 2.13219616vh);
+		/* font-size: min(1.04166667vw, 2.13219616vh); */
+		font-size: min(1.04329681vw, 2.13219616vh);
+		
 	}
 	
 	/*-b-all--------------------------------------------*/
@@ -42,14 +44,15 @@
 		padding: 1rem 0 0.1rem;
 	}
 	.menu-btn-line {
-		height: 0.075rem;
+		height: 2px;
 	}
 	.menu-btn-line:first-child {
 		top: 0.025rem;
 		width: 2.7rem;
 	}
 	.menu-btn-line:nth-child(2) {
-		top: 0.325rem;
+		/* top: 0.325rem; */
+		top: 0.335rem;
 		width: 2.7rem;
 	}
 	.menu-btn-line:nth-child(3) {
@@ -214,6 +217,35 @@
 	
 	/*-active-*/
 	/*-e-right-bar--------------------------------------*/
+
+
+
+
+	/*-b-footer-----------------------------------------*/
+	footer {
+		margin: 6.65rem 0 0;
+		height: 13.1rem;
+		padding: 3.75rem 11.55rem 1.2rem;
+	}
+	footer:before,
+	footer:after {
+		top: 9.6rem;
+	}
+	footer:before {
+		width: 73.125vw;
+	}
+	footer:after {
+		width: 10vw;
+	}
+	#footerhand {
+		right: 4.0625vw;
+		width: 26.05rem;
+		height: 19.78rem;
+	}
+	#frow1 .btn {
+		margin: 0 0 0 6.2rem;
+	}
+	/*-e-footer-----------------------------------------*/
 	
 	
 	
@@ -604,8 +636,6 @@
 	
 	
 	/*-b-form-------------------------------------------*/
-	form {
-	}
 	.input {
 		margin: 0 3.75rem 0 0;
 	}
@@ -642,6 +672,72 @@
 		height: 0.1rem;
 	}
 	/*-e-form-------------------------------------------*/
+
+
+
+	/*-b-catalog-ctlg-----------------------------------*/
+	.ctlg {
+		grid-gap: 0.2rem;
+		height: 32.7rem;
+	}
+	.ctlg-i h3 {
+		bottom: 6.05rem;
+		left: 1.1rem;
+		font-size: 40px;
+	}
+	.ctlg-i .btn {
+		bottom: 1.6rem;
+		left: 1.1rem;
+	}
+
+	/*-b-ctlg-news------------------*/
+	.ctlg-news .wrap {
+		max-width: 72.9rem;
+		width: 100%;
+	}
+	.ctlg-news h2 {
+		margin: 7.85rem 0 2.7rem;
+	}
+
+	.ctlg-news .swiper-container {
+		width: 72.9rem;
+		height: 22.5rem;
+	}
+	.ctlg-n-el {
+		width: 23.3rem;
+		height: 22.5rem;
+	}
+	.ctlg-n-el-content {
+		padding: 0.6rem 2.6rem;
+		transform: translateY(14.45rem);
+	}
+
+	.ctlg-n-el-date {
+		font-size: 0.8rem;
+		line-height: 1.3rem;
+		margin: 0 0 0.665rem;
+	}
+	.ctlg-n-el h4 {
+		margin: 0 0 1rem;
+		font-size: 1rem;
+		line-height: 1.3rem;
+	}
+	.ctlg-n-el p {
+		margin: 0 0 0.8rem;
+		font-size: 0.8rem;
+		line-height: 1.1rem;
+	}
+
+	.ctlg-news-arr {
+		top: 6.4rem;
+		width: 2.75rem;
+		height: 9.7rem;
+	}
+	.ctlg-news > .btn {
+		margin: 3rem auto 12.65rem;
+	}
+	/*-e-ctlg-news------------------*/
+	/*-e-catalog-ctlg-----------------------------------*/
 }
 
 

@@ -5,6 +5,7 @@ var Info = {
 	coef: 1,
 	isMenu: false,
 	isEclipse: false,
+	home: false,
 }
 document.addEventListener("DOMContentLoaded", function(e) {
 	Info.vw = window.innerWidth;
@@ -17,6 +18,7 @@ document.addEventListener("DOMContentLoaded", function(e) {
 			onDom[i]();
 		}
 	}
+	Info.home = document.body.classList.contains("home");
 	window.addEventListener("resize", function(e) {
 		Info.vw = window.innerWidth;
 		Info.vh = window.innerHeight;
@@ -242,16 +244,24 @@ onDom.push(function() {
 	btn.onclick = function() {
 		if (!Info.isMenu) {
 			menu.classList.add("active");
-			Info.isMenu = true;
-			if (Info.vw < 768) {
+			if (Info.home) {
+				if (Info.vw < 768) {
+					document.body.style.overflow = "hidden";
+				}
+			} else {
 				document.body.style.overflow = "hidden";
 			}
+			Info.isMenu = true;
 		} else {
 			menu.classList.remove("active");
-			Info.isMenu = false;
-			if (Info.vw < 768) {
+			if (Info.home) {
+				if (Info.vw < 768) {
+					document.body.style.overflow = "scroll";
+				}
+			} else {
 				document.body.style.overflow = "scroll";
 			}
+			Info.isMenu = false;
 		}
 	}
 	close.onclick = function() {
@@ -273,7 +283,7 @@ onDom.push(function() {
 	
 	for (var i = 0; i < amount; i++) {
 		const ci = i;
-		hiders[ci].style.height = lists[ci].getBoundingClientRect().height / 20 + "rem";
+		hiders[ci].style.height = lists[ci].getBoundingClientRect().height / 20 + 0.1 + "rem";
 	}
 	for (var i = 0; i < amount; i++) {
 		const ci = i;
@@ -291,13 +301,23 @@ onDom.push(function() {
 		// Optional parameters
 		loop: true,
 		speed: 500,
-		spaceBetween: 30,
-		slidesPerView: 3,
+		spaceBetween: 20,
+		slidesPerView: "auto",
 
 		// Navigation arrows
 		navigation: {
 		  prevEl: '.ctlg-news-prev',
 		  nextEl: '.ctlg-news-next',
 		},
+		breakpoints: {
+			767: {
+				slidesPerView: 3,
+				spaceBetween: 30
+			},
+			480: {
+				slidesPerView: 2,
+				spaceBetween: 20
+			},
+		}
 	})
 })
