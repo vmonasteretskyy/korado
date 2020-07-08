@@ -700,7 +700,10 @@
 	.subcat:nth-child(4n) {
 		margin: 0 0 1.5rem 0;
 	}
-	.item:nth-child(4n) {
+	.cat-items .item:nth-child(4n) {
+		margin: 0 0 1.5rem 0;
+	}
+	.fcat-items .item:nth-child(3n) {
 		margin: 0 0 1.5rem 0;
 	}
 }

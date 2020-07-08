@@ -9,7 +9,8 @@
 	</div>
 </footer>
 
-<script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/14.6.0/nouislider.min.js"></script>
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 <script src="./assets/scripts/neuscript.js"></script>
 <script src="./assets/scripts/script.js"></script>
 </body>

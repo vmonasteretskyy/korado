@@ -1,0 +1,18 @@
+<?php include 'header.php'; ?>
+
+<?php include 'components/breadcrumb.php'; ?>
+
+<section class="news-item">
+	<div class="wrap">
+		<h1>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia facere reiciendis nulla architecto sequi</h1>
+		<p><b>Lorem ipsum dolor</b> sit amet consectetur adipisicing elit. Quas numquam, odit velit asperiores dicta corrupti tempora dolore culpa iure neque laborum, veniam ipsam iusto explicabo, veritatis saepe esse eligendi amet.Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas numquam, odit velit asperiores dicta corrupti tempora dolore culpa iure neque laborum, veniam ipsam iusto explicabo, veritatis saepe esse eligendi amet.Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas numquam, odit velit asperiores dicta corrupti tempora dolore culpa iure neque laborum, veniam ipsam iusto explicabo, veritatis saepe esse eligendi amet.Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas numquam, odit velit asperiores dicta corrupti tempora dolore culpa iure neque laborum, veniam ipsam iusto explicabo, veritatis saepe esse eligendi amet.Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas numquam, odit velit asperiores dicta corrupti tempora dolore culpa iure neque laborum, veniam ipsam iusto explicabo, veritatis saepe esse eligendi amet.Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas numquam, odit velit asperiores dicta corrupti tempora dolore culpa iure neque laborum, veniam ipsam iusto explicabo, veritatis saepe esse eligendi amet.Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas numquam, odit velit asperiores dicta corrupti tempora dolore culpa iure neque laborum, veniam ipsam iusto explicabo, veritatis saepe esse eligendi amet.</p>
+		<img src="./assets/img/news-item/i1.jpg" alt="img">
+		<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas numquam, odit velit asperiores dicta corrupti tempora dolore culpa iure neque laborum, veniam ipsam iusto explicabo, veritatis saepe esse eligendi amet.Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas numquam, odit velit asperiores dicta corrupti tempora dolore culpa iure neque laborum, veniam ipsam iusto explicabo, veritatis saepe esse eligendi amet.Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas numquam, odit velit asperiores dicta corrupti tempora dolore culpa iure neque laborum, veniam ipsam iusto explicabo, veritatis saepe esse eligendi amet.Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas numquam, odit velit asperiores dicta corrupti tempora dolore culpa iure neque laborum, veniam ipsam iusto explicabo, veritatis saepe esse eligendi amet.Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas numquam, odit velit asperiores dicta corrupti tempora dolore culpa iure neque laborum, veniam ipsam iusto explicabo, veritatis saepe esse eligendi amet.Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas numquam, odit velit asperiores dicta corrupti tempora dolore culpa iure neque laborum, veniam ipsam iusto explicabo, veritatis saepe esse eligendi amet.Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas numquam, odit velit asperiores dicta corrupti tempora dolore culpa iure neque laborum, veniam ipsam iusto explicabo, veritatis saepe esse eligendi amet.</p>
+	</div>
+	<div class="rowc">
+		<a href="">предыдущая</a>
+		<a href="">следующая</a>
+	</div>
+</section>
+
+<?php include 'footer.php'; ?>

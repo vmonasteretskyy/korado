@@ -1,5 +1,5 @@
 <?php include 'header.php'; ?>
-
+<!-- каталог -->
 <section class="ctlg">
 
 	<div class="ctlg-i">
@@ -36,7 +36,7 @@
 	</div>
 	<div class="ctlg-swiper-wrap">
 		<!-- Slider main container -->
-		<div class="swiper-container">
+		<div class="swiper-container ctlg-swiper-js">
 			<!-- Additional required wrapper -->
 			<div class="swiper-wrapper">
 

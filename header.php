@@ -21,7 +21,8 @@
 	<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="./assets/fonts/fontello/fontello.css">
 	<!-- <link rel="stylesheet" type="text/css" href="./assets/fonts/f2/fontello.css"> -->
-	<link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
+	<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/14.6.0/nouislider.min.css">
 	<link rel="stylesheet" type="text/css" href="./assets/styles/style.css">
 	<link rel="stylesheet" type="text/css" href="./assets/styles/desc.css">
 	<link rel="stylesheet" type="text/css" href="./assets/styles/media.css">
@@ -45,16 +46,16 @@
 				<button class="menu-list-btn icon-triangle-t" type="button"></button>
 				<div class="menu-list-hider hidden">
 					<ul class="menu-list">
-						<li><a href="">Акционные товары</a></li>
-						<li><a href="">Акционные товары</a></li>
+						<li><a href="">Акционные Предложения</a></li>
+						<li><a href="">Уцененные товары с дисконтом</a></li>
 					</ul>
 				</div>
 			</li>
-			<li class="menu-li"><a href="">Техническая информация</a></li>
-			<li class="menu-li"><a href="">Фотогалерея</a></li>
-			<li class="menu-li"><a href="">Видео обзоры</a></li>
-			<li class="menu-li"><a href="">Прайс-лист продукции</a></li>
-			<li class="menu-li"><a href="">Условия соглашения</a></li>
+			<li class="menu-li"><a href="">Запасные части и дополнительные комплектующие к оборудованию</a></li>
+			<li class="menu-li"><a href="">Конвекторы</a></li>
+			<li class="menu-li"><a href="">Локальные вентиляционные установки</a></li>
+			<li class="menu-li"><a href="">Полотенцесушители</a></li>
+			<li class="menu-li"><a href="">Радиаторы</a></li>
 		</ul>
 	</nav>
 
@@ -83,8 +84,8 @@
 
 
 	<div id="menu-left">
-		<a>Акционные товары</a>
-		<a>Уценка</a>
+		<a>Акционные предложения</a>
+		<a>Уцененные товары с дисконтом</a>
 	</div>
 	<div id="menu-right">
 		<a>Получить промо-код</a>

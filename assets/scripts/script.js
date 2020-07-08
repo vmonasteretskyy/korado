@@ -297,7 +297,7 @@ onDom.push(function() {
 var catalogSwiper = undefined;
 onDom.push(function() {
 	if (document.getElementsByClassName("ctlg-news").length == 0) return;
-	catalogSwiper = new Swiper ('.swiper-container', {
+	catalogSwiper = new Swiper ('.ctlg-swiper-js', {
 		// Optional parameters
 		loop: true,
 		speed: 500,
@@ -306,8 +306,8 @@ onDom.push(function() {
 
 		// Navigation arrows
 		navigation: {
-		  prevEl: '.ctlg-news-prev',
-		  nextEl: '.ctlg-news-next',
+			prevEl: '.ctlg-news-prev',
+			nextEl: '.ctlg-news-next',
 		},
 		breakpoints: {
 			767: {
@@ -320,4 +320,74 @@ onDom.push(function() {
 			},
 		}
 	})
+});
+
+var calc1 = undefined;
+onDom.push(function() {
+	if (document.getElementsByClassName("calc-swiper-js").length == 0) return; 
+	calc1 = new Swiper('.calc-swiper-js', {
+		speed: 400,
+		loop: false,
+		spaceBetween: 100,
+		slidesPerView: "auto",
+		autoHeight: true,
+		navigation: {
+			prevEl: '.calc-prev',
+			nextEl: '.calc-prev',
+		},
+		pagination: {
+			el: ".calc-pagination-js ",
+			type: "custom",
+			clickable: false,
+			currentClass: "active",
+		}
+	});
+});
+
+var accordions = undefined;
+onDom.push(function() {
+	var elems = document.getElementsByClassName("accordion") || [];
+	var amount = elems.length;
+	if (amount == 0) return;
+	// accordions = new Array(amount);
+	accordions = new Accordions({
+		parentClass: "acc-cont",
+		hiderClass: "accordion",
+		btnClass: "acc-btn",
+		contentClass: "f-row-inner",
+		maxHeight: 171,
+		measureType: "rem",
+	});
+	// }
+})
+
+var fslider = undefined;
+var fsliderData = [0,0]
+onDom.push(function() {
+	fslider = document.getElementsByClassName("f-slider")[0];
+	if (!fslider) return;
+	fsliderData = [
+		+fslider.getAttribute("data-min"),
+		+fslider.getAttribute("data-max")
+	];
+	noUiSlider.create(fslider, {
+		start: fsliderData,
+		connect: true,
+		step: 1,
+		range: {
+			'min': fsliderData[0],
+			'max': fsliderData[1]
+		}
+	});
+	var minmax = [
+		document.getElementsByClassName("f-i-min")[0],
+		document.getElementsByClassName("f-i-max")[0]
+	]
+
+	fslider.noUiSlider.on('update', function (values, handle) {
+		// rangeSliderValueElement.innerHTML = values[handle];
+		// min.value = 
+		minmax[handle].value = Math.trunc(values[handle]);
+		// console.log(values, handle)
+	});
 })
