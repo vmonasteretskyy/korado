@@ -244,6 +244,7 @@ onDom.push(function() {
 	btn.onclick = function() {
 		if (!Info.isMenu) {
 			menu.classList.add("active");
+			this.classList.add("active");
 			if (Info.home) {
 				if (Info.vw < 768) {
 					document.body.style.overflow = "hidden";
@@ -254,6 +255,7 @@ onDom.push(function() {
 			Info.isMenu = true;
 		} else {
 			menu.classList.remove("active");
+			this.classList.remove("active");
 			if (Info.home) {
 				if (Info.vw < 768) {
 					document.body.style.overflow = "scroll";
@@ -267,6 +269,7 @@ onDom.push(function() {
 	close.onclick = function() {
 		if (Info.isMenu) {
 			menu.classList.remove("active");
+			btn.classList.remove("active");
 			Info.isMenu = false;
 			document.body.style.overflow = "scroll";
 		}
@@ -333,14 +336,22 @@ onDom.push(function() {
 		autoHeight: true,
 		navigation: {
 			prevEl: '.calc-prev',
-			nextEl: '.calc-prev',
+			nextEl: '.calc-next',
 		},
-		pagination: {
-			el: ".calc-pagination-js ",
-			type: "custom",
-			clickable: false,
-			currentClass: "active",
-		}
+		// pagination: {
+		// 	el: ".calc-pagination-js",
+		// 	type: "custom",
+		// 	clickable: true,
+		// 	currentClass: "active",
+		// 	clickableClass: "lol",
+		// 	slideChange	
+		// },
+	});
+	var pag = document.getElementsByClassName("calc-pag-elem");
+	pag[0].classList.add("active");
+	calc1.on('slideChange', function (data) {
+		pag[data.previousIndex].classList.remove("active");
+		pag[data.realIndex].classList.add("active");
 	});
 });
 

@@ -78,95 +78,95 @@
 				</div>
 			</div>
 
-<div class="ctlg-n-el">
-	<img class="ctlg-n-el-img" src="./assets/img/catalog/news/n3.jpg" alt="">
-	<div class="ctlg-n-el-content">
-		<span class="ctlg-n-el-date">23.04.2020</span>
-		<h4>Обеспечить здоровье в вашем доме с надлежащим отоплением. Вы также избавитесь от вирусов.</h4>
-		<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nisi sunt accusamus exercitationem consequatur dolore necessitatibus ducimus, repudiandae sequi alias nihil consequuntur animi pariatur odit. Quis laudantium sit repellat! Tenetur, qui.</p>
-		<a class="link" href="">Читать</a>
-	</div>
-</div>
+			<div class="ctlg-n-el">
+				<img class="ctlg-n-el-img" src="./assets/img/catalog/news/n3.jpg" alt="">
+				<div class="ctlg-n-el-content">
+					<span class="ctlg-n-el-date">23.04.2020</span>
+					<h4>Обеспечить здоровье в вашем доме с надлежащим отоплением. Вы также избавитесь от вирусов.</h4>
+					<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nisi sunt accusamus exercitationem consequatur dolore necessitatibus ducimus, repudiandae sequi alias nihil consequuntur animi pariatur odit. Quis laudantium sit repellat! Tenetur, qui.</p>
+					<a class="link" href="">Читать</a>
+				</div>
+			</div>
 
-<div class="ctlg-n-el">
-	<img class="ctlg-n-el-img" src="./assets/img/catalog/news/n3.jpg" alt="">
-	<div class="ctlg-n-el-content">
-		<span class="ctlg-n-el-date">23.04.2020</span>
-		<h4>Обеспечить здоровье в вашем доме с надлежащим отоплением. Вы также избавитесь от вирусов.</h4>
-		<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nisi sunt accusamus exercitationem consequatur dolore necessitatibus ducimus, repudiandae sequi alias nihil consequuntur animi pariatur odit. Quis laudantium sit repellat! Tenetur, qui.</p>
-		<a class="link" href="">Читать</a>
-	</div>
-</div>
+			<div class="ctlg-n-el">
+				<img class="ctlg-n-el-img" src="./assets/img/catalog/news/n3.jpg" alt="">
+				<div class="ctlg-n-el-content">
+					<span class="ctlg-n-el-date">23.04.2020</span>
+					<h4>Обеспечить здоровье в вашем доме с надлежащим отоплением. Вы также избавитесь от вирусов.</h4>
+					<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nisi sunt accusamus exercitationem consequatur dolore necessitatibus ducimus, repudiandae sequi alias nihil consequuntur animi pariatur odit. Quis laudantium sit repellat! Tenetur, qui.</p>
+					<a class="link" href="">Читать</a>
+				</div>
+			</div>
 
-<div class="ctlg-n-el">
-	<img class="ctlg-n-el-img" src="./assets/img/catalog/news/n3.jpg" alt="">
-	<div class="ctlg-n-el-content">
-		<span class="ctlg-n-el-date">23.04.2020</span>
-		<h4>Обеспечить здоровье в вашем доме с надлежащим отоплением. Вы также избавитесь от вирусов.</h4>
-		<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nisi sunt accusamus exercitationem consequatur dolore necessitatibus ducimus, repudiandae sequi alias nihil consequuntur animi pariatur odit. Quis laudantium sit repellat! Tenetur, qui.</p>
-		<a class="link" href="">Читать</a>
-	</div>
-</div>
+			<div class="ctlg-n-el">
+				<img class="ctlg-n-el-img" src="./assets/img/catalog/news/n3.jpg" alt="">
+				<div class="ctlg-n-el-content">
+					<span class="ctlg-n-el-date">23.04.2020</span>
+					<h4>Обеспечить здоровье в вашем доме с надлежащим отоплением. Вы также избавитесь от вирусов.</h4>
+					<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nisi sunt accusamus exercitationem consequatur dolore necessitatibus ducimus, repudiandae sequi alias nihil consequuntur animi pariatur odit. Quis laudantium sit repellat! Tenetur, qui.</p>
+					<a class="link" href="">Читать</a>
+				</div>
+			</div>
 
-<div class="ctlg-n-el">
-	<img class="ctlg-n-el-img" src="./assets/img/catalog/news/n3.jpg" alt="">
-	<div class="ctlg-n-el-content">
-		<span class="ctlg-n-el-date">23.04.2020</span>
-		<h4>Обеспечить здоровье в вашем доме с надлежащим отоплением. Вы также избавитесь от вирусов.</h4>
-		<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nisi sunt accusamus exercitationem consequatur dolore necessitatibus ducimus, repudiandae sequi alias nihil consequuntur animi pariatur odit. Quis laudantium sit repellat! Tenetur, qui.</p>
-		<a class="link" href="">Читать</a>
-	</div>
-</div>
+			<div class="ctlg-n-el">
+				<img class="ctlg-n-el-img" src="./assets/img/catalog/news/n3.jpg" alt="">
+				<div class="ctlg-n-el-content">
+					<span class="ctlg-n-el-date">23.04.2020</span>
+					<h4>Обеспечить здоровье в вашем доме с надлежащим отоплением. Вы также избавитесь от вирусов.</h4>
+					<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nisi sunt accusamus exercitationem consequatur dolore necessitatibus ducimus, repudiandae sequi alias nihil consequuntur animi pariatur odit. Quis laudantium sit repellat! Tenetur, qui.</p>
+					<a class="link" href="">Читать</a>
+				</div>
+			</div>
 
-<div class="ctlg-n-el">
-	<img class="ctlg-n-el-img" src="./assets/img/catalog/news/n3.jpg" alt="">
-	<div class="ctlg-n-el-content">
-		<span class="ctlg-n-el-date">23.04.2020</span>
-		<h4>Обеспечить здоровье в вашем доме с надлежащим отоплением. Вы также избавитесь от вирусов.</h4>
-		<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nisi sunt accusamus exercitationem consequatur dolore necessitatibus ducimus, repudiandae sequi alias nihil consequuntur animi pariatur odit. Quis laudantium sit repellat! Tenetur, qui.</p>
-		<a class="link" href="">Читать</a>
-	</div>
-</div>
+			<div class="ctlg-n-el">
+				<img class="ctlg-n-el-img" src="./assets/img/catalog/news/n3.jpg" alt="">
+				<div class="ctlg-n-el-content">
+					<span class="ctlg-n-el-date">23.04.2020</span>
+					<h4>Обеспечить здоровье в вашем доме с надлежащим отоплением. Вы также избавитесь от вирусов.</h4>
+					<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nisi sunt accusamus exercitationem consequatur dolore necessitatibus ducimus, repudiandae sequi alias nihil consequuntur animi pariatur odit. Quis laudantium sit repellat! Tenetur, qui.</p>
+					<a class="link" href="">Читать</a>
+				</div>
+			</div>
 
-<div class="ctlg-n-el">
-	<img class="ctlg-n-el-img" src="./assets/img/catalog/news/n3.jpg" alt="">
-	<div class="ctlg-n-el-content">
-		<span class="ctlg-n-el-date">23.04.2020</span>
-		<h4>Обеспечить здоровье в вашем доме с надлежащим отоплением. Вы также избавитесь от вирусов.</h4>
-		<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nisi sunt accusamus exercitationem consequatur dolore necessitatibus ducimus, repudiandae sequi alias nihil consequuntur animi pariatur odit. Quis laudantium sit repellat! Tenetur, qui.</p>
-		<a class="link" href="">Читать</a>
-	</div>
-</div>
+			<div class="ctlg-n-el">
+				<img class="ctlg-n-el-img" src="./assets/img/catalog/news/n3.jpg" alt="">
+				<div class="ctlg-n-el-content">
+					<span class="ctlg-n-el-date">23.04.2020</span>
+					<h4>Обеспечить здоровье в вашем доме с надлежащим отоплением. Вы также избавитесь от вирусов.</h4>
+					<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nisi sunt accusamus exercitationem consequatur dolore necessitatibus ducimus, repudiandae sequi alias nihil consequuntur animi pariatur odit. Quis laudantium sit repellat! Tenetur, qui.</p>
+					<a class="link" href="">Читать</a>
+				</div>
+			</div>
 
-<div class="ctlg-n-el">
-	<img class="ctlg-n-el-img" src="./assets/img/catalog/news/n3.jpg" alt="">
-	<div class="ctlg-n-el-content">
-		<span class="ctlg-n-el-date">23.04.2020</span>
-		<h4>Обеспечить здоровье в вашем доме с надлежащим отоплением. Вы также избавитесь от вирусов.</h4>
-		<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nisi sunt accusamus exercitationem consequatur dolore necessitatibus ducimus, repudiandae sequi alias nihil consequuntur animi pariatur odit. Quis laudantium sit repellat! Tenetur, qui.</p>
-		<a class="link" href="">Читать</a>
-	</div>
-</div>
+			<div class="ctlg-n-el">
+				<img class="ctlg-n-el-img" src="./assets/img/catalog/news/n3.jpg" alt="">
+				<div class="ctlg-n-el-content">
+					<span class="ctlg-n-el-date">23.04.2020</span>
+					<h4>Обеспечить здоровье в вашем доме с надлежащим отоплением. Вы также избавитесь от вирусов.</h4>
+					<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nisi sunt accusamus exercitationem consequatur dolore necessitatibus ducimus, repudiandae sequi alias nihil consequuntur animi pariatur odit. Quis laudantium sit repellat! Tenetur, qui.</p>
+					<a class="link" href="">Читать</a>
+				</div>
+			</div>
 
-<div class="ctlg-n-el">
-	<img class="ctlg-n-el-img" src="./assets/img/catalog/news/n3.jpg" alt="">
-	<div class="ctlg-n-el-content">
-		<span class="ctlg-n-el-date">23.04.2020</span>
-		<h4>Обеспечить здоровье в вашем доме с надлежащим отоплением. Вы также избавитесь от вирусов.</h4>
-		<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nisi sunt accusamus exercitationem consequatur dolore necessitatibus ducimus, repudiandae sequi alias nihil consequuntur animi pariatur odit. Quis laudantium sit repellat! Tenetur, qui.</p>
-		<a class="link" href="">Читать</a>
-	</div>
-</div>
+			<div class="ctlg-n-el">
+				<img class="ctlg-n-el-img" src="./assets/img/catalog/news/n3.jpg" alt="">
+				<div class="ctlg-n-el-content">
+					<span class="ctlg-n-el-date">23.04.2020</span>
+					<h4>Обеспечить здоровье в вашем доме с надлежащим отоплением. Вы также избавитесь от вирусов.</h4>
+					<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nisi sunt accusamus exercitationem consequatur dolore necessitatibus ducimus, repudiandae sequi alias nihil consequuntur animi pariatur odit. Quis laudantium sit repellat! Tenetur, qui.</p>
+					<a class="link" href="">Читать</a>
+				</div>
+			</div>
 
-<div class="ctlg-n-el">
-	<img class="ctlg-n-el-img" src="./assets/img/catalog/news/n3.jpg" alt="">
-	<div class="ctlg-n-el-content">
-		<span class="ctlg-n-el-date">23.04.2020</span>
-		<h4>Обеспечить здоровье в вашем доме с надлежащим отоплением. Вы также избавитесь от вирусов.</h4>
-		<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nisi sunt accusamus exercitationem consequatur dolore necessitatibus ducimus, repudiandae sequi alias nihil consequuntur animi pariatur odit. Quis laudantium sit repellat! Tenetur, qui.</p>
-		<a class="link" href="">Читать</a>
-	</div>
-</div>
+			<div class="ctlg-n-el">
+				<img class="ctlg-n-el-img" src="./assets/img/catalog/news/n3.jpg" alt="">
+				<div class="ctlg-n-el-content">
+					<span class="ctlg-n-el-date">23.04.2020</span>
+					<h4>Обеспечить здоровье в вашем доме с надлежащим отоплением. Вы также избавитесь от вирусов.</h4>
+					<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nisi sunt accusamus exercitationem consequatur dolore necessitatibus ducimus, repudiandae sequi alias nihil consequuntur animi pariatur odit. Quis laudantium sit repellat! Tenetur, qui.</p>
+					<a class="link" href="">Читать</a>
+				</div>
+			</div>
 
 		</div>
 	</div>

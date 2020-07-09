@@ -5,13 +5,15 @@
 	</div>
 	<div class="swiper-container calc-swiper-js">
 		<div class="swiper-pagination calc-pagination-js">
-			<div class="calc-pag-elem">Применение</div>
-			<div class="calc-pag-elem">Площадь помещения</div>
-			<div class="calc-pag-elem">Размеры</div>
-			<div class="calc-pag-elem">Тип радиатора</div>
-			<div class="calc-pag-elem">Тип лицевой панели</div>
-			<div class="calc-pag-elem">Тип подключения</div>
-			<div class="calc-pag-elem">Монтаж</div>
+			<div class="wrap">
+				<div class="calc-pag-elem active">Применение</div>
+				<div class="calc-pag-elem">Площадь помещения</div>
+				<div class="calc-pag-elem">Размеры</div>
+				<div class="calc-pag-elem">Тип радиатора</div>
+				<div class="calc-pag-elem">Тип лицевой панели</div>
+				<div class="calc-pag-elem">Тип подключения</div>
+				<div class="calc-pag-elem">Монтаж</div>
+			</div>
 		</div>
 
 		<div class="swiper-wrapper">
@@ -51,12 +53,14 @@
 						</label>
 					</div>
 				</div>
-				<div class="calc-prev btn icon-trash">Удалить</div>
-				<div class="calc-next btn transparent green">Дальше</div>
+				<div class="calc-btns-row">
+					<div class="calc-prev btn default icon-trash">Удалить</div>
+					<div class="calc-next btn transparent green">Дальше</div>
+				</div>
 			</div>
 
 			<div class="swiper-slide calc-slide">
-				<div class="calc-slide-bg" style="background-image: url();"></div>
+				<div class="calc-slide-bg calc-bg-calc" style="background-image: url(./assets/img/calc/calc-bg-calc.png);"></div>
 				<div class="calc-slide-content">
 					<div class="calc-rads col1">
 						<label class="calc-rad-l">
@@ -86,208 +90,250 @@
 						</label>
 					</div>
 				</div>
-				<div class="calc-prev btn">Назад</div>
-				<div class="calc-next btn transparent green">Дальше</div>
+				<div class="calc-btns-row">
+					<div class="calc-prev btn default">Назад</div>
+					<div class="calc-next btn transparent green">Дальше</div>
+				</div>
 			</div>
 
 			<div class="swiper-slide calc-slide">
-				<div class="calc-slide-bg" style="background-image: url(./assets/img/calc/calc-rad-2.png);"></div>
 				<div class="calc-slide-content">
 					<div class="calc-radiator-measure">
-						<select>
-							<option>Высота радиатора</option>
-							<option>1</option>
-							<option>2</option>
-							<option>3</option>
-						</select>
-						<select>
-							<option>Ширина радиатора</option>
-							<option>1</option>
-							<option>2</option>
-							<option>3</option>
-						</select>
-						<select>
-							<option>Глубина радиатора</option>
-							<option>1</option>
-							<option>2</option>
-							<option>3</option>
-						</select>
+						<div class="select icon-triangle-tb">
+							<select>
+								<option>Высота радиатора</option>
+								<option>1</option>
+								<option>2</option>
+								<option>3</option>
+							</select>
+						</div>
+						<div class="select icon-triangle-tb">
+							<select>
+								<option>Ширина радиатора</option>
+								<option>1</option>
+								<option>2</option>
+								<option>3</option>
+							</select>
+						</div>
+						<div class="select icon-triangle-tb">
+							<select>
+								<option>Глубина радиатора</option>
+								<option>1</option>
+								<option>2</option>
+								<option>3</option>
+							</select>
+						</div>
+						<div class="calc-slide-bg rad-measure-bg" style="background-image: url(./assets/img/calc/calc-rad-2.png);"></div>
 					</div>
 				</div>
-				<div class="calc-prev btn">Назад</div>
-				<div class="calc-next btn transparent green">Дальше</div>
+				<div class="calc-btns-row">
+					<div class="calc-prev btn default">Назад</div>
+					<div class="calc-next btn transparent green">Дальше</div>
+				</div>
 			</div>
 
 			<div class="swiper-slide calc-slide">
 				<div class="calc-slide-content">
 					<div class="calc-radiator-type">
 						<label class="calc-rad-img-l">
-							<input type="radio" class="calc-rad-img-i" value="10">
+							<input type="radio" class="calc-rad-img-i" name="radtype" value="10">
 							<img class="calc-rad-img-img" src="./assets/img/calc/calc1.jpg" alt="">
 							<span class="calc-rad-img-s"></span>
 							<span class="calc-rad-img-text">10</span>
 						</label>
 						<label class="calc-rad-img-l">
-							<input type="radio" class="calc-rad-img-i" value="11">
+							<input type="radio" class="calc-rad-img-i" name="radtype" value="11">
 							<img class="calc-rad-img-img" src="./assets/img/calc/calc2.jpg" alt="">
 							<span class="calc-rad-img-s"></span>
 							<span class="calc-rad-img-text">11</span>
 						</label>
 						<label class="calc-rad-img-l">
-							<input type="radio" class="calc-rad-img-i" value="20">
+							<input type="radio" class="calc-rad-img-i" name="radtype" value="20">
 							<img class="calc-rad-img-img" src="./assets/img/calc/calc3.jpg" alt="">
 							<span class="calc-rad-img-s"></span>
 							<span class="calc-rad-img-text">20</span>
 						</label>
 						<label class="calc-rad-img-l">
-							<input type="radio" class="calc-rad-img-i" value="21">
+							<input type="radio" class="calc-rad-img-i" name="radtype" value="21">
 							<img class="calc-rad-img-img" src="./assets/img/calc/calc4.jpg" alt="">
 							<span class="calc-rad-img-s"></span>
 							<span class="calc-rad-img-text">21</span>
 						</label>
 						<label class="calc-rad-img-l">
-							<input type="radio" class="calc-rad-img-i" value="22">
+							<input type="radio" class="calc-rad-img-i" name="radtype" value="22">
 							<img class="calc-rad-img-img" src="./assets/img/calc/calc5.jpg" alt="">
 							<span class="calc-rad-img-s"></span>
 							<span class="calc-rad-img-text">22</span>
 						</label>
 						<label class="calc-rad-img-l">
-							<input type="radio" class="calc-rad-img-i" value="23">
+							<input type="radio" class="calc-rad-img-i" name="radtype" value="23">
 							<img class="calc-rad-img-img" src="./assets/img/calc/calc6.jpg" alt="">
 							<span class="calc-rad-img-s"></span>
 							<span class="calc-rad-img-text">23</span>
 						</label>
 						<label class="calc-rad-img-l">
-							<input type="radio" class="calc-rad-img-i" value="30">
+							<input type="radio" class="calc-rad-img-i" name="radtype" value="30">
 							<img class="calc-rad-img-img" src="./assets/img/calc/calc7.jpg" alt="">
 							<span class="calc-rad-img-s"></span>
 							<span class="calc-rad-img-text">30</span>
 						</label>
 						<label class="calc-rad-img-l">
-							<input type="radio" class="calc-rad-img-i" value="32">
+							<input type="radio" class="calc-rad-img-i" name="radtype" value="32">
 							<img class="calc-rad-img-img" src="./assets/img/calc/calc8.jpg" alt="">
 							<span class="calc-rad-img-s"></span>
 							<span class="calc-rad-img-text">32</span>
 						</label>
 						<label class="calc-rad-img-l">
-							<input type="radio" class="calc-rad-img-i" value="33">
+							<input type="radio" class="calc-rad-img-i" name="radtype" value="33">
 							<img class="calc-rad-img-img" src="./assets/img/calc/calc9.jpg" alt="">
 							<span class="calc-rad-img-s"></span>
 							<span class="calc-rad-img-text">33</span>
 						</label>
 						<label class="calc-rad-img-l">
-							<input type="radio" class="calc-rad-img-i" value="44">
+							<input type="radio" class="calc-rad-img-i" name="radtype" value="44">
 							<img class="calc-rad-img-img" src="./assets/img/calc/calc10.jpg" alt="">
 							<span class="calc-rad-img-s"></span>
 							<span class="calc-rad-img-text">44</span>
 						</label>
 						<label class="calc-rad-img-l">
-							<input type="radio" class="calc-rad-img-i" value="46">
+							<input type="radio" class="calc-rad-img-i" name="radtype" value="46">
 							<img class="calc-rad-img-img" src="./assets/img/calc/calc11.jpg" alt="">
 							<span class="calc-rad-img-s"></span>
 							<span class="calc-rad-img-text">46</span>
 						</label>
 					</div>
 				</div>
-				<div class="calc-prev btn">Назад</div>
-				<div class="calc-next btn transparent green">Дальше</div>
+				<div class="calc-btns-row">
+					<div class="calc-prev btn default">Назад</div>
+					<div class="calc-next btn transparent green">Дальше</div>
+				</div>
 			</div>
 
 			<div class="swiper-slide calc-slide">
 				<div class="calc-slide-content">
 					<div class="calc-radiator-face">
 						<label class="calc-rad-img-l">
-							<input type="radio" class="calc-rad-img-i" value="10">
-							<img class="calc-rad-img-img" src="./assets/img/calc/calc1.jpg" alt="">
+							<input type="radio" class="calc-rad-img-i" name="radprof" value="10">
+							<img class="calc-rad-img-img" src="./assets/img/calc/prof1.png" alt="">
 							<span class="calc-rad-img-s"></span>
-							<span class="calc-rad-img-text">10</span>
+							<span class="calc-rad-img-text">Плоская с мелким горизонтальным профилированием</span>
 						</label>
 						<label class="calc-rad-img-l">
-							<input type="radio" class="calc-rad-img-i" value="11">
-							<img class="calc-rad-img-img" src="./assets/img/calc/calc2.jpg" alt="">
+							<input type="radio" class="calc-rad-img-i" name="radprof" value="11">
+							<img class="calc-rad-img-img" src="./assets/img/calc/prof2.png" alt="">
 							<span class="calc-rad-img-s"></span>
-							<span class="calc-rad-img-text">11</span>
+							<span class="calc-rad-img-text">Плоская с зеркалом</span>
 						</label>
 						<label class="calc-rad-img-l">
-							<input type="radio" class="calc-rad-img-i" value="11">
-							<img class="calc-rad-img-img" src="./assets/img/calc/calc2.jpg" alt="">
+							<input type="radio" class="calc-rad-img-i" name="radprof" value="11">
+							<img class="calc-rad-img-img" src="./assets/img/calc/prof3.png" alt="">
 							<span class="calc-rad-img-s"></span>
-							<span class="calc-rad-img-text">11</span>
+							<span class="calc-rad-img-text">С вертикальным профилированием</span>
 						</label>
 						<label class="calc-rad-img-l">
-							<input type="radio" class="calc-rad-img-i" value="11">
-							<img class="calc-rad-img-img" src="./assets/img/calc/calc2.jpg" alt="">
+							<input type="radio" class="calc-rad-img-i" name="radprof" value="11">
+							<img class="calc-rad-img-img" src="./assets/img/calc/prof4.png" alt="">
 							<span class="calc-rad-img-s"></span>
-							<span class="calc-rad-img-text">11</span>
+							<span class="calc-rad-img-text">Гладкая</span>
 						</label>
 						<label class="calc-rad-img-l">
-							<input type="radio" class="calc-rad-img-i" value="11">
-							<img class="calc-rad-img-img" src="./assets/img/calc/calc2.jpg" alt="">
+							<input type="radio" class="calc-rad-img-i" name="radprof" value="11">
+							<img class="calc-rad-img-img" src="./assets/img/calc/prof5.png" alt="">
 							<span class="calc-rad-img-s"></span>
-							<span class="calc-rad-img-text">11</span>
+							<span class="calc-rad-img-text">С горизонтальным профилированием</span>
 						</label>
 					</div>
 				</div>
-				<div class="calc-prev btn">Назад</div>
-				<div class="calc-next btn transparent green">Дальше</div>
+				<div class="calc-btns-row">
+					<div class="calc-prev btn default">Назад</div>
+					<div class="calc-next btn transparent green">Дальше</div>
+				</div>
 			</div>
 
 			<div class="swiper-slide calc-slide">
 				<div class="calc-slide-content">
 					<div class="calc-radiator-connect">
 						<label class="calc-rad-img-l">
-							<input type="radio" class="calc-rad-img-i" value="10">
-							<img class="calc-rad-img-img" src="./assets/img/calc/calc1.jpg" alt="">
+							<input type="radio" class="calc-rad-img-i" name="radpcon" value="10">
+							<img class="calc-rad-img-img" src="./assets/img/calc/con1.png" alt="">
 							<span class="calc-rad-img-s"></span>
-							<span class="calc-rad-img-text">10</span>
+							<span class="calc-rad-img-text">Боковое</span>
 						</label>
 						<label class="calc-rad-img-l">
-							<input type="radio" class="calc-rad-img-i" value="11">
-							<img class="calc-rad-img-img" src="./assets/img/calc/calc2.jpg" alt="">
+							<input type="radio" class="calc-rad-img-i" name="radpcon" value="11">
+							<img class="calc-rad-img-img" src="./assets/img/calc/con2.png" alt="">
 							<span class="calc-rad-img-s"></span>
-							<span class="calc-rad-img-text">11</span>
+							<span class="calc-rad-img-text">Нижнее центральное / Универсальное боковое</span>
 						</label>
 						<label class="calc-rad-img-l">
-							<input type="radio" class="calc-rad-img-i" value="11">
-							<img class="calc-rad-img-img" src="./assets/img/calc/calc2.jpg" alt="">
+							<input type="radio" class="calc-rad-img-i" name="radpcon" value="11">
+							<img class="calc-rad-img-img" src="./assets/img/calc/con3.png" alt="">
 							<span class="calc-rad-img-s"></span>
-							<span class="calc-rad-img-text">11</span>
+							<span class="calc-rad-img-text">Нижнее-правое</span>
 						</label>
 						<label class="calc-rad-img-l">
-							<input type="radio" class="calc-rad-img-i" value="11">
-							<img class="calc-rad-img-img" src="./assets/img/calc/calc2.jpg" alt="">
+							<input type="radio" class="calc-rad-img-i" name="radpcon" value="11">
+							<img class="calc-rad-img-img" src="./assets/img/calc/con4.png" alt="">
 							<span class="calc-rad-img-s"></span>
-							<span class="calc-rad-img-text">11</span>
+							<span class="calc-rad-img-text">Нижнее-левое / нижнее правое</span>
 						</label>
 						<label class="calc-rad-img-l">
-							<input type="radio" class="calc-rad-img-i" value="11">
-							<img class="calc-rad-img-img" src="./assets/img/calc/calc2.jpg" alt="">
+							<input type="radio" class="calc-rad-img-i" name="radpcon" value="11">
+							<img class="calc-rad-img-img" src="./assets/img/calc/con5.png" alt="">
 							<span class="calc-rad-img-s"></span>
-							<span class="calc-rad-img-text">11</span>
+							<span class="calc-rad-img-text">Нижнее-центральное / нижнее-правое </span>
+						</label>
+						<label class="calc-rad-img-l">
+							<input type="radio" class="calc-rad-img-i" name="radpcon" value="11">
+							<img class="calc-rad-img-img" src="./assets/img/calc/con5.png" alt="">
+							<span class="calc-rad-img-s"></span>
+							<span class="calc-rad-img-text">Нижнее-центральное / нижнее-правое </span>
+						</label>
+						<label class="calc-rad-img-l">
+							<input type="radio" class="calc-rad-img-i" name="radpcon" value="11">
+							<img class="calc-rad-img-img" src="./assets/img/calc/con5.png" alt="">
+							<span class="calc-rad-img-s"></span>
+							<span class="calc-rad-img-text">Нижнее-центральное / нижнее-правое </span>
+						</label>
+						<label class="calc-rad-img-l">
+							<input type="radio" class="calc-rad-img-i" name="radpcon" value="11">
+							<img class="calc-rad-img-img" src="./assets/img/calc/con5.png" alt="">
+							<span class="calc-rad-img-s"></span>
+							<span class="calc-rad-img-text">Нижнее-центральное / нижнее-правое </span>
+						</label>
+						<label class="calc-rad-img-l">
+							<input type="radio" class="calc-rad-img-i" name="radpcon" value="11">
+							<img class="calc-rad-img-img" src="./assets/img/calc/con5.png" alt="">
+							<span class="calc-rad-img-s"></span>
+							<span class="calc-rad-img-text">Нижнее-центральное / нижнее-правое </span>
 						</label>
 					</div>
 				</div>
-				<div class="calc-prev btn">Назад</div>
-				<div class="calc-next btn transparent green">Дальше</div>
+				<div class="calc-btns-row">
+					<div class="calc-prev btn default">Назад</div>
+					<div class="calc-next btn transparent green">Дальше</div>
+				</div>
 			</div>
 
 			<div class="swiper-slide calc-slide">
 				<div class="calc-slide-content">
-					<div class="calc-radiator-measure">
+					<div class="calc-radiator-mount">
 						<label class="calc-rad-noimg-l">
-							<input type="radio" class="calc-rad-img-i" value="10">
+							<input type="radio" class="calc-rad-img-i" name="radpmount" value="10">
 							<span class="calc-rad-img-s"></span>
-							<span class="calc-rad-img-text">10</span>
+							<span class="calc-rad-img-text">Настенный монтаж</span>
 						</label>
 						<label class="calc-rad-noimg-l">
-							<input type="radio" class="calc-rad-img-i" value="11">
+							<input type="radio" class="calc-rad-img-i" name="radpmount" value="11">
 							<span class="calc-rad-img-s"></span>
-							<span class="calc-rad-img-text">11</span>
+							<span class="calc-rad-img-text">Напольный монтаж</span>
 						</label>
 					</div>
 				</div>
-				<div class="calc-prev btn">Назад</div>
-				<div class="calc-next btn transparent green">Дальше</div>
+				<div class="calc-btns-row">
+					<div class="calc-prev btn default">Назад</div>
+					<div class="calc-next btn transparent green">Показать результат</div>
+				</div>
 			</div>
 		</div>
 	</div>

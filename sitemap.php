@@ -23,7 +23,9 @@
 		<li><a href="index.php">homepage +</a></li>
 		<li><a href="catalog.php">catalog +</a></li>
 		<li><a href="categories.php">categories +</a></li>
-		<li><a href="category.php">category +</a></li>
+		<li><a href="category.php">category calc1</a></li>
+		<li><a href="category2.php">category calc2</a></li>
+		<li><a href="category3.php">category calc3</a></li>
 		<li><a href="category-filter.php">category-filter + -mobile</a></li>
 		<li><a href="goods.php">goods</a></li>
 		<li><a href="contacts.php">contacts+ -mobile</a></li>
@@ -32,6 +34,7 @@
 		<li><a href="gallery.php">gallery + -mobile</a></li>
 		<li><a href="info.php">info</a></li>
 		<li><a href="infoCatalog.php">infoCatalog</a></li>
+		<li><a href="personal.php">infoCatalog</a></li>
 	</ol>	
 </body>
 </html>

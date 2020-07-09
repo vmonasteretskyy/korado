@@ -298,21 +298,10 @@ class NVSliderFader {
 
 		btnLinkClass: undefined,
 		marginBottom: 0,
-
-		//nvsmobbar 
-		nvsParentId: undefined,
-		nvsRectangleId: undefined,
-		nvsElemsClass: undefined,
-		nvsNumsAllClass: undefined,
-
-		toShow: 3,
-		centerMode: false,
 	}) {
 		var parent = this;
 		this.params = params;
 		this.marB = this.params.marginBottom;
-		if (!this.parent) return;
-		this.allowResize = true;
 
 		this.parent = document.getElementsByClassName(this.params.parentClass)[0];
 		this.trans = document.getElementsByClassName(this.params.transitionClass)[0];
@@ -329,16 +318,6 @@ class NVSliderFader {
 
 		this.btnLink = document.getElementsByClassName(this.params.btnLinkClass);
 
-		this.nvsRect = document.getElementById(this.params.nvsRectangleId);
-		this.nvsElems = document.getElementsByClassName(this.params.nvsElemsClass);
-		this.nvsAll = document.getElementById(this.params.nvsParentId).getElementsByClassName(this.params.nvsNumsAllClass);
-
-		//nvs 
-		if(this.nvsRect) {
-			this.nvsW = 100 / this.nvsElems.length;
-			this.nvsRect.style.width = this.nvsW + "%";
-		}
-
 		if (this.elemA.length != this.faderElems.length || this.elemA.length == 0) {
 			console.warn("NeuSlider can't init: In slider is", this.elemA.length, "elems, in fader is", this.faderElems.length, "elems!");
 			return;
@@ -350,10 +329,6 @@ class NVSliderFader {
 		this.nowElem = 0;
 		this.animating = false;
 
-		for (var i = 0; i < this.amount; i++) {
-			const ci = i;
-			this.nvsAll[ci].innerHTML = this.amount;		
-		}
 
 		this.elems = [
 			this.elem.cloneNode(true),
@@ -380,16 +355,6 @@ class NVSliderFader {
 
 		this.nextBtn.onclick = function() {
 			parent.detectDirection(3);
-		}
-
-		for (var i = 0; i < this.nvsElems.length; i++) {
-			const ci = i;
-			this.nvsElems[ci].onclick = function() {
-				parent.prev = parent.now;
-				parent.now = ci;
-				parent.transform();
-			}
-			
 		}
 
 		// this.caa = 0;
@@ -456,7 +421,7 @@ class NVSliderFader {
 		// 		}
 		// 	}
 		// }
-		// console.log("this.touchContainer", this.touchContainer)
+		console.log("this.touchContainer", this.touchContainer)
 		this.detectTouch(this.touchContainer, function(direction) {
 			if (parent.animating) return;
 			parent.detectDirection(direction);
@@ -489,23 +454,15 @@ class NVSliderFader {
 				this.apos[i] = this.apos[i - 1] + this.ah[i - 1] + this.marB;
 			}
 		}
-		if (this.params.centerMode) {
-			for (var i = 0; i < this.amount; i++) {
-				this.apos[i] += this.ah[i]/2;
-			}
+		for (var i = 0; i < this.amount; i++) {
+			this.apos[i] += this.ah[i]/2;
 		}
 
 		this.hp = 0;
-		for (var i = 0; i < this.params.toShow; i++) {
+		for (var i = 0; i < 5; i++) {
 			this.hp += this.ah[i];
 		}
-		if (this.params.toShow < 4) {
-			this.hp += this.marB / 2;
-			for (var i = 0; i < this.amount; i++) {
-				this.apos[i] += this.ah[i]/2;
-			}
-		}
-		this.hp += (this.params.toShow - 1) * this.marB;
+		this.hp += 4 * this.marB;
 
 		this.trans.style.height = this.hp + "px";
 
@@ -517,9 +474,9 @@ class NVSliderFader {
 	}
 
 	detectDirection(direction) {
-		// console.log("direction", direction)
+		console.log("direction", direction)
 		if (this.animating) return;
-		if (direction == 1 || direction == 4) {
+		if (direction == 1 || direction == 2) {
 			if (this.now > 0) {
 				this.prev = this.now;
 				this.now--;
@@ -532,7 +489,7 @@ class NVSliderFader {
 				this.transform();
 			}
 		} 
-		if (direction == 3 || direction == 2) {
+		if (direction == 3 || direction == 4) {
 			if (this.now < this.amount - 1) {
 				this.prev = this.now;
 				this.now++;
@@ -564,17 +521,7 @@ class NVSliderFader {
 			this.elems[2].style.top = -(this.nowElem + 1) * this.h + "px";
 		}
 		this.trTo = this.nowElem * this.h + -this.apos[this.now];
-
-		//centerMode
-		if (this.params.centerMode) {
-			this.trTo += this.cc - (this.params.toShow - 1) * Info.coef; //offset
-			// this.trTo += this
-			// this.trTo += this.ah[this.now - 1] + this.ah[this.now - 2];
-			// if (this.params.toShow < 4) {
-				// this.trTo -= this.marB;
-			// }
-		}
-
+		this.trTo += this.cc - 4 * Info.coef; //offset
 
 		// console.log("nowElem", this.nowElem);
 		// console.log("h", this.h);
@@ -592,13 +539,6 @@ class NVSliderFader {
 				this.btnLink[ci].href = href;
 			}
 		}
-		
-
-		// if (Info.mob) {
-			this.nvsRect.style.transform = "translate3D(" + 100 * this.now + "%,0,0)";
-			this.nvsElems[this.prev].classList.remove("active");
-			this.nvsElems[this.now].classList.add("active");
-		// }
 
 		setTimeout(function(){
 			parent.animating = false;
@@ -614,6 +554,7 @@ class NVSliderFader {
 			console.warn("Can't init touches: handler is not a function");
 			return;
 		}
+		console.log("DTINITED", elem);
 		elem.addEventListener('touchstart', handleTouchStart, false);		
 		elem.addEventListener('touchmove', handleTouchMove, false);	
 		elem.addEventListener('touchend', handleTouchEnd, false);
@@ -632,12 +573,14 @@ class NVSliderFader {
 		}													 
 	
 		function handleTouchStart(evt) {
-			const firstTouch = getTouches(evt)[0];										
-			xDown = firstTouch.clientX;										
-			yDown = firstTouch.clientY;										
+			console.log("tstart");
+			const firstTouch = getTouches(evt)[0];									  
+			xDown = firstTouch.clientX;									  
+			yDown = firstTouch.clientY;									  
 		};												
 	
 		function handleTouchMove(evt) {
+			console.log("tmove");
 			if ( ! xDown || ! yDown ) {return;}
 	
 			xUp = evt.touches[0].clientX;									
@@ -651,18 +594,19 @@ class NVSliderFader {
 					handler(2);
 				} else if (xDiff < -0) {
 					handler(4);
-				}						 
+				}					   
 			} else {
-				// if ( yDiff > 0 ) {
-				// 	handler(3);
-				// } else if (yDiff < 0) { 
-				// 	handler(1);
-				// }																 
+				if ( yDiff > 0 ) {
+					handler(3);
+				} else if (yDiff < 0) { 
+					handler(1);
+				}																 
 			}		
 			xDown = null;
 			yDown = null;									 
 		};
 		function handleTouchEnd(evt) {
+			console.log("tend");
 		};
 	}
 } 
