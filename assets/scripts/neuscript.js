@@ -40,6 +40,11 @@ class PageScroll {
 		this.active = false;
 
 		this.loc = +sessionStorage.getItem('scrollNow');
+		
+		if (location.href.indexOf("#") != -1) {
+			var a = location.href.indexOf("#");
+			this.loc = location.href.substr(location.href.indexOf("#") + 1) - 1;
+		}
 		this.resize();
 		if (this.loc) {
 			this.now = this.loc;
@@ -278,344 +283,6 @@ class PageScroll {
 
 
 
-
-
-
-class NVSliderFader {
-	constructor(params = {
-		parentClass: undefined,
-		transitionClass: undefined,
-		elemsClass: undefined,
-		elemsAClass: undefined,
-
-		prevArrId: undefined,
-		nextArrId: undefined,
-
-		touchElemId: undefined,
-
-		faderParentClass: undefined,
-		faderElemsClass: undefined,
-
-		btnLinkClass: undefined,
-		marginBottom: 0,
-	}) {
-		var parent = this;
-		this.params = params;
-		this.marB = this.params.marginBottom;
-
-		this.parent = document.getElementsByClassName(this.params.parentClass)[0];
-		this.trans = document.getElementsByClassName(this.params.transitionClass)[0];
-		this.elem = document.getElementsByClassName(this.params.elemsClass)[0];
-		this.elemA = this.elem.getElementsByClassName(this.params.elemsAClass);
-
-		this.touchContainer = document.getElementById(this.params.touchElemId);
-
-		this.prevBtn = document.getElementById(this.params.prevArrId);
-		this.nextBtn = document.getElementById(this.params.nextArrId);
-
-		this.fadeParent = document.getElementsByClassName(this.params.faderParentClass)[0];
-		this.faderElems = document.getElementsByClassName(this.params.faderElemsClass);
-
-		this.btnLink = document.getElementsByClassName(this.params.btnLinkClass);
-
-		if (this.elemA.length != this.faderElems.length || this.elemA.length == 0) {
-			console.warn("NeuSlider can't init: In slider is", this.elemA.length, "elems, in fader is", this.faderElems.length, "elems!");
-			return;
-		}
-		this.amount = this.elemA.length;
-		this.prev = 0;
-		this.now = 0;
-		this.prevElem = 0;
-		this.nowElem = 0;
-		this.animating = false;
-
-
-		this.elems = [
-			this.elem.cloneNode(true),
-			this.elem,
-			this.elem.cloneNode(true)
-		];
-		// this.elemA[this.now].classList.add("active");
-		this.elems[0].classList.add("clone");
-		this.elems[2].classList.add("clone");
-		this.trans.insertBefore(this.elems[0], this.trans.childNodes[0]);
-		this.trans.append(this.elems[2]);
-
-		this.elemsA = [
-			this.elems[0].getElementsByClassName(this.params.elemsAClass),
-			this.elemA,
-			this.elems[2].getElementsByClassName(this.params.elemsAClass),
-		];
-		
-		this.resize();
-
-		this.prevBtn.onclick = function() {
-			parent.detectDirection(1);
-		}
-
-		this.nextBtn.onclick = function() {
-			parent.detectDirection(3);
-		}
-
-		// this.caa = 0;
-		// for (var i = 0; i < this.elemsA.length; i++) {
-		// 	const ci = i;
-		// 	for (let j = 0; j < this.elemsA[ci].length; j++) {
-		// 		const cj = j;
-		// 		this.elemsA[ci][cj].onclick = function() {
-		// 			console.log("|||parents", parent.prevElem, parent.nowElem);
-		// 			console.log("ci",ci,"cj",cj)
-		// 			if (parent.nowElem == parent.prevElem) {
-		// 				if (ci == 0) {
-		// 					console.log("st0");
-		// 					parent.prevElem = parent.nowElem;
-		// 					parent.nowElem++;
-		// 					parent.prev = parent.now;
-		// 					parent.now = cj;
-		// 					parent.transform();
-		// 					return;
-		// 				} 
-		// 				if (ci == 1) {
-		// 					console.log("st1");
-		// 					parent.prev = parent.now;
-		// 					parent.now = cj;
-		// 					parent.transform();
-		// 					return;
-		// 				}
-		// 				if (ci == 2) {
-		// 					console.log("st2");
-		// 					parent.prevElem = parent.nowElem;
-		// 					parent.nowElem++;
-		// 					parent.prev = parent.now;
-		// 					parent.now = cj;
-		// 					parent.transform();
-		// 					return;
-		// 				}
-		// 			}
-
-		// 			if (parent.prevElem < parent.nowElem) { //up
-		// 				if (ci == 0) {
-		// 					console.log("1st0");
-		// 				} 
-		// 				if (ci == 1) {
-		// 					parent.prevElem = parent.nowElem;
-		// 					console.log("1st1");
-		// 				}
-		// 				if (ci == 2) {
-		// 					console.log("1st2");
-		// 				}		
-		// 			}
-		// 			if (parent.prevElem > parent.nowElem) { //up
-		// 				if (ci == 0) {
-		// 					console.log("2st0");
-		// 				} 
-		// 				if (ci == 1) {
-		// 					parent.prevElem = parent.nowElem;
-		// 					console.log("2st1");
-		// 				}
-		// 				if (ci == 2) {
-		// 					console.log("2st2");
-		// 				}	
-		// 			}
-
-		// 		}
-		// 	}
-		// }
-		console.log("this.touchContainer", this.touchContainer)
-		this.detectTouch(this.touchContainer, function(direction) {
-			if (parent.animating) return;
-			parent.detectDirection(direction);
-		});
-		// this.preventDefaultScroll(function(direction) {
-		// 	if (parent.animating) return;
-		// 	parent.detectDirection(direction);
-		// });
-	}
-	
-	resize() {
-		if (Info.mob) {
-			this.marB = 29.4;
-		} else {
-			this.marB = this.params.marginBottom * Info.coef;
-		}
-		this.h = this.elem.getBoundingClientRect().height;
-		this.ah = new Array(this.amount);
-		for (var i = 0; i < this.amount; i++) {
-			const ci = i;
-			this.ah[ci] = this.elemA[ci].getBoundingClientRect().height;		
-		}
-		this.cc = this.h / 2.79674797;
-		//stops
-		this.apos = new Array(this.amount);
-		for (var i = 0; i < this.amount; i++) {
-			if (i == 0) {
-				this.apos[i] = 0;
-			} else {
-				this.apos[i] = this.apos[i - 1] + this.ah[i - 1] + this.marB;
-			}
-		}
-		for (var i = 0; i < this.amount; i++) {
-			this.apos[i] += this.ah[i]/2;
-		}
-
-		this.hp = 0;
-		for (var i = 0; i < 5; i++) {
-			this.hp += this.ah[i];
-		}
-		this.hp += 4 * this.marB;
-
-		this.trans.style.height = this.hp + "px";
-
-		this.elems[0].style.top = -this.h + "px";
-		this.elems[1].style.top = "0px";
-		this.elems[2].style.top = +this.h + "px";
-
-		this.transform();
-	}
-
-	detectDirection(direction) {
-		console.log("direction", direction)
-		if (this.animating) return;
-		if (direction == 1 || direction == 2) {
-			if (this.now > 0) {
-				this.prev = this.now;
-				this.now--;
-				this.transform();
-			} else {
-				this.prevElem = this.nowElem;
-				this.nowElem++;
-				this.prev = this.now;
-				this.now = this.amount - 1;
-				this.transform();
-			}
-		} 
-		if (direction == 3 || direction == 4) {
-			if (this.now < this.amount - 1) {
-				this.prev = this.now;
-				this.now++;
-				this.transform();
-			} else {
-				this.prevElem = this.nowElem;
-				this.nowElem--;
-				this.prev = this.now;
-				this.now = 0;
-				this.transform();
-			}
-		}
-	}
-
-	transform() {
-		var parent = this;
-		this.animating = true;
-		// for (var i = 0; i < this.elemsA.length; i++) {
-		// 	const ci = i;
-		// 	this.elemsA[ci][this.prev].classList.remove("center");
-		// 	this.elemsA[ci][this.now].classList.add("center");
-		// }
-		this.elemsA[1][this.prev].classList.remove("center");
-		this.elemsA[1][this.now].classList.add("center");
-
-		if (this.prevElem != this.nowElem) {
-			this.elems[0].style.top = -(this.nowElem - 1) * this.h + "px";
-			this.elems[1].style.top = -(this.nowElem) * this.h + "px";
-			this.elems[2].style.top = -(this.nowElem + 1) * this.h + "px";
-		}
-		this.trTo = this.nowElem * this.h + -this.apos[this.now];
-		this.trTo += this.cc - 4 * Info.coef; //offset
-
-		// console.log("nowElem", this.nowElem);
-		// console.log("h", this.h);
-		// console.log("apos", this.apos);
-		// console.log("apos[this.now]", this.apos[this.now]);
-		// console.log("apos[2]", this.apos[2]);
-		this.trans.style.transform = "translate3D(0," + this.trTo + "px,0)";
-		this.faderElems[this.prev].classList.remove('active');
-		this.faderElems[this.now].classList.add('active');
-
-		if (this.btnLink || this.btnLink.length != 0) {
-			var href = this.elemsA[1][this.now].getAttribute("data-href");
-			for (var i = 0; i < this.btnLink.length; i++) {
-				const ci = i;
-				this.btnLink[ci].href = href;
-			}
-		}
-
-		setTimeout(function(){
-			parent.animating = false;
-		},300);
-	}
-
-	detectTouch(elem, handler) {
-		if (elem != document && !(elem instanceof Element)) {
-			console.warn("Can't init touches: element is not ad document or istance of Element ");
-			return;
-		}
-		if (typeof(handler) != "function") {
-			console.warn("Can't init touches: handler is not a function");
-			return;
-		}
-		console.log("DTINITED", elem);
-		elem.addEventListener('touchstart', handleTouchStart, false);		
-		elem.addEventListener('touchmove', handleTouchMove, false);	
-		elem.addEventListener('touchend', handleTouchEnd, false);
-	
-		var xDown = null;														
-		var yDown = null;
-	
-		var xUp = null;
-		var yUp = null;
-		var xDiff = null;
-		var yDiff = null;
-	
-		function getTouches(evt) {
-			return evt.touches ||			// browser API
-				evt.originalEvent.touches;	// jQuery
-		}													 
-	
-		function handleTouchStart(evt) {
-			console.log("tstart");
-			const firstTouch = getTouches(evt)[0];									  
-			xDown = firstTouch.clientX;									  
-			yDown = firstTouch.clientY;									  
-		};												
-	
-		function handleTouchMove(evt) {
-			console.log("tmove");
-			if ( ! xDown || ! yDown ) {return;}
-	
-			xUp = evt.touches[0].clientX;									
-			yUp = evt.touches[0].clientY;
-			xDiff = xDown - xUp;
-			yDiff = yDown - yUp;
-	
-			if ( Math.abs( xDiff ) > Math.abs( yDiff ) ) {
-				/*most significant*/
-				if ( xDiff > 0 ) { 
-					handler(2);
-				} else if (xDiff < -0) {
-					handler(4);
-				}					   
-			} else {
-				if ( yDiff > 0 ) {
-					handler(3);
-				} else if (yDiff < 0) { 
-					handler(1);
-				}																 
-			}		
-			xDown = null;
-			yDown = null;									 
-		};
-		function handleTouchEnd(evt) {
-			console.log("tend");
-		};
-	}
-} 
-
-
-
-
-
-
 class Accordions {
 	constructor(params = {
 		parentClass: undefined,
@@ -657,203 +324,47 @@ class Accordions {
 
 
 
-// var ssb = {
-// 	aConts	: [],
-// 	mouseY : 0,
-// 	N	: 0,
-// 	asd : 0, /*active scrollbar element*/
-// 	sc : 0,
-// 	sp : 0,
-// 	to : 0,
-	
-// 	// constructor
-// 	scrollbar : function (cont_id) {
-// 		var cont = document.getElementById(cont_id);
-		
-// 		// perform initialization
-// 		if (! ssb.init()) return false;
-		
-// 		var cont_clone = cont.cloneNode(false);
-// 		cont_clone.style.overflow = "hidden";
-// 		cont.parentNode.appendChild(cont_clone);
-// 		cont_clone.appendChild(cont);
-// 		cont.style.position = 'absolute';
-// 		cont.style.left = cont.style.top = '0px';
-// 		cont.style.width = cont.style.height = '100%';
-		
-// 		// adding new container into array
-// 		ssb.aConts[ssb.N++] = cont;
-		
-// 		cont.sg = false;
-		
-// 		//creating scrollbar child elements
-// 		cont.st = this.create_div('ssb_st', cont, cont_clone);
-// 		cont.sb = this.create_div('ssb_sb', cont, cont_clone);
-// 		cont.su = this.create_div('ssb_up', cont, cont_clone);
-// 		cont.sd = this.create_div('ssb_down', cont, cont_clone);
-		
-// 		// on mouse down processing
-// 		cont.sb.onmousedown = function (e) {
-// 		if (! this.cont.sg) {
-// 			if (! e) e = window.event;
-			
-// 			ssb.asd = this.cont;
-// 			this.cont.yZ = e.screenY;
-// 			this.cont.sZ = cont.scrollTop;
-// 			this.cont.sg = true;
-			
-// 			// new class name
-// 			this.className = 'ssb_sb ssb_sb_down';
-// 		}
-// 		return false;
-// 		}
-// 		// on mouse down on free track area - move our scroll element too
-// 		cont.st.onmousedown = function (e) {
-// 		if (! e) e = window.event;
-// 		ssb.asd = this.cont;
-		
-// 		ssb.mouseY = e.clientY + document.body.scrollTop + document.documentElement.scrollTop;
-// 		for (var o = this.cont, y = 0; o != null; o = o.offsetParent) y += o.offsetTop;
-// 		this.cont.scrollTop = (ssb.mouseY - y - (this.cont.ratio * this.cont.offsetHeight / 2) - this.cont.sw) / this.cont.ratio;
-// 		this.cont.sb.onmousedown(e);
-// 		}
-		
-// 		// onmousedown events
-// 		cont.su.onmousedown = cont.su.ondblclick = function (e) { ssb.mousedown(this, -1); return false; }
-// 		cont.sd.onmousedown = cont.sd.ondblclick = function (e) { ssb.mousedown(this,	1); return false; }
-		
-// 		//onmouseout events
-// 		cont.su.onmouseout = cont.su.onmouseup = ssb.clear;
-// 		cont.sd.onmouseout = cont.sd.onmouseup = ssb.clear;
-		
-// 		// on mouse over - apply custom class name: ssb_sb_over
-// 		cont.sb.onmouseover = function (e) {
-// 		if (! this.cont.sg) this.className = 'ssb_sb ssb_sb_over';
-// 		return false;
-// 		}
-		
-// 		// on mouse out - revert back our usual class name 'ssb_sb'
-// 		cont.sb.onmouseout	= function (e) {
-// 		if (! this.cont.sg) this.className = 'ssb_sb';
-// 		return false;
-// 		}
-		
-// 		// onscroll - change positions of scroll element
-// 		cont.ssb_onscroll = function () {
-// 		this.ratio = (this.offsetHeight - 2 * this.sw) / this.scrollHeight;
-// 		this.sb.style.top = Math.floor(this.sw + this.scrollTop * this.ratio) + 'px';
-// 		}
-		
-// 		// scrollbar width
-// 		cont.sw = 12;
-		
-// 		// start scrolling
-// 		cont.ssb_onscroll();
-// 		ssb.refresh();
-		
-// 		// binding own onscroll event
-// 		cont.onscroll = cont.ssb_onscroll;
-// 		return cont;
-// 	},
-	
-// 	// initialization
-// 	init : function () {
-// 		if (window.oper || (! window.addEventListener && ! window.attachEvent)) { return false; }
-		
-// 		// temp inner function for event registration
-// 		function addEvent (o, e, f) {
-// 		if (window.addEventListener) { o.addEventListener(e, f, false); ssb.w3c = true; return true; }
-// 		if (window.attachEvent) return o.attachEvent('on' + e, f);
-// 		return false;
-// 		}
-		
-// 		// binding events
-// 		addEvent(window.document, 'mousemove', ssb.onmousemove);
-// 		addEvent(window.document, 'mouseup', ssb.onmouseup);
-// 		addEvent(window, 'resize', ssb.refresh);
-// 		return true;
-// 	},
-	
-// 	// create and append div finc
-// 	create_div : function(c, cont, cont_clone) {
-// 		var o = document.createElement('div');
-// 		o.cont = cont;
-// 		o.className = c;
-// 		cont_clone.appendChild(o);
-// 		return o;
-// 	},
-// 	// do clear of controls
-// 	clear : function () {
-// 		clearTimeout(ssb.to);
-// 		ssb.sc = 0;
-// 		return false;
-// 	},
-// 	// refresh scrollbar
-// 	refresh : function () {
-// 		for (var i = 0, N = ssb.N; i < N; i++) {
-// 		var o = ssb.aConts[i];
-// 		o.ssb_onscroll();
-// 		o.sb.style.width = o.st.style.width = o.su.style.width = o.su.style.height = o.sd.style.width = o.sd.style.height = o.sw + 'px';
-// 		o.sb.style.height = Math.ceil(Math.max(o.sw * .5, o.ratio * o.offsetHeight) + 1) + 'px';
-// 		}
-// 	},
-// 	// arrow scrolling
-// 	arrow_scroll : function () {
-// 		if (ssb.sc != 0) {
-// 		ssb.asd.scrollTop += 6 * ssb.sc / ssb.asd.ratio;
-// 		ssb.to = setTimeout(ssb.arrow_scroll, ssb.sp);
-// 		ssb.sp = 32;
-// 		}
-// 	},
-	
-// 	/* event binded functions : */
-// 	// scroll on mouse down
-// 	mousedown : function (o, s) {
-// 		if (ssb.sc == 0) {
-// 		// new class name
-// 		o.cont.sb.className = 'ssb_sb ssb_sb_down';
-// 		ssb.asd = o.cont;
-// 		ssb.sc = s;
-// 		ssb.sp = 400;
-// 		ssb.arrow_scroll();
-// 		}
-// 	},
-// 	// on mouseMove binded event
-// 	onmousemove : function(e) {
-// 		if (! e) e = window.event;
-// 		// get vertical mouse position
-// 		ssb.mouseY = e.screenY;
-// 		if (ssb.asd.sg) ssb.asd.scrollTop = ssb.asd.sZ + (ssb.mouseY - ssb.asd.yZ) / ssb.asd.ratio;
-// 	},
-// 	// on mouseUp binded event
-// 	onmouseup : function (e) {
-// 		if (! e) e = window.event;
-// 		var tg = (e.target) ? e.target : e.srcElement;
-// 		if (ssb.asd && document.releaseCapture) ssb.asd.releaseCapture();
-		
-// 		// new class name
-// 		if (ssb.asd) ssb.asd.sb.className = (tg.className.indexOf('scrollbar') > 0) ? 'ssb_sb ssb_sb_over' : 'ssb_sb';
-// 		document.onselectstart = '';
-// 		ssb.clear();
-// 		ssb.asd.sg = false;
-// 	}
-// }
-	
-// window.onload = function() {
-// 	ssb.scrollbar('container'); // scrollbar initialization
-// }
-	
 
 
 
 
 
-//i cant do it now cause i slept in avevrange 6h :(
-// //custom scrollbar
-// class CSB {
-// 	constructor(params = {
-// 		containerQuery: undefined,
-// 	}) {
-// 		this.params = params;
-// 	}
-// }
+
+class Switcher {
+	constructor(params = {
+		parent: undefined,
+		buttons: undefined,
+		containers: undefined,
+	}) {
+		this.params = params;
+		this.parent = params.parent;
+		this.buttons = params.buttons;
+		this.containers = params.containers;
+		this.amount = this.buttons.length;
+		this.prev = 0;
+		this.resize();
+		this.containers[0].classList.add("active");
+		this.buttons[0].classList.add("active");
+		if (this.amount != this.containers.length) {console.warn("ErrLen");return;}
+		for (var i = 0; i < this.amount; i++) {
+			const ci = i;
+			this.buttons[ci].onclick = () => {
+				// console.log(this.containers)
+				this.containers[this.prev].classList.remove("active");
+				this.containers[ci].classList.add("active");
+				this.buttons[this.prev].classList.remove("active");
+				this.buttons[ci].classList.add("active");
+				this.parent.style.height = this.h[ci] + "px";
+				this.prev = ci;
+			}
+		}
+	}
+	resize() {
+		this.h = new Array(this.amount);
+		for (var i = 0; i < this.amount; i++) {
+			const ci = i;
+			this.h[ci] = this.containers[ci].getBoundingClientRect().height;
+		}
+		this.parent.style.height = this.h[this.prev] + "px";
+	}
+};

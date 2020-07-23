@@ -20,21 +20,22 @@
 </head>
 <body>
 	<ol>
-		<li><a href="index.php">homepage +</a></li>
-		<li><a href="catalog.php">catalog +</a></li>
-		<li><a href="categories.php">categories +</a></li>
+		<li><a href="index.php">homepage</a></li>
+		<li><a href="catalog.php">catalog</a></li>
+		<li><a href="categories.php">categories</a></li>
 		<li><a href="category.php">category calc1</a></li>
 		<li><a href="category2.php">category calc2</a></li>
 		<li><a href="category3.php">category calc3</a></li>
-		<li><a href="category-filter.php">category-filter + -mobile</a></li>
-		<li><a href="goods.php">goods</a></li>
-		<li><a href="contacts.php">contacts+ -mobile</a></li>
-		<li><a href="news.php">news +</a></li>
-		<li><a href="news-item.php">news-item </a></li>
-		<li><a href="gallery.php">gallery + -mobile</a></li>
-		<li><a href="info.php">info</a></li>
-		<li><a href="infoCatalog.php">infoCatalog</a></li>
-		<li><a href="personal.php">infoCatalog</a></li>
+		<li><a href="category-filter.php">category-filter</a></li>
+		<li><a href="goods.php">product-page</a></li>
+		<li><a href="contacts.php">contacts</a></li>
+		<li><a href="news.php">news</a></li>
+		<li><a href="news-item.php">news-item</a></li>
+		<li><a href="gallery.php">gallery photo</a></li>
+		<li><a href="video.php">gallery video</a></li>
+		<li><a href="about.php">info about</a></li>
+		<li><a href="download.php">info download</a></li>
+		<li><a href="personal.php">personal</a></li>
 	</ol>	
 </body>
 </html>

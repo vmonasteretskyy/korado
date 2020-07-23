@@ -3,21 +3,19 @@
 <section class="cat-fixed-bg nearfooter">
 	<div class="fixed-bg" style="background-image: url(./assets/img/category/bg.jpg);"></div>
 
-	<?php include 'breadcrumb.php'; ?>
+	<?php include 'components/breadcrumb.php'; ?>
 
-	
+	<section class="cf-title">
+		<div class="wrap">
+			<h2>Радиаторы с гладкою лицевой панелью</h2>
+		</div>
+	</section>
 	<!-- b-promo-goods -->
 
 	<div class="filter-wrap"> 
-		<div class="fcat-sort">
-			<select>
-				<option>За популярністю</option>
-				<option>За популярністю2</option>
-				<option>За популярністю3</option>
-			</select>
-		</div>
 		<div class="filter-row">
 			<div class="filter-outer">
+				<button class="mob icon-arr-r" id="close-filter" type="button"></button>
 				<div class="filter">
 
 					<div class="f-col">
@@ -181,6 +179,37 @@
 		</div>
 
 	</div>
+
+	
+	<section class="cat-relprod cat-relprod-f">
+		<div class="wrap">
+			<h2>Смежные категории</h2>
+			<div class="items-wrap">
+
+				<div class="subcat">
+					<img src="./assets/img/category/rsc1.jpg" alt="">
+					<h4>Конвекторы</h4>
+					<a href="" class="btn black">Смотреть</a>
+				</div>
+				<div class="subcat">
+					<img src="./assets/img/category/rsc2.jpg" alt="">
+					<h4>Полотенцесушители</h4>
+					<a href="" class="btn black">Смотреть</a>
+				</div>
+				<div class="subcat">
+					<img src="./assets/img/category/rsc3.jpg" alt="">
+					<h4>Запасные части к оборудованию</h4>
+					<a href="" class="btn black">Смотреть</a>
+				</div>
+				<div class="subcat">
+					<img src="./assets/img/category/rsc4.jpg" alt="">
+					<h4>Локальные вентиляционные установки</h4>
+					<a href="" class="btn black">Смотреть</a>
+				</div>
+
+			</div>
+		</div>
+	</section>
 </section>
 
 

@@ -21,18 +21,26 @@
 	<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="./assets/fonts/fontello/fontello.css">
 	<!-- <link rel="stylesheet" type="text/css" href="./assets/fonts/f2/fontello.css"> -->
-	<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/14.6.0/nouislider.min.css">
-	<link rel="stylesheet" type="text/css" href="./assets/styles/style.css">
-	<link rel="stylesheet" type="text/css" href="./assets/styles/desc.css">
-	<link rel="stylesheet" type="text/css" href="./assets/styles/media.css">
+	<link rel="stylesheet" type="text/css" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/14.6.0/nouislider.min.css">
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css">
+	<link rel="stylesheet" type="text/css" href="./assets/styles/style.css?ver=1002">
+	<link rel="stylesheet" type="text/css" href="./assets/styles/desc.css?ver=1002">
+	<link rel="stylesheet" type="text/css" href="./assets/styles/media.css?ver=1002">
 	<script>var onDom=[],onLoad=[],onResize=[];</script>
 </head>
 
 
 <!-- if (homepage) {add "home first" to body classlist} -->
 <!-- <body class="home first"> -->
-<body>
+<?php if ($page == "home") {
+	echo "<body class='home first'>";
+} else {
+	echo "<body>";
+}
+?>
+
+<div id="eclipse"></div>
 
 <div id="menu">
 	<button id="close-menu" class="mob">
@@ -46,8 +54,8 @@
 				<button class="menu-list-btn icon-triangle-t" type="button"></button>
 				<div class="menu-list-hider hidden">
 					<ul class="menu-list">
-						<li><a href="">Акционные Предложения</a></li>
-						<li><a href="">Уцененные товары с дисконтом</a></li>
+						<li><a href="category-filter.php">Акционные Предложения</a></li>
+						<li><a href="category-filter.php">Уцененные товары с дисконтом</a></li>
 					</ul>
 				</div>
 			</li>
@@ -56,6 +64,11 @@
 			<li class="menu-li"><a href="">Локальные вентиляционные установки</a></li>
 			<li class="menu-li"><a href="">Полотенцесушители</a></li>
 			<li class="menu-li"><a href="">Радиаторы</a></li>
+			<div class="menu-currency mcds">
+				<button class="menu-currency-btn active">UAH</button>
+				<button class="menu-currency-btn">USD</button>
+				<button class="menu-currency-btn">EUR</button>
+			</div>
 		</ul>
 	</nav>
 
@@ -84,18 +97,18 @@
 
 
 	<div id="menu-left">
-		<a>Акционные предложения</a>
-		<a>Уцененные товары с дисконтом</a>
+		<a href="category-filter.php">Акционные предложения</a>
+		<a href="category-filter.php">Уцененные товары с дисконтом</a>
 	</div>
 	<div id="menu-right">
-		<a>Получить промо-код</a>
+		<a href="/index.php#6">Получить промо-код</a>
 	</div>
 
 	<nav id="menu-top-nav" class="mob">
 		<ul>
-			<li><a href="">Контактная информация</a></li>
+			<li><a href="contacts.php">Контактная информация</a></li>
 			<li><a href="">Заказать обратный звонок</a></li>
-			<li><a href="">Время работы</a></li>
+			<li><a href="contacts.php">Время работы</a></li>
 			<li><a href="">Доставка и оплата</a></li>
 			<li><a href="">Консультация специалиста</a></li>
 		</ul>
@@ -103,8 +116,9 @@
 </div>
 
 <header>
-	<!-- top-nav exists only on home page -->
-	<!-- <div id="top-nav">
+
+<?php $topnav = <<<HTML
+	<div id="top-nav">
 		<nav>
 			<ul>
 				<li><a href="">Контактная информация</a></li>
@@ -114,7 +128,15 @@
 				<li><a href="">Консультация специалиста</a></li>
 			</ul>
 		</nav>
-	</div> -->
+	</div>
+HTML
+;
+
+if ($page == "home") {
+	echo $topnav;
+} 
+
+?>
 
 	<div id="top-bar">
 		<button id="menu-btn" type="button">

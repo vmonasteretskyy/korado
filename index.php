@@ -1,3 +1,5 @@
+<?php $page = "home"; ?>
+
 <?php include 'header.php'; ?>
 
 
@@ -99,30 +101,34 @@
 		</section>
 
 		<!-- 2 -->
-		<section class="scroll-elem" name="main-second">
-			<div class="bg">
-				<div class="bg1 white025" style="background-image: url(./assets/img/main/bg2.jpg)"></div>
+		<section class="scroll-elem fading-bg" name="main-second">
+			<div class="bg mbg2">
+				<div class="bg1 white025 active" style="background-image: url(./assets/img/main/bg2.jpg)"></div>
+				<div class="bg1 white025" style="background-image: url(./assets/img/main/bg5.jpg)"></div>
+				<div class="bg1 white025" style="background-image: url(./assets/img/main/bg4.jpg)"></div>
+				<div class="bg1 white025" style="background-image: url(./assets/img/main/bg4.jpg)"></div>
+				<div class="bg1 white025" style="background-image: url(./assets/img/main/bg4.jpg)"></div>
+				<div class="bg1 white025" style="background-image: url(./assets/img/main/bg4.jpg)"></div>
+				<div class="bg1 white025" style="background-image: url(./assets/img/main/bg4.jpg)"></div>
+				<div class="bg1 white025" style="background-image: url(./assets/img/main/bg4.jpg)"></div>
 			</div>
 			
-			<div id="main-vslider">
-				<button class="neu-vslider-btn neu-vslider-prev icon-triangle-s-t" id="nvsf2-prev" type="button"></button>
-				<div class="neu-vslider-hider nvsh2">
-					<div class="neu-vslider-trans nvst2">
+			<div class="swiper-outer desc" id="mvso2">
+				<button class="swbtn swbtn-prev icon-triangle-s-t" id="nvsf2-prev" type="button"></button>
+				<div class="swiper-container mvs" id="mvs2">
 
-						<ul class="neu-vslider nvs2">
-							<li class="neu-vslider-a nvsa2" data-href="h1">Локальные вентиляционные установки</li>
-							<li class="neu-vslider-a nvsa2" data-href="h2">Запасные части к оборудованию<li>
-							<li class="neu-vslider-a nvsa2" data-href="h3">Радиаторы</li>
-							<li class="neu-vslider-a nvsa2" data-href="h4">Конвекторы</li>
-							<li class="neu-vslider-a nvsa2" data-href="h5">Полотенцесушители</li>
-							<li class="neu-vslider-a nvsa2" data-href="h6">TestCategory6</li>
-							<li class="neu-vslider-a nvsa2" data-href="h7">TestCategory7</li>
-							<li class="neu-vslider-a nvsa2" data-href="h8">TestCategory8</li>
-						</ul>
-
+					<div class="swiper-wrapper">
+						<div class="swiper-slide ssdh" data-href="h1">Локальные вентиляционные установки</div>
+						<div class="swiper-slide ssdh" data-href="h2">Запасные части к оборудованию</div>
+						<div class="swiper-slide ssdh" data-href="h3">Радиаторы</div>
+						<div class="swiper-slide ssdh" data-href="h4">Конвекторы</div>
+						<div class="swiper-slide ssdh" data-href="h5">Полотенцесушители</div>
+						<div class="swiper-slide ssdh" data-href="h6">TestCategory6</div>
+						<div class="swiper-slide ssdh" data-href="h7">TestCategory7</div>
+						<div class="swiper-slide ssdh" data-href="h8">TestCategory8</div>
 					</div>
 				</div>
-				<button class="neu-vslider-btn neu-vslider-next icon-triangle-s-b" id="nvsf2-next" type="button"></button>
+				<button class="swbtn swbtn-next icon-triangle-s-b" id="nvsf2-next" type="button"></button>
 			</div>
 
 			<div class="rhomb-wrap rhomb-med nvsft" id="nvsft2">
@@ -218,35 +224,35 @@
 				<div class="nvs-bar-elems">
 					<div class="nvs-bar-elem nvse2 active">
 						<span class="nvs-nums-current"></span>
-						<span class="nvs-nums-all"></span>
+						<span class="nvs-nums-all">8</span>
 					</div>
 					<div class="nvs-bar-elem nvse2">
 						<span class="nvs-nums-current"></span>
-						<span class="nvs-nums-all"></span>
+						<span class="nvs-nums-all">8</span>
 					</div>
 					<div class="nvs-bar-elem nvse2">
 						<span class="nvs-nums-current"></span>
-						<span class="nvs-nums-all"></span>
+						<span class="nvs-nums-all">8</span>
 					</div>
 					<div class="nvs-bar-elem nvse2">
 						<span class="nvs-nums-current"></span>
-						<span class="nvs-nums-all"></span>
+						<span class="nvs-nums-all">8</span>
 					</div>
 					<div class="nvs-bar-elem nvse2">
 						<span class="nvs-nums-current"></span>
-						<span class="nvs-nums-all"></span>
+						<span class="nvs-nums-all">8</span>
 					</div>
 					<div class="nvs-bar-elem nvse2">
 						<span class="nvs-nums-current"></span>
-						<span class="nvs-nums-all"></span>
+						<span class="nvs-nums-all">8</span>
 					</div>
 					<div class="nvs-bar-elem nvse2">
 						<span class="nvs-nums-current"></span>
-						<span class="nvs-nums-all"></span>
+						<span class="nvs-nums-all">8</span>
 					</div>
 					<div class="nvs-bar-elem nvse2">
 						<span class="nvs-nums-current"></span>
-						<span class="nvs-nums-all"></span>
+						<span class="nvs-nums-all">8</span>
 					</div>
 				</div>
 			</div>
@@ -257,20 +263,35 @@
 			<div class="main-wrap">
 				<div class="top-img-bg" style="background-image: url(./assets/img/main/bg3.jpg)"></div>
 
-				<div class="nvsww3 desc">
-					<button class="neu-vslider-btn neu-vslider-prev icon-triangle-s-t" id="nvsf3-prev" type="button"></button>
+				<!-- <div class="nvsww3 desc">
+					<button class="swbtn swbtn-prev icon-triangle-s-t" id="nvsf3-prev" type="button"></button>
 					<div class="neu-vslider-hider nvshgrad nvsh3">
-						<div class="neu-vslider-trans nvst3">
+						div class="neu-vslider-trans nvst3">
 							<ul class="neu-vslider nvs3">
-								<li class="neu-vslider-a nvsa3" data-href="h1">О Нас</li>
-								<li class="neu-vslider-a nvsa3" data-href="h2">О бренде<li>
-								<li class="neu-vslider-a nvsa3" data-href="h3">Техническая информация</li>
-								<li class="neu-vslider-a nvsa3" data-href="h4">TestCategory4</li>
-								<li class="neu-vslider-a nvsa3" data-href="h5">TestCategory5</li>
+								<li class="swiper-slide neu-vslider-a nvsa3" data-href="h1">О Нас</li>
+								<li class="swiper-slide neu-vslider-a nvsa3" data-href="h2">О бренде<li>
+								<li class="swiper-slide neu-vslider-a nvsa3" data-href="h3">Техническая информация</li>
+								<li class="swiper-slide neu-vslider-a nvsa3" data-href="h4">TestCategory4</li>
+								<li class="swiper-slide neu-vslider-a nvsa3" data-href="h5">TestCategory5</li>
 							</ul>
 						</div>
 					</div>
-					<button class="neu-vslider-btn neu-vslider-next icon-triangle-s-b" id="nvsf3-next" type="button"></button>
+					<button class="swbtn neu-vslider-next icon-triangle-s-b" id="nvsf3-next" type="button"></button>
+				</div> -->
+
+				<div class="swiper-outer desc" id="mvso3">
+					<button class="swbtn swbtn-prev icon-triangle-s-t" id="nvsf3-prev" type="button"></button>
+					<div class="swiper-container mvs" id="mvs3">
+
+						<div class="swiper-wrapper">
+							<div class="swiper-slide ssdh" data-href="h1">О Нас</div>
+							<div class="swiper-slide ssdh" data-href="h2">О бренде</div>
+							<div class="swiper-slide ssdh" data-href="h3">Техническая информация</div>
+							<div class="swiper-slide ssdh" data-href="h4">TestCategory4</div>
+							<div class="swiper-slide ssdh" data-href="h5">TestCategory5</div>
+						</div>
+					</div>
+					<button class="swbtn swbtn-next icon-triangle-s-b" id="nvsf3-next" type="button"></button>
 				</div>
 
 				<div class="main-wrap-text">
@@ -316,23 +337,23 @@
 				<div class="nvs-bar-elems">
 					<div class="nvs-bar-elem nvse3 active">
 						<span class="nvs-nums-current"></span>
-						<span class="nvs-nums-all"></span>
+						<span class="nvs-nums-all">5</span>
 					</div>
 					<div class="nvs-bar-elem nvse3">
 						<span class="nvs-nums-current"></span>
-						<span class="nvs-nums-all"></span>
+						<span class="nvs-nums-all">5</span>
 					</div>
 					<div class="nvs-bar-elem nvse3">
 						<span class="nvs-nums-current"></span>
-						<span class="nvs-nums-all"></span>
+						<span class="nvs-nums-all">5</span>
 					</div>
 					<div class="nvs-bar-elem nvse3">
 						<span class="nvs-nums-current"></span>
-						<span class="nvs-nums-all"></span>
+						<span class="nvs-nums-all">5</span>
 					</div>
 					<div class="nvs-bar-elem nvse3">
 						<span class="nvs-nums-current"></span>
-						<span class="nvs-nums-all"></span>
+						<span class="nvs-nums-all">5</span>
 					</div>
 				</div>
 			</div>
@@ -340,27 +361,29 @@
 
 		<!-- 4 -->
 		<section class="scroll-elem main-items-section">
-			<div class="bg">
+			<div class="bg mbg4">
+				<div class="bg1 white025 bgoffsetleftmob active" style="background-image: url(./assets/img/main/bg4.jpg)"></div>
+				<div class="bg1 white025 bgoffsetleftmob" style="background-image: url(./assets/img/main/bg5.jpg)"></div>
+				<div class="bg1 white025 bgoffsetleftmob" style="background-image: url(./assets/img/main/bg4.jpg)"></div>
+				<div class="bg1 white025 bgoffsetleftmob" style="background-image: url(./assets/img/main/bg5.jpg)"></div>
 				<div class="bg1 white025 bgoffsetleftmob" style="background-image: url(./assets/img/main/bg4.jpg)"></div>
 			</div>
 
 			
-			<div class="nvsww4 desc">
-				<button class="neu-vslider-btn neu-vslider-prev icon-triangle-s-t" id="nvsf4-prev" type="button"></button>
-				<div class="neu-vslider-hider nvsh4">
-					<div class="neu-vslider-trans nvst4">
-						<ul class="neu-vslider nvs4">
-							<li class="neu-vslider-a nvsa4" data-href="h1">Локальные вентиляционные установки <b>Korado</b></li>
-							<li class="neu-vslider-a nvsa4" data-href="h2">О бренде<li>
-							<li class="neu-vslider-a nvsa4" data-href="h3">Техническая информация</li>
-							<li class="neu-vslider-a nvsa4" data-href="h4">TestCategory4</li>
-							<li class="neu-vslider-a nvsa4" data-href="h5">TestCategory5</li>
-						</ul>
+			<div class="swiper-outer desc" id="mvso4">
+				<button class="swbtn swbtn-prev icon-triangle-s-t" id="nvsf4-prev" type="button"></button>
+				<div class="swiper-container mvs" id="mvs4">
+
+					<div class="swiper-wrapper">
+						<div class="swiper-slide ssdh" data-href="h1">Локальные вентиляционные установки <b>Korado</b></div>
+						<div class="swiper-slide ssdh" data-href="h2">О бренде</div>
+						<div class="swiper-slide ssdh" data-href="h3">Техническая информация</div>
+						<div class="swiper-slide ssdh" data-href="h4">TestCategory4</div>
+						<div class="swiper-slide ssdh" data-href="h5">TestCategory5</div>
 					</div>
 				</div>
-				<button class="neu-vslider-btn neu-vslider-next icon-triangle-s-b" id="nvsf4-next" type="button"></button>
+				<button class="swbtn swbtn-next icon-triangle-s-b" id="nvsf4-next" type="button"></button>
 			</div>
-
 
 			<div class="neu-vsfader nvsf4" id="nvsft4">
 
@@ -371,7 +394,7 @@
 						
 						<div class="item main-item">
 							<div class="item-notification new">Новинка</div>
-							<button class="item-heart icon-heart" type="button"></button>
+							<button class="item-heart icon-heart-empty" type="button"></button>
 							<img src="./assets/img/items/koratherm-horizontal1.jpg" alt="">
 							<div class="item-stars">
 								<div class="item-is icon-star"></div>
@@ -411,7 +434,7 @@
 						
 						<div class="item main-item">
 							<div class="item-notification new">Новинка</div>
-							<button class="item-heart icon-heart" type="button"></button>
+							<button class="item-heart icon-heart-empty" type="button"></button>
 							<img src="./assets/img/items/koratherm-horizontal1.jpg" alt="">
 							<div class="item-stars">
 								<div class="item-is icon-star"></div>
@@ -431,7 +454,7 @@
 						
 						<!-- <div class="item main-item">
 							<div class="item-notification new">Новинка</div>
-							<button class="item-heart icon-heart" type="button"></button>
+							<button class="item-heart icon-heart-empty" type="button"></button>
 							<img src="./assets/img/items/koratherm-horizontal1.jpg" alt="">
 							<div class="item-stars">
 								<div class="item-is icon-star"></div>
@@ -480,7 +503,7 @@
 
 						<div class="item main-item">
 							<div class="item-notification new">Новинка</div>
-							<button class="item-heart icon-heart" type="button"></button>
+							<button class="item-heart icon-heart-empty" type="button"></button>
 							<img src="./assets/img/items/koratherm-horizontal1.jpg" alt="">
 							<div class="item-stars">
 								<div class="item-is icon-star"></div>
@@ -500,7 +523,7 @@
 
 						<div class="item main-item">
 							<div class="item-notification new">Новинка</div>
-							<button class="item-heart icon-heart" type="button"></button>
+							<button class="item-heart icon-heart-empty" type="button"></button>
 							<img src="./assets/img/items/koratherm-horizontal1.jpg" alt="">
 							<div class="item-stars">
 								<div class="item-is icon-star"></div>
@@ -520,7 +543,7 @@
 
 						<!-- <div class="item main-item">
 							<div class="item-notification new">Новинка</div>
-							<button class="item-heart icon-heart" type="button"></button>
+							<button class="item-heart icon-heart-empty" type="button"></button>
 							<img src="./assets/img/items/koratherm-horizontal1.jpg" alt="">
 							<div class="item-stars">
 								<div class="item-is icon-star"></div>
@@ -549,7 +572,7 @@
 
 						<div class="item main-item">
 							<div class="item-notification new">Новинка</div>
-							<button class="item-heart icon-heart" type="button"></button>
+							<button class="item-heart icon-heart-empty" type="button"></button>
 							<img src="./assets/img/items/koratherm-horizontal1.jpg" alt="">
 							<div class="item-stars">
 								<div class="item-is icon-star"></div>
@@ -589,7 +612,7 @@
 
 						<div class="item main-item">
 							<div class="item-notification new">Новинка</div>
-							<button class="item-heart icon-heart" type="button"></button>
+							<button class="item-heart icon-heart-empty" type="button"></button>
 							<img src="./assets/img/items/koratherm-horizontal1.jpg" alt="">
 							<div class="item-stars">
 								<div class="item-is icon-star"></div>
@@ -609,7 +632,7 @@
 						
 						<!-- <div class="item main-item">
 							<div class="item-notification new">Новинка</div>
-							<button class="item-heart icon-heart" type="button"></button>
+							<button class="item-heart icon-heart-empty" type="button"></button>
 							<img src="./assets/img/items/koratherm-horizontal1.jpg" alt="">
 							<div class="item-stars">
 								<div class="item-is icon-star"></div>
@@ -638,7 +661,7 @@
 
 						<div class="item main-item">
 							<div class="item-notification new">Новинка</div>
-							<button class="item-heart icon-heart" type="button"></button>
+							<button class="item-heart icon-heart-empty" type="button"></button>
 							<img src="./assets/img/items/koratherm-horizontal1.jpg" alt="">
 							<div class="item-stars">
 								<div class="item-is icon-star"></div>
@@ -658,7 +681,7 @@
 
 						<div class="item main-item">
 							<div class="item-notification new">Новинка</div>
-							<button class="item-heart icon-heart" type="button"></button>
+							<button class="item-heart icon-heart-empty" type="button"></button>
 							<img src="./assets/img/items/koratherm-horizontal1.jpg" alt="">
 							<div class="item-stars">
 								<div class="item-is icon-star"></div>
@@ -698,7 +721,7 @@
 						
 						<!-- <div class="item main-item">
 							<div class="item-notification new">Новинка</div>
-							<button class="item-heart icon-heart" type="button"></button>
+							<button class="item-heart icon-heart-empty" type="button"></button>
 							<img src="./assets/img/items/koratherm-horizontal1.jpg" alt="">
 							<div class="item-stars">
 								<div class="item-is icon-star"></div>
@@ -727,7 +750,7 @@
 
 						<div class="item main-item">
 							<div class="item-notification new">Новинка</div>
-							<button class="item-heart icon-heart" type="button"></button>
+							<button class="item-heart icon-heart-empty" type="button"></button>
 							<img src="./assets/img/items/koratherm-horizontal1.jpg" alt="">
 							<div class="item-stars">
 								<div class="item-is icon-star"></div>
@@ -747,7 +770,7 @@
 
 						<div class="item main-item">
 							<div class="item-notification new">Новинка</div>
-							<button class="item-heart icon-heart" type="button"></button>
+							<button class="item-heart icon-heart-empty" type="button"></button>
 							<img src="./assets/img/items/koratherm-horizontal1.jpg" alt="">
 							<div class="item-stars">
 								<div class="item-is icon-star"></div>
@@ -787,7 +810,7 @@
 						
 						<!-- <div class="item main-item">
 							<div class="item-notification new">Новинка</div>
-							<button class="item-heart icon-heart" type="button"></button>
+							<button class="item-heart icon-heart-empty" type="button"></button>
 							<img src="./assets/img/items/koratherm-horizontal1.jpg" alt="">
 							<div class="item-stars">
 								<div class="item-is icon-star"></div>
@@ -817,23 +840,23 @@
 				<div class="nvs-bar-elems">
 					<div class="nvs-bar-elem nvse4 active">
 						<span class="nvs-nums-current"></span>
-						<span class="nvs-nums-all"></span>
+						<span class="nvs-nums-all">5</span>
 					</div>
 					<div class="nvs-bar-elem nvse4">
 						<span class="nvs-nums-current"></span>
-						<span class="nvs-nums-all"></span>
+						<span class="nvs-nums-all">5</span>
 					</div>
 					<div class="nvs-bar-elem nvse4">
 						<span class="nvs-nums-current"></span>
-						<span class="nvs-nums-all"></span>
+						<span class="nvs-nums-all">5</span>
 					</div>
 					<div class="nvs-bar-elem nvse4">
 						<span class="nvs-nums-current"></span>
-						<span class="nvs-nums-all"></span>
+						<span class="nvs-nums-all">5</span>
 					</div>
 					<div class="nvs-bar-elem nvse4">
 						<span class="nvs-nums-current"></span>
-						<span class="nvs-nums-all"></span>
+						<span class="nvs-nums-all">5</span>
 					</div>
 				</div>
 			</div>
@@ -842,24 +865,27 @@
 
 		<!-- 5 -->
 		<section class="scroll-elem main-items-section">
-			<div class="bg">
+			<div class="bg mbg5">
+				<div class="bg1 white025 active" style="background-image: url(./assets/img/main/bg5.jpg)"></div>
+				<div class="bg1 white025" style="background-image: url(./assets/img/main/bg2-3.jpg)"></div>
+				<div class="bg1 white025" style="background-image: url(./assets/img/main/bg5.jpg)"></div>
+				<div class="bg1 white025" style="background-image: url(./assets/img/main/bg5.jpg)"></div>
 				<div class="bg1 white025" style="background-image: url(./assets/img/main/bg5.jpg)"></div>
 			</div>
 			
-			<div class="nvsww5 desc">
-				<button class="neu-vslider-btn neu-vslider-prev icon-triangle-s-t" id="nvsf5-prev" type="button"></button>
-				<div class="neu-vslider-hider nvsh5">
-					<div class="neu-vslider-trans nvst5">
-						<ul class="neu-vslider nvs5">
-							<li class="neu-vslider-a nvsa5" data-href="h1">Локальные вентиляционные установки <b>Korado</b></li>
-							<li class="neu-vslider-a nvsa5" data-href="h2">О бренде<li>
-							<li class="neu-vslider-a nvsa5" data-href="h3">Техническая информация</li>
-							<li class="neu-vslider-a nvsa5" data-href="h4">TestCategory4</li>
-							<li class="neu-vslider-a nvsa5" data-href="h5">TestCategory5</li>
-						</ul>
+			<div class="swiper-outer desc" id="mvso5">
+				<button class="swbtn swbtn-prev icon-triangle-s-t" id="nvsf5-prev" type="button"></button>
+				<div class="swiper-container mvs" id="mvs5">
+
+					<div class="swiper-wrapper">
+						<div class="swiper-slide ssdh" data-href="h1">Локальные вентиляционные установки <b>Korado</b></div>
+						<div class="swiper-slide ssdh" data-href="h2">О бренде</div>
+						<div class="swiper-slide ssdh" data-href="h3">Техническая информация</div>
+						<div class="swiper-slide ssdh" data-href="h4">TestCategory4</div>
+						<div class="swiper-slide ssdh" data-href="h5">TestCategory5</div>
 					</div>
 				</div>
-				<button class="neu-vslider-btn neu-vslider-next icon-triangle-s-b" id="nvsf5-next" type="button"></button>
+				<button class="swbtn swbtn-next icon-triangle-s-b" id="nvsf5-next" type="button"></button>
 			</div>
 
 			<div class="neu-vsfader nvsf5" id="nvsft5">
@@ -871,7 +897,7 @@
 						
 						<div class="item main-item">
 							<div class="item-notification sale">Акция</div>
-							<button class="item-heart icon-heart" type="button"></button>
+							<button class="item-heart icon-heart-empty" type="button"></button>
 							<img src="./assets/img/items/koratherm-horizontal1.jpg" alt="">
 							<div class="item-stars">
 								<div class="item-is icon-star"></div>
@@ -913,7 +939,7 @@
 						
 						<div class="item main-item">
 							<div class="item-notification sale">Акция</div>
-							<button class="item-heart icon-heart" type="button"></button>
+							<button class="item-heart icon-heart-empty" type="button"></button>
 							<img src="./assets/img/items/koratherm-horizontal1.jpg" alt="">
 							<div class="item-stars">
 								<div class="item-is icon-star"></div>
@@ -934,7 +960,7 @@
 						
 						<!-- <div class="item main-item">
 							<div class="item-notification sale">Акция</div>
-							<button class="item-heart icon-heart" type="button"></button>
+							<button class="item-heart icon-heart-empty" type="button"></button>
 							<img src="./assets/img/items/koratherm-horizontal1.jpg" alt="">
 							<div class="item-stars">
 								<div class="item-is icon-star"></div>
@@ -964,7 +990,7 @@
 						
 						<div class="item main-item">
 							<div class="item-notification sale">Акция</div>
-							<button class="item-heart icon-heart" type="button"></button>
+							<button class="item-heart icon-heart-empty" type="button"></button>
 							<img src="./assets/img/items/koratherm-horizontal1.jpg" alt="">
 							<div class="item-stars">
 								<div class="item-is icon-star"></div>
@@ -985,7 +1011,7 @@
 						
 						<div class="item main-item">
 							<div class="item-notification sale">Акция</div>
-							<button class="item-heart icon-heart" type="button"></button>
+							<button class="item-heart icon-heart-empty" type="button"></button>
 							<img src="./assets/img/items/koratherm-horizontal1.jpg" alt="">
 							<div class="item-stars">
 								<div class="item-is icon-star"></div>
@@ -1027,7 +1053,7 @@
 						
 						<!-- <div class="item main-item">
 							<div class="item-notification sale">Акция</div>
-							<button class="item-heart icon-heart" type="button"></button>
+							<button class="item-heart icon-heart-empty" type="button"></button>
 							<img src="./assets/img/items/koratherm-horizontal1.jpg" alt="">
 							<div class="item-stars">
 								<div class="item-is icon-star"></div>
@@ -1057,7 +1083,7 @@
 						
 						<div class="item main-item">
 							<div class="item-notification sale">Акция</div>
-							<button class="item-heart icon-heart" type="button"></button>
+							<button class="item-heart icon-heart-empty" type="button"></button>
 							<img src="./assets/img/items/koratherm-horizontal1.jpg" alt="">
 							<div class="item-stars">
 								<div class="item-is icon-star"></div>
@@ -1099,7 +1125,7 @@
 						
 						<div class="item main-item">
 							<div class="item-notification sale">Акция</div>
-							<button class="item-heart icon-heart" type="button"></button>
+							<button class="item-heart icon-heart-empty" type="button"></button>
 							<img src="./assets/img/items/koratherm-horizontal1.jpg" alt="">
 							<div class="item-stars">
 								<div class="item-is icon-star"></div>
@@ -1120,7 +1146,7 @@
 						
 						<!-- <div class="item main-item">
 							<div class="item-notification sale">Акция</div>
-							<button class="item-heart icon-heart" type="button"></button>
+							<button class="item-heart icon-heart-empty" type="button"></button>
 							<img src="./assets/img/items/koratherm-horizontal1.jpg" alt="">
 							<div class="item-stars">
 								<div class="item-is icon-star"></div>
@@ -1150,7 +1176,7 @@
 						
 						<div class="item main-item">
 							<div class="item-notification sale">Акция</div>
-							<button class="item-heart icon-heart" type="button"></button>
+							<button class="item-heart icon-heart-empty" type="button"></button>
 							<img src="./assets/img/items/koratherm-horizontal1.jpg" alt="">
 							<div class="item-stars">
 								<div class="item-is icon-star"></div>
@@ -1192,7 +1218,7 @@
 						
 						<div class="item main-item">
 							<div class="item-notification sale">Акция</div>
-							<button class="item-heart icon-heart" type="button"></button>
+							<button class="item-heart icon-heart-empty" type="button"></button>
 							<img src="./assets/img/items/koratherm-horizontal1.jpg" alt="">
 							<div class="item-stars">
 								<div class="item-is icon-star"></div>
@@ -1213,7 +1239,7 @@
 						
 						<!-- <div class="item main-item">
 							<div class="item-notification sale">Акция</div>
-							<button class="item-heart icon-heart" type="button"></button>
+							<button class="item-heart icon-heart-empty" type="button"></button>
 							<img src="./assets/img/items/koratherm-horizontal1.jpg" alt="">
 							<div class="item-stars">
 								<div class="item-is icon-star"></div>
@@ -1243,7 +1269,7 @@
 						
 						<div class="item main-item">
 							<div class="item-notification sale">Акция</div>
-							<button class="item-heart icon-heart" type="button"></button>
+							<button class="item-heart icon-heart-empty" type="button"></button>
 							<img src="./assets/img/items/koratherm-horizontal1.jpg" alt="">
 							<div class="item-stars">
 								<div class="item-is icon-star"></div>
@@ -1285,7 +1311,7 @@
 						
 						<div class="item main-item">
 							<div class="item-notification sale">Акция</div>
-							<button class="item-heart icon-heart" type="button"></button>
+							<button class="item-heart icon-heart-empty" type="button"></button>
 							<img src="./assets/img/items/koratherm-horizontal1.jpg" alt="">
 							<div class="item-stars">
 								<div class="item-is icon-star"></div>
@@ -1306,7 +1332,7 @@
 						
 						<!-- <div class="item main-item">
 							<div class="item-notification sale">Акция</div>
-							<button class="item-heart icon-heart" type="button"></button>
+							<button class="item-heart icon-heart-empty" type="button"></button>
 							<img src="./assets/img/items/koratherm-horizontal1.jpg" alt="">
 							<div class="item-stars">
 								<div class="item-is icon-star"></div>
@@ -1340,23 +1366,23 @@
 				<div class="nvs-bar-elems">
 					<div class="nvs-bar-elem nvse5 active">
 						<span class="nvs-nums-current"></span>
-						<span class="nvs-nums-all"></span>
+						<span class="nvs-nums-all">5</span>
 					</div>
 					<div class="nvs-bar-elem nvse5">
 						<span class="nvs-nums-current"></span>
-						<span class="nvs-nums-all"></span>
+						<span class="nvs-nums-all">5</span>
 					</div>
 					<div class="nvs-bar-elem nvse5">
 						<span class="nvs-nums-current"></span>
-						<span class="nvs-nums-all"></span>
+						<span class="nvs-nums-all">5</span>
 					</div>
 					<div class="nvs-bar-elem nvse5">
 						<span class="nvs-nums-current"></span>
-						<span class="nvs-nums-all"></span>
+						<span class="nvs-nums-all">5</span>
 					</div>
 					<div class="nvs-bar-elem nvse5">
 						<span class="nvs-nums-current"></span>
-						<span class="nvs-nums-all"></span>
+						<span class="nvs-nums-all">5</span>
 					</div>
 				</div>
 			</div>
@@ -1376,7 +1402,7 @@
 						<span class="input-error">Возникла ошибка с вводом имени</span>
 						<div class="clear-input"></div>
 					</div>
-					<div class="input invalid">
+					<div class="input"> <!--add class "invalid" for error -->
 						<input type="text" name="Email">
 						<label>Email</label>
 						<span class="input-error">Возникла ошибка с вводом Email адреса</span>
@@ -1390,6 +1416,8 @@
 	</div>
 </section>
 
+
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 <script src="./assets/scripts/neuscript.js"></script>
 <script src="./assets/scripts/script.js"></script>
 </body>

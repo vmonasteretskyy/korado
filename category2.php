@@ -4,7 +4,7 @@
 
 <?php include 'components/title3.php'; ?>
 
-<?php include 'components/calc_rad.php'; ?>
+<?php include 'components/calc_rushnik.php'; ?>
 
 <section class="cat-fixed-bg nearfooter">
 	<div class="fixed-bg" style="background-image: url(./assets/img/category/bg.jpg);"></div>

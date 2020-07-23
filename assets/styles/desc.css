@@ -1,7 +1,7 @@
 @media screen and (min-height: 480px) and (min-width: 1025px) {
 	html {
-		/* font-size: min(1.04166667vw, 2.13219616vh); */
-		font-size: min(1.04329681vw, 2.13219616vh);
+		font-size: min(1.04166667vw, 2.13219616vh);
+		/* font-size: min(1.04329681vw, 2.13219616vh); */
 		
 	}
 }
@@ -37,7 +37,7 @@
 		display: none;
 	}
 	.desc {
-		display: none;
+		display: none !important;
 	}
 	.nvsftitle, h3 {
 		font-weight: 700;
@@ -58,6 +58,13 @@
 		width: 70vw;
 		height: 30rem;
 	}
+	.ctlg-news .swiper-container {
+		width: 47rem;
+	}
+	.ctlg-news .wrap {
+		width: 47rem;
+	}
+
 }
 @media screen and (min-width: 768px) {
 	.mob {
