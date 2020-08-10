@@ -1,5 +1,11 @@
 <?php include 'header.php'; ?>
 
+<?php 
+$titleimg = "./assets/img/category/gallery-bg.jpg";
+$title = "Фотогалерея";
+$titledescr = "Вдохновитесь подборкой интерьеров с использованием наших продуктов"; 
+?>
+
 <?php include './components/title.php'; ?>
 
 <section class="ctlg-news">

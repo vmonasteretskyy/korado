@@ -24,9 +24,9 @@
 	<link rel="stylesheet" type="text/css" href="https://unpkg.com/swiper/swiper-bundle.min.css">
 	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/14.6.0/nouislider.min.css">
 	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css">
-	<link rel="stylesheet" type="text/css" href="./assets/styles/style.css?ver=1002">
-	<link rel="stylesheet" type="text/css" href="./assets/styles/desc.css?ver=1002">
-	<link rel="stylesheet" type="text/css" href="./assets/styles/media.css?ver=1002">
+	<link rel="stylesheet" type="text/css" href="./assets/styles/style.css?ver=1003">
+	<link rel="stylesheet" type="text/css" href="./assets/styles/desc.css?ver=1003">
+	<link rel="stylesheet" type="text/css" href="./assets/styles/media.css?ver=1003">
 	<script>var onDom=[],onLoad=[],onResize=[];</script>
 </head>
 
@@ -36,11 +36,98 @@
 <?php if ($page == "home") {
 	echo "<body class='home first'>";
 } else {
-	echo "<body>";
+	echo "<body class='first'>";
 }
 ?>
 
 <div id="eclipse"></div>
+
+<div class="popup" id="pentertype">
+	<button type="button" class="pcross" id="close-pentertype"></button>
+	<div class="pwrap">
+		<h2>Вход</h2>
+		<p>Для входа кабинет выберите один из вариантов</p>
+		<button type="button" class="btn black" id="open-plog">Войти как зарегестрированный пользователь</button>
+		<span class="or">или</span>
+		<button type="button" class="btn green" id="open-preg">Создать учетную запись</button>
+	</div>
+</div>
+
+<div class="popup" id="plogin">
+	<button type="button" class="pcross" id="close-plog"></button>
+	<div class="pwrap">
+		<h2>Вход для зарегестрированного пользователя</h2>
+		<p>Для входа кабинет введите свой логин и пароль</p>
+		<form id="login-form" action="" method="get">
+			<div class="input">
+				<input type="text" name="login">
+				<label>Логин</label>
+				<span class="input-error">Возникла ошибка с вводом логина</span>
+				<div class="clear-input"></div>
+			</div>
+			<div class="input">
+				<input type="password" name="password">
+				<label>Пароль</label>
+				<span class="input-error">Возникла ошибка с вводом пароля</span>
+				<div class="clear-input"></div>
+			</div>
+			<button type="submit" class="btn black">Войти</button>
+		</form>
+		<span class="or">или</span>
+		<button type="button" class="btn green" id="open-preg2">Создать учетную запись</button>
+	</div>
+</div>
+
+<div class="popup" id="preg">
+	<button type="button" class="pcross" id="close-preg"></button>
+	<div class="pwrap">
+		<h2>Новая учетная запись</h2>
+		<p>Для создания учетной записи обязательные поля к заполнению</p>
+		<form id="reg-form" action="" method="get">
+			<div class="input">
+				<input type="text" name="fio">
+				<label>Фио</label>
+				<span class="input-error">Возникла ошибка с вводом ФИО</span>
+				<div class="clear-input"></div>
+			</div>
+			<div class="input iwithdescr">
+				<input type="text" name="tel">
+				<label>Телефон</label>
+				<span class="input-error">Возникла ошибка с вводом пароля</span>
+				<span class="input-descr">введите номер в международном формате +380</span>
+				<div class="clear-input"></div>
+			</div>
+			<div class="input">
+				<input type="text" name="email">
+				<label>EMAIL</label>
+				<span class="input-error">Возникла ошибка с вводом EMAIL</span>
+				<div class="clear-input"></div>
+			</div>
+			<div class="input">
+				<input type="password" name="password">
+				<label>Пароль</label>
+				<span class="input-error">Возникла ошибка с вводом пароля</span>
+				<div class="clear-input"></div>
+			</div>
+			<div class="input">
+				<input type="password" name="repassword">
+				<label>Подтверждение пароля</label>
+				<span class="input-error">Пароли не совпадают</span>
+				<div class="clear-input"></div>
+			</div>
+			<div class="input select icon-triangle-b">
+				<select>
+					<option>Вид деятельности</option>
+					<option>Деятельность 1</option>
+					<option>Деятельность 2</option>
+					<option>Деятельность 3</option>
+				</select>
+			</div>
+			<button type="submit" class="btn green">Создать учетную запись</button>
+		</form>
+	</div>
+</div>
+
 
 <div id="menu">
 	<button id="close-menu" class="mob">
@@ -49,16 +136,17 @@
 	<nav id="menu-nav">
 		<ul class="menu-ul">
 			<li class="menu-li"><a href="">Каталог</a></li>
-			<li class="menu-li">
+			<!-- <li class="menu-li">
 				<a href="">Информация</a>
 				<button class="menu-list-btn icon-triangle-t" type="button"></button>
 				<div class="menu-list-hider hidden">
 					<ul class="menu-list">
-						<li><a href="category-filter.php">Акционные Предложения</a></li>
-						<li><a href="category-filter.php">Уцененные товары с дисконтом</a></li>
+						<li><a href="about.php">О производстве</a></li>
+						<li><a href="about.php">О нас</a></li>
+						<li><a href="download.php">Каталоги продукции</a></li>
 					</ul>
 				</div>
-			</li>
+			</li> -->
 			<li class="menu-li"><a href="">Запасные части и дополнительные комплектующие к оборудованию</a></li>
 			<li class="menu-li"><a href="">Конвекторы</a></li>
 			<li class="menu-li"><a href="">Локальные вентиляционные установки</a></li>
@@ -132,11 +220,10 @@
 HTML
 ;
 
-if ($page == "home") {
-	echo $topnav;
-} 
-
+echo $topnav;
 ?>
+
+
 
 	<div id="top-bar">
 		<button id="menu-btn" type="button">
@@ -175,3 +262,108 @@ if ($page == "home") {
 		</button>
 	</div>
 </header>
+
+	<div id="search-wrap" class="">
+		<form id="search">
+			<input id="isearch" type="search" name="search" placeholder="Введите">
+			<button type="submit" class="icon-search"></button>
+			<button type="button" id="clear-search"></button>
+		</form>
+		<div class="search-row">
+			<div class="search-col">
+				<h3>Категории</h3>
+				<hr>
+				<div class="breadcrumb-search">
+					<span class="bc-search"><i>Р</i>адиаторы</span>
+					<ul class="breadcrumb">
+						<li><a class="icon-home" href="/"></a></li>
+						<li class="icon-arr-r"><a href="">Каталог</a></li>
+						<li class="icon-arr-r"><a href="">Радиаторы</a></li>
+					</ul>
+				</div>
+				<h3>Продукты</h3>
+				<hr>
+				<div class="items-prods-search">
+
+					<a href="" class="ips">
+						<div class="img">
+							<img src="./assets/img/cart/i1.png" alt="">
+						</div>
+						<span class="ips-title"><i>Р</i>АДИАТОР 33-K 300x900</span>
+						<div class="ips-price-row">
+							<span class="ips-price">2950 <span>грн</span></span>
+						</div>
+					</a>
+					
+					<a href="" class="ips">
+						<div class="img">
+							<img src="./assets/img/cart/i1.png" alt="">
+						</div>
+						<span class="ips-title"><i>Р</i>АДИАТОР 33-K 300x900</span>
+						<div class="ips-price-row">
+							<span class="ips-price">2950 <span>грн</span></span>
+						</div>
+					</a>
+					
+					<a href="" class="ips">
+						<div class="img">
+							<img src="./assets/img/cart/i1.png" alt="">
+						</div>
+						<span class="ips-title"><i>Р</i>АДИАТОР 33-K 300x900 LOREEEEMEMEE</span>
+						<div class="ips-price-row">
+							<span class="ips-price-old">3100 грн</span>
+							<span class="ips-price">2950 <span>грн</span></span>
+						</div>
+					</a>
+
+				</div>
+			</div>
+			<div class="search-col">
+				<span class="h3">Категория: <span>РАДИАТОРЫ</span></span>
+				<div class="sc-items">
+
+				<a class="sc-item" href="">
+						<div class="img">
+							<img src="./assets/img/cart/i1.png" alt="">
+						</div>
+						<span class="sc-item-title">РАДИАТОР 33-K 300x900</span>
+						<div class="sc-item-price-row">
+							<span class="sc-item-price">2950 <span>грн</span></span>
+						</div>
+					</a>
+					
+					<a class="sc-item" href="">
+						<div class="img">
+							<img src="./assets/img/cart/i1.png" alt="">
+						</div>
+						<span class="sc-item-title">РАДИАТОР 33-K 300x900</span>
+						<div class="sc-item-price-row">
+							<span class="sc-item-price">2950 <span>грн</span></span>
+						</div>
+					</a>
+					<a class="sc-item" href="">
+						<div class="img">
+							<img src="./assets/img/cart/i1.png" alt="">
+						</div>
+						<span class="sc-item-title">РАДИАТОР 33-K 300x900</span>
+						<div class="sc-item-price-row">
+							<span class="sc-item-price-old">3100 грн</span>
+							<span class="sc-item-price">2950 <span>грн</span></span>
+						</div>
+					</a>
+					
+					<a class="sc-item" href="">
+						<div class="img">
+							<img src="./assets/img/cart/i1.png" alt="">
+						</div>
+						<span class="sc-item-title">РАДИАТОР 33-K 300x900</span>
+						<div class="sc-item-price-row">
+							<span class="sc-item-price-old">3100 грн</span>
+							<span class="sc-item-price">2950 <span>грн</span></span>
+						</div>
+					</a>
+
+				</div>
+			</div>
+		</div>
+	</div>

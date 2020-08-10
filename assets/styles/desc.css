@@ -31,11 +31,27 @@
 	.fcat-items .item:nth-child(3n) {
 		margin: 0 0 1.5rem 0;
 	}
+	
+	.calc-rads.col2 .calc-rad-l:nth-child(2n) {
+		padding-left: 3.2rem;
+	}
 }
 @media screen and (max-width: 1024px) {		
 	#main-vslider {
 		display: none;
 	}
+	.calc-rads.col2.lite {
+		width: auto;
+	}
+	.ccbgc {
+		padding-right: 3.1rem;
+		max-width: calc(100vw - 30px);
+	}
+	/* .ccbg {
+		position: relative;
+		top: 0;
+		right: -1rem;
+	} */
 	.desc {
 		display: none !important;
 	}

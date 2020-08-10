@@ -300,7 +300,15 @@ class Accordions {
 		var amount = this.btn.length;
 		for (var i = 0; i < amount; i++) {
 			const ci = i;
-			this.hider[ci].style.height = params.maxHeight / 20 + "rem";
+			var h = this.content[ci].getBoundingClientRect().height;
+			if (h > params.maxHeight) {
+				h = params.maxHeight;
+				this.hider[ci].classList.add("scroll");
+			} else {
+				this.hider[ci].classList.add("noscroll");
+			}
+			this.hider[ci].classList.add("hidden");
+			this.hider[ci].style.height = h / 20 + "rem";
 		}
 
 		for (var i = 0; i < amount; i++) {
@@ -368,3 +376,202 @@ class Switcher {
 		this.parent.style.height = this.h[this.prev] + "px";
 	}
 };
+
+
+
+
+
+
+
+
+
+
+class CartElems {
+	constructor(params = {
+		id: undefined,
+		elem: undefined,
+		del: undefined,
+		price: 0,
+		minus: undefined,
+		input: undefined,
+		plus: undefined,
+		sum: undefined,
+		max: 100,
+		onchange: [],
+	}) {
+		if (params.id == undefined) return;
+		this.params = params;
+		this.amount = +this.params.input.value;
+		this.params.price = +this.params.price;
+		this.first = true;
+		
+		this.params.minus.onclick = () => {
+			if (this.amount < 2) return;
+			this.amount--;
+			this.updateInput();
+		}		
+		this.params.plus.onclick = () => {
+			if (this.amount >= this.params.max) return;
+			this.amount++;
+			this.updateInput();
+		}
+		this.params.input.onkeyup = () => {
+			this.params.input.value = this.params.input.value.replace(/[^\d\.]/g, '');
+			if (this.params.input.value > this.params.max) {
+				this.params.input.value = this.params.max;
+			}
+			if (this.params.input.value < 1) {
+				this.params.input.value = 1;
+			}
+			this.amount = +this.params.input.value;
+			this.updateInput();
+		}
+		this.updateInput();
+	}
+	updateInput() {
+		this.params.input.value = this.amount;
+		this.params.sum.innerHTML = this.amount * this.params.price;
+		if (this.first) {
+			this.first = false;
+		} else {
+			if (this.params.onchange.length != 0) {
+				for (var i = 0; i < this.params.onchange.length; i++) {
+					this.params.onchange[i]();					
+				}
+			}
+		}
+	}
+	getFullPrice() {
+		return this.amount * this.params.price;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+// zoom 
+class Zoom {
+	constructor(params = {
+		firstImg: undefined,
+		lens: undefined,
+		result: undefined
+	}) {
+		this.params = params;
+		this.img = params.firstImg;
+		this.lens = params.lens;
+		this.result = params.result;
+
+		console.log(this)
+		this.cx = this.result.offsetWidth / this.lens.offsetWidth;
+		this.cy = this.result.offsetHeight / this.lens.offsetHeight;
+
+		this.tx = 0;
+		this.ty = 0;
+
+		this.changeImg();
+		this.inited = true;
+	}
+
+	changeImg(img) {
+		var self = this;
+		if (img) { this.img = img; }
+		/* Execute a function when someone moves the cursor over the image, or the lens: */
+		this.lens.removeEventListener("mousemove", function(e) {self.moveLens(e)});
+		this.img.removeEventListener("mousemove", function(e) {self.moveLens(e)});
+
+		this.lens.removeEventListener("mouseenter", function() {self.visibleResult(true)});
+		this.lens.removeEventListener("mouseleave", function() {self.visibleResult(false)});
+		this.img.removeEventListener("mouseenter", function() {self.visibleResult(true)});
+		this.img.removeEventListener("mouseleave", function() {self.visibleResult(false)});
+
+		/* And also for touch screens: */
+		this.lens.removeEventListener("touchmove", function(e) {self.moveLens(e)});
+		this.img.removeEventListener("touchmove", function(e) {self.moveLens(e)});
+
+		var size = this.getOriginalSize();
+		this.result.style.backgroundImage = "url('" + this.img.src + "')";
+		this.result.style.backgroundSize = (size.width * this.cx) + "px " + (size.height * this.cy) + "px";
+
+		/* Execute a function when someone moves the cursor over the image, or the lens: */
+		this.lens.addEventListener("mousemove", function(e) {self.moveLens(e)});
+		this.img.addEventListener("mousemove", function(e) {self.moveLens(e)});
+
+		this.lens.addEventListener("mouseenter", function() {self.visibleResult(true)});
+		this.lens.addEventListener("mouseleave", function() {self.visibleResult(false)});
+		this.img.addEventListener("mouseenter", function() {self.visibleResult(true)});
+		this.img.addEventListener("mouseleave", function() {self.visibleResult(false)});
+
+		/* And also for touch screens: */
+		this.lens.addEventListener("touchmove", function(e) {self.moveLens(e)});
+		this.img.addEventListener("touchmove", function(e) {self.moveLens(e)});
+	}
+	getOriginalSize() {
+		var width, height, sw, sh, snew;
+		var timg = new Image();
+		timg.src = this.img.src;
+
+		sw = this.img.width / timg.width;
+		sh = this.img.height / timg.height;
+
+
+		if (sw > sh) {
+			snew = sh;
+		} else {
+			snew = sw;
+		}
+		
+		width = timg.width * snew;
+		height = timg.height * snew;
+
+		if (sw > sh) {
+			this.tx = (this.img.width - width) / 2;
+		} else {
+			this.ty = (this.img.height - height) / 2;
+		}
+
+		return {width: width, height: height}
+	}
+	moveLens(e) {
+		var pos, x, y;
+		/* Prevent any other actions that may occur when moving over the image */
+		e.preventDefault();
+		/* Get the cursor's x and y positions: */
+		pos = this.getCursorPos(e);
+		/* Calculate the position of the lens: */
+		x = pos.x - (this.lens.offsetWidth / 2);
+		y = pos.y - (this.lens.offsetHeight / 2);
+		/* Prevent the lens from being positioned outside the image: */
+		if (x > this.img.width - this.lens.offsetWidth) { x = this.img.width - this.lens.offsetWidth; }
+		if (x < 0) { x = 0; }
+		if (y > this.img.height - this.lens.offsetHeight) { y = this.img.height - this.lens.offsetHeight; }
+		if (y < 0) { y = 0; }
+		/* Set the position of the lens: */
+		this.lens.style.left = x + "px";
+		this.lens.style.top = y + "px";
+		/* Display what the lens "sees": */
+		this.result.style.backgroundPosition = -(x * this.cx - this.tx * this.cx) + "px " + -(y * this.cy - this.ty * this.cy) + "px";
+	}
+	visibleResult(visible) {
+		visible ? this.result.classList.add("active") : this.result.classList.remove("active");
+		visible ? this.lens.classList.add("active") : this.lens.classList.remove("active");
+	}
+	getCursorPos(e) {
+		var a, x = 0, y = 0;
+		e = e || window.event;
+		/* Get the x and y positions of the image: */
+		a = this.img.getBoundingClientRect();
+		/* Calculate the cursor's x and y coordinates, relative to the image: */
+		x = e.pageX - a.left;
+		y = e.pageY - a.top;
+		/* Consider any page scrolling: */
+		x = x - window.pageXOffset;
+		y = y - window.pageYOffset;
+		return { x: x, y: y };
+	}
+}

@@ -1,5 +1,12 @@
 <?php include 'header.php'; ?>
 <!-- радиаторы2 -->
+
+<?php 
+$titleimg = "./assets/img/category/rad-soft-bg.jpg";
+$title = "Полотенцесушители";
+$titledescr = "Подберите лучший полотенцесушитель"; 
+?>
+
 <?php include 'components/title.php'; ?>
 
 <?php include 'components/title3.php'; ?>

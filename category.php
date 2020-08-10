@@ -1,5 +1,12 @@
 <?php include 'header.php'; ?>
 <!-- радиаторы2 -->
+
+<?php 
+$titleimg = "./assets/img/category/rad-soft-bg.jpg";
+$title = "Радиаторы c гладкой лицевой панелью";
+$titledescr = "Подберите лучший радиатор"; 
+?>
+
 <?php include 'components/title.php'; ?>
 
 <?php include 'components/title3.php'; ?>

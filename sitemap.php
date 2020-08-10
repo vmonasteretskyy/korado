@@ -36,6 +36,7 @@
 		<li><a href="about.php">info about</a></li>
 		<li><a href="download.php">info download</a></li>
 		<li><a href="personal.php">personal</a></li>
+		<li><a href="cart.php">cart</a></li>
 	</ol>	
 </body>
 </html>

@@ -1,5 +1,11 @@
 <?php include 'header.php'; ?>
 
+<?php 
+$titleimg = "./assets/img/category/contacts-bg.jpg";
+$title = "Контактная информация";
+$titledescr = "Если есть к нам вопросы, то обращайтесь по контактным телефонам. Наш менеджер с радостью вам ответит."; 
+?>
+
 <?php include 'components/title.php'; ?>
 
 <section class="contacts">

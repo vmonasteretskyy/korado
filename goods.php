@@ -12,13 +12,13 @@
 				<div class="swiper-wrapper">
 					<!-- Slides -->
 					<div class="swiper-slide glbss">
-						<img src="./assets/img/goods/i1.jpg" alt="">
+						<img class="glbssi" src="./assets/img/goods/i1.jpg" alt="">
 					</div>
 					<div class="swiper-slide glbss">
-						<img src="./assets/img/goods/i2.jpg" alt="">
+						<img class="glbssi" src="./assets/img/goods/i2.jpg" alt="">
 					</div>
 					<div class="swiper-slide glbss">
-						<img src="./assets/img/goods/i3.jpg" alt="">
+						<img class="glbssi" src="./assets/img/goods/i3.jpg" alt="">
 					</div>
 				</div>
 			</div>
@@ -29,6 +29,7 @@
 				<img class="glbi active" src="./assets/img/goods/i1.jpg" alt="">
 				<img class="glbi" src="./assets/img/goods/i2.jpg" alt="">
 				<img class="glbi" src="./assets/img/goods/i3.jpg" alt="">
+				<div class="glbi-lens"></div>
 			</div>
 			<!-- If we need navigation buttons -->
 			<div class="swiper-button-prev glbs-prev"></div>
@@ -36,6 +37,7 @@
 		</div>
 	</div>
 	<div class="g-right">
+		<div class="glbi-zoom-result"></div>
 		<h2>Радиатор Koratherm Horizontal M</h2>
 		<span class="g-code-wrap">Код товара: <span class="g-code">30455 100</span></span>
 		<div class="g-star-row">
@@ -50,35 +52,35 @@
 		</div>
 		<div class="g-color-row">
 
-			<div class="g-color active">
+			<div class="g-color active" data-src="./assets/img/goods/i1.jpg,./assets/img/goods/i2.jpg,./assets/img/goods/i3.jpg">
 				<div class="g-color-code" style="background-color: #fff;"></div>
 				<div class="g-text-hider">
 					<span class="g-text">белый</span>
 				</div>
 			</div>
 
-			<div class="g-color">
+			<div class="g-color" data-src="./assets/img/calc/c-con1.png,./assets/img/calc/c-con2.png,./assets/img/calc/c-con3.png">
 				<div class="g-color-code" style="background-color: #DEDEDE;"></div>
 				<div class="g-text-hider">
 					<span class="g-text">серый</span>
 				</div>
 			</div>
 
-			<div class="g-color">
+			<div class="g-color" data-src="./assets/img/goods/i1.jpg,./assets/img/goods/i2.jpg,./assets/img/goods/i3.jpg">
 				<div class="g-color-code" style="background-color: #AF9664;"></div>
 				<div class="g-text-hider">
 					<span class="g-text">золотистый</span>
 				</div>
 			</div>
 
-			<div class="g-color">
+			<div class="g-color" data-src="./assets/img/goods/i1.jpg,./assets/img/goods/i2.jpg,./assets/img/goods/i3.jpg">
 				<div class="g-color-code" style="background-color: #2F2F2F;"></div>
 				<div class="g-text-hider">
 					<span class="g-text">черный</span>
 				</div>
 			</div>
 
-			<div class="g-color">
+			<div class="g-color" data-src="./assets/img/goods/i1.jpg,./assets/img/goods/i2.jpg,./assets/img/goods/i3.jpg">
 				<div class="g-color-code" style="background-color: #DF4844;"></div>
 				<div class="g-text-hider">
 					<span class="g-text">красный</span>

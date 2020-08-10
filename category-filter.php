@@ -31,14 +31,22 @@
 						</div>
 					</div>
 
-					<div class="f-col f-col-slider">
-						<div class="f-row">
-							<input type="text" class="f-i-min" value="">
-							<div class="f-i-hr"></div>
-							<input type="text" class="f-i-max" value="">
+					<div class="f-col f-col-slider acc-cont">
+						<div class="f-row underline">
+							<span class="f-title">Цена, грн</span>
+							<button type="button" class="acc-btn"></button>
 						</div>
-						<div class="f-row">
-							<div class="f-slider" data-min="0" data-max="100000"></div>
+						<div class="f-col accordion">
+							<div class="f-row-inner f-col">
+								<div class="f-row frmb">
+									<input type="text" class="f-i-min" value="">
+									<div class="f-i-hr"></div>
+									<input type="text" class="f-i-max" value="">
+								</div>
+								<div class="f-row">
+									<div class="f-slider" data-min="0" data-max="100000"></div>
+								</div>
+							</div>
 						</div>
 					</div>
 
@@ -47,7 +55,7 @@
 							<span class="f-title">Высота радиатора, ММ</span>
 							<button type="button" class="acc-btn"></button>
 						</div>
-						<div class="f-row accordion scroll hidden">
+						<div class="f-row accordion">
 							<div class="f-row-inner">
 								<label class="f-cb-item">
 									<input type="checkbox" class="f-cb-cb">
@@ -61,30 +69,7 @@
 									<span class="f-cb-title">400</span>
 									<span class="f-cb-count">1022</span>
 								</label>
-								<label class="f-cb-item">
-									<input type="checkbox" class="f-cb-cb">
-									<span class="f-cb-span"></span>
-									<span class="f-cb-title">600</span>
-									<span class="f-cb-count">3523</span>
-								</label>
-								<label class="f-cb-item">
-									<input type="checkbox" class="f-cb-cb">
-									<span class="f-cb-span"></span>
-									<span class="f-cb-title">800</span>
-									<span class="f-cb-count">911</span>
-								</label>
-								<label class="f-cb-item">
-									<input type="checkbox" class="f-cb-cb">
-									<span class="f-cb-span"></span>
-									<span class="f-cb-title">1000</span>
-									<span class="f-cb-count">1241</span>
-								</label>
-								<label class="f-cb-item">
-									<input type="checkbox" class="f-cb-cb">
-									<span class="f-cb-span"></span>
-									<span class="f-cb-title">1200</span>
-									<span class="f-cb-count">1241</span>
-								</label>
+
 							</div>
 						</div>
 					</div>
@@ -94,7 +79,7 @@
 							<span class="f-title">Высота радиатора, ММ</span>
 							<button type="button" class="acc-btn"></button>
 						</div>
-						<div class="f-row accordion scroll hidden">
+						<div class="f-row accordion">
 							<div class="f-row-inner">
 								<label class="f-cb-item">
 									<input type="checkbox" class="f-cb-cb">
@@ -129,7 +114,7 @@
 							<span class="f-title">Длинна радиатора, ММ</span>
 							<button type="button" class="acc-btn"></button>
 						</div>
-						<div class="f-row accordion scroll hidden">
+						<div class="f-row accordion">
 							<div class="f-row-inner">
 								<label class="f-cb-item">
 									<input type="checkbox" class="f-cb-cb">

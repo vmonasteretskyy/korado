@@ -1,5 +1,12 @@
 <?php include 'header.php'; ?>
 <!-- радиаторы -->
+
+<?php 
+$titleimg = "./assets/img/category/sbg.jpg";
+$title = "Радиаторы";
+$titledescr = "Вы можете выбрать вид радиатора, который вас интересует"; 
+?>
+
 <?php include 'components/title.php'; ?>
 
 <section class="subcats">

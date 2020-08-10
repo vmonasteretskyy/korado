@@ -1,5 +1,11 @@
 <?php include 'header.php'; ?>
 
+<?php 
+$titleimg = "./assets/img/category/info-bg.jpg";
+$title = "Информация";
+$titledescr = "О нас, о производителе <b>korado</b>, Каталоги"; 
+?>
+
 <?php include 'components/title2.php'; ?>
 
 <section class="download-list">
