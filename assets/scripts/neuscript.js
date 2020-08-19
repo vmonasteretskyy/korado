@@ -10,6 +10,8 @@ class PageScroll {
 
 		nextBtnClass: undefined,
 	}) {
+		document.body.parentNode.scrollTo(0,0);
+		document.body.scrollTo(0,0);
 		this.params = params;
 		this.container = document.getElementsByClassName(this.params.containertClass)[0];
 		if (!this.container) return;
@@ -106,6 +108,7 @@ class PageScroll {
 
 	transform() {
 		if (!this.active) return;
+		document.body.parentNode.scrollTo(0,0);
 		var parent = this;
 		this.animating = true;
 		this.container.style.transform = "translate3D(0," + (-this.h * this.now) + "px,0)";
@@ -290,28 +293,18 @@ class Accordions {
 		btnClass: undefined,
 		contentClass: undefined,
 		maxHeight: 0,
-		measureType: "px",
 	}) {
 		this.parent = document.getElementsByClassName(params.parentClass);
 		this.hider = document.getElementsByClassName(params.hiderClass);
 		this.content = document.getElementsByClassName(params.contentClass);
 		this.btn = document.getElementsByClassName(params.btnClass);
+		this.maxHeight = params.maxHeight;
 		var self = this;
-		var amount = this.btn.length;
-		for (var i = 0; i < amount; i++) {
-			const ci = i;
-			var h = this.content[ci].getBoundingClientRect().height;
-			if (h > params.maxHeight) {
-				h = params.maxHeight;
-				this.hider[ci].classList.add("scroll");
-			} else {
-				this.hider[ci].classList.add("noscroll");
-			}
-			this.hider[ci].classList.add("hidden");
-			this.hider[ci].style.height = h / 20 + "rem";
-		}
+		this.amount = this.btn.length;
 
-		for (var i = 0; i < amount; i++) {
+		this.resize()
+
+		for (var i = 0; i < this.amount; i++) {
 			const ci = i;
 			this.btn[ci].onclick = function() {
 				if (self.hider[ci].classList.contains("hidden")) {
@@ -322,6 +315,23 @@ class Accordions {
 					this.classList.remove("active");
 				}
 			}			
+		}
+		this.inited = true;
+	}
+	resize() {
+		Info.coef ? this.coef = Info.coef : this.coef = 1;
+		this.coefMaxHeight = this.maxHeight * this.coef;
+		for (var i = 0; i < this.amount; i++) {
+			const ci = i;
+			var h = this.content[ci].getBoundingClientRect().height;
+			if (h > this.coefMaxHeight) {
+				h = this.coefMaxHeight;
+				this.hider[ci].classList.add("scroll");
+			} else {
+				this.hider[ci].classList.add("noscroll");
+			}
+			if (!this.inited) this.hider[ci].classList.add("hidden");
+			this.hider[ci].style.height = h + "px";
 		}
 	}
 }
@@ -467,7 +477,6 @@ class Zoom {
 		this.lens = params.lens;
 		this.result = params.result;
 
-		console.log(this)
 		this.cx = this.result.offsetWidth / this.lens.offsetWidth;
 		this.cy = this.result.offsetHeight / this.lens.offsetHeight;
 

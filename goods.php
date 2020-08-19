@@ -238,6 +238,10 @@
 						</tbody>
 					</table>
 				</div>
+				<div class="table-hider-scroll-border"></div>
+				<div class="table-hider-scroll-border-arr"></div>
+				<div class="thsbtn" id="thsbtn-l"></div>
+				<div class="thsbtn active" id="thsbtn-r"></div>
 			</div>
 			<div class="sw-elem">
 				<form>

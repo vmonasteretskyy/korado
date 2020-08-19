@@ -14,7 +14,7 @@
 
 	<div class="filter-wrap"> 
 		<div class="filter-row">
-			<div class="filter-outer">
+			<div class="filter-outer" id="filter-mob">
 				<button class="mob icon-arr-r" id="close-filter" type="button"></button>
 				<div class="filter">
 

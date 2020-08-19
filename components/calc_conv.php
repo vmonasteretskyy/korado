@@ -5,16 +5,20 @@
 	</div>
 
 	<div class="calc-vert-row">
-		<div class="calc-pagination-js">
-			<div class="wrap">
-				<div class="calc-pag-elem active">Рекомендуемое применение</div>
-				<div class="calc-pag-elem">Площадь обогреваемого помещения</div>
-				<div class="calc-pag-elem">Тип конвектора</div>
-				<div class="calc-pag-elem">Тип конвекции</div>
-				<div class="calc-pag-elem">Размер конвектора</div>
-				<div class="calc-pag-elem">Тип подключения</div>
+		<div class="calc-pagination-js-wrap">
+			<div class="calc-pagination-js">
+				<div class="wrap">
+					<div class="calc-pag-elem active">Рекомендуемое применение</div>
+					<div class="calc-pag-elem">Площадь обогреваемого помещения</div>
+					<div class="calc-pag-elem">Тип конвектора</div>
+					<div class="calc-pag-elem">Тип конвекции</div>
+					<div class="calc-pag-elem">Размер конвектора</div>
+					<div class="calc-pag-elem">Тип подключения</div>
+				</div>
 			</div>
 		</div>
+
+	<div class="calc-vert-slider-wrap">
 
 		<div class="swiper-container calc-swiper-js">
 
@@ -319,6 +323,8 @@
 
 			</div>
 		</div>
+
+	</div>
 
 	</div>
 </section>

@@ -305,13 +305,13 @@
 
 						<div class="neu-vsfader-elem nvsfe3">
 							<h3 class="bmob">О бренде</h3>
-							<p>1Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt dolor quasi accusantium labore tempore soluta quidem consectetur, odio, cum perspiciatis odit minima quos. Tempora voluptatem rerum vero iure! Harum, porro?</p>
+							<p>1Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
 							<a href="" class="btn black">Больше</a>
 						</div>
 
 						<div class="neu-vsfader-elem nvsfe3">
 							<h3 class="bmob">Техническая информация</h3>
-							<p>1Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt dolor quasi accusantium labore tempore soluta quidem consectetur, odio, cum perspiciatis odit minima quos. Tempora voluptatem rerum vero iure! Harum, porro?</p>
+							<p>1Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt dolor quasi accusantium labore tempore soluta quidem consectetur, odio, cum perspiciatis odit minima quos. Tempora voluptatem rerum vero iure! Harum, porro?1Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt dolor quasi accusantium labore tempore soluta quidem consectetur, odio, cum perspiciatis odit minima quos. Tempora voluptatem rerum vero iure! Harum, porro?1Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt dolor quasi accusantium labore tempore soluta quidem consectetur, odio, cum perspiciatis odit minima quos. Tempora voluptatem rerum vero iure! Harum, porro?1Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt dolor quasi accusantium labore tempore soluta quidem consectetur, odio, cum perspiciatis odit minima quos. Tempora voluptatem rerum vero iure! Harum, porro?</p>
 							<a href="" class="btn black">Больше</a>
 						</div>
 

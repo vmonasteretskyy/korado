@@ -22,7 +22,8 @@
 [class^="icon-"], [class*=" icon-"] {
 	display: flex;
 } 
-[class^="icon-"]:before, [class*=" icon-"]:before {
+[class^="icon-"]:before, [class*=" icon-"]:before, .icon:before,
+.fancybox-navigation .fancybox-button div:before {
 	font-family: "fontello";
 	font-style: normal;
 	font-weight: normal;
@@ -56,7 +57,8 @@
 	/* Uncomment for 3D effect */
 	/* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
 }
- 
+
+
 .icon-star:before { content: '\e800'; } /* '' */
 .icon-star-empty:before { content: '\e801'; } /* '' */
 .icon-heatertt:before { content: '\e802'; } /* '' */
@@ -84,7 +86,7 @@
 .icon-triangle-s-t:before { content: '\e818'; } /* '' */
 .icon-triangle-t:before { content: '\e819'; } /* '' */
 .icon-triangle-tb:before { content: '\e81a'; } /* '' */
-.icon-vb:before { content: '\e81b'; } /* '' */
+.icon-viber:before { content: '\e81b'; } /* '' */
 .icon-arr-r:before { content: '\e81c'; } /* '' */
 .icon-cart:before { content: '\e81d'; } /* '' */
 .icon-circleplay:before { content: '\e81e'; } /* '' */
@@ -92,3 +94,5 @@
 .icon-download:before { content: '\e820'; } /* '' */
 .icon-file:before { content: '\e821'; } /* '' */
 .icon-person:before { content: '\e822'; } /* '' */
+.icon-chat:before { content: '\e823'; } /* '' */
+.icon-heart-line:before { content: '\e824'; } /* '' */

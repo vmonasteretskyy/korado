@@ -72,6 +72,14 @@
 				<div class="clear-input"></div>
 			</div>
 			<button type="submit" class="btn black">Войти</button>
+			<div class="form-actions-row">
+				<label class="fcbl far-text">
+					<input class="cb" type="checkbox" name="remember">
+					<div class="cbm icon-ok"></div>
+					Запомнить меня
+				</label>
+				<a class="far-text" href="">Забыли пароль?</a>
+			</div>
 		</form>
 		<span class="or">или</span>
 		<button type="button" class="btn green" id="open-preg2">Создать учетную запись</button>
@@ -128,7 +136,7 @@
 	</div>
 </div>
 
-
+<!-- b-menu------------------------------------------------ -->
 <div id="menu">
 	<button id="close-menu" class="mob">
 		Закрыть
@@ -152,11 +160,11 @@
 			<li class="menu-li"><a href="">Локальные вентиляционные установки</a></li>
 			<li class="menu-li"><a href="">Полотенцесушители</a></li>
 			<li class="menu-li"><a href="">Радиаторы</a></li>
-			<div class="menu-currency mcds">
+			<!-- <div class="menu-currency mob">
 				<button class="menu-currency-btn active">UAH</button>
 				<button class="menu-currency-btn">USD</button>
 				<button class="menu-currency-btn">EUR</button>
-			</div>
+			</div> -->
 		</ul>
 	</nav>
 
@@ -176,6 +184,10 @@
 			<button class="menu-currency-btn">USD</button>
 			<button class="menu-currency-btn">EUR</button>
 		</div>
+		<button id="menu-heart" type="button">
+			<div class="icon icon-heart-line"></div>
+			<span>Избранные товары</span>
+		</button>
 		<button id="menu-cart" type="button">
 			<div class="icon icon-cart"></div>
 			<span>Корзина</span>
@@ -202,10 +214,11 @@
 		</ul>
 	</nav>
 </div>
+<!-- e-menu------------------------------------------------ -->
 
+<!-- HEADER -->
 <header>
 
-<?php $topnav = <<<HTML
 	<div id="top-nav">
 		<nav>
 			<ul>
@@ -217,13 +230,6 @@
 			</ul>
 		</nav>
 	</div>
-HTML
-;
-
-echo $topnav;
-?>
-
-
 
 	<div id="top-bar">
 		<button id="menu-btn" type="button">
@@ -241,13 +247,6 @@ echo $topnav;
 			<div class="icon icon-search"></div>
 			<span>Поиск по каталогу</span>
 		</button>
-		<a class="logo" href="">
-			<img src="./assets/img/logo.svg">
-		</a>
-		<button id="top-login" type="button">
-			<div class="icon icon-login"></div>
-			<span>Приветствую, войдите в кабинет</span>
-		</button>
 		<div id="top-currency">
 			<div id="top-currency-img" style="background-image: url(./assets/img/currency/uah.svg)"></div>
 			<div id="top-currency-col">
@@ -255,6 +254,17 @@ echo $topnav;
 				<button class="top-currency-btn" type="button">EUR</button>
 			</div>
 		</div>
+		<a class="logo" href="">
+			<img src="./assets/img/logo.svg">
+		</a>
+		<button id="top-login" type="button">
+			<div class="icon icon-login"></div>
+			<span>Приветствую, войдите в кабинет</span>
+		</button>
+		<button id="top-heart" type="button">
+			<div class="icon icon-heart-line"></div>
+			<span>Избранные товары</span>
+		</button>
 		<button id="top-cart" type="button">
 			<div class="icon icon-cart"></div>
 			<span id="top-cart-amount">0</span>
@@ -263,107 +273,103 @@ echo $topnav;
 	</div>
 </header>
 
-	<div id="search-wrap" class="">
-		<form id="search">
-			<input id="isearch" type="search" name="search" placeholder="Введите">
-			<button type="submit" class="icon-search"></button>
-			<button type="button" id="clear-search"></button>
-		</form>
-		<div class="search-row">
-			<div class="search-col">
-				<h3>Категории</h3>
-				<hr>
-				<div class="breadcrumb-search">
-					<span class="bc-search"><i>Р</i>адиаторы</span>
-					<ul class="breadcrumb">
-						<li><a class="icon-home" href="/"></a></li>
-						<li class="icon-arr-r"><a href="">Каталог</a></li>
-						<li class="icon-arr-r"><a href="">Радиаторы</a></li>
-					</ul>
-				</div>
-				<h3>Продукты</h3>
-				<hr>
-				<div class="items-prods-search">
-
-					<a href="" class="ips">
-						<div class="img">
-							<img src="./assets/img/cart/i1.png" alt="">
-						</div>
-						<span class="ips-title"><i>Р</i>АДИАТОР 33-K 300x900</span>
-						<div class="ips-price-row">
-							<span class="ips-price">2950 <span>грн</span></span>
-						</div>
-					</a>
-					
-					<a href="" class="ips">
-						<div class="img">
-							<img src="./assets/img/cart/i1.png" alt="">
-						</div>
-						<span class="ips-title"><i>Р</i>АДИАТОР 33-K 300x900</span>
-						<div class="ips-price-row">
-							<span class="ips-price">2950 <span>грн</span></span>
-						</div>
-					</a>
-					
-					<a href="" class="ips">
-						<div class="img">
-							<img src="./assets/img/cart/i1.png" alt="">
-						</div>
-						<span class="ips-title"><i>Р</i>АДИАТОР 33-K 300x900 LOREEEEMEMEE</span>
-						<div class="ips-price-row">
-							<span class="ips-price-old">3100 грн</span>
-							<span class="ips-price">2950 <span>грн</span></span>
-						</div>
-					</a>
-
-				</div>
+<div id="search-wrap" class="">
+	<form id="search">
+		<input id="isearch" type="search" name="search" placeholder="Введите">
+		<button type="submit" class="icon-search"></button>
+		<button type="button" id="clear-search"></button>
+	</form>
+	<div class="search-row">
+		<div class="search-col">
+			<h3>Категории</h3>
+			<hr>
+			<div class="breadcrumb-search">
+				<span class="bc-search"><i>Р</i>адиаторы</span>
+				<ul class="breadcrumb">
+					<li><a class="icon-home" href="/"></a></li>
+					<li class="icon-arr-r"><a href="">Каталог</a></li>
+					<li class="icon-arr-r"><a href="">Радиаторы</a></li>
+				</ul>
 			</div>
-			<div class="search-col">
-				<span class="h3">Категория: <span>РАДИАТОРЫ</span></span>
-				<div class="sc-items">
-
+			<h3>Продукты</h3>
+			<hr>
+			<div class="items-prods-search">
+				<a href="" class="ips">
+					<div class="img">
+						<img src="./assets/img/cart/i1.png" alt="">
+					</div>
+					<span class="ips-title"><i>Р</i>АДИАТОР 33-K 300x900</span>
+					<div class="ips-price-row">
+						<span class="ips-price">2950 <span>грн</span></span>
+					</div>
+				</a>
+				
+				<a href="" class="ips">
+					<div class="img">
+						<img src="./assets/img/cart/i1.png" alt="">
+					</div>
+					<span class="ips-title"><i>Р</i>АДИАТОР 33-K 300x900</span>
+					<div class="ips-price-row">
+						<span class="ips-price">2950 <span>грн</span></span>
+					</div>
+				</a>
+				
+				<a href="" class="ips">
+					<div class="img">
+						<img src="./assets/img/cart/i1.png" alt="">
+					</div>
+					<span class="ips-title"><i>Р</i>АДИАТОР 33-K 300x900 LOREEEEMEMEE</span>
+					<div class="ips-price-row">
+						<span class="ips-price-old">3100 грн</span>
+						<span class="ips-price">2950 <span>грн</span></span>
+					</div>
+				</a>
+			</div>
+		</div>
+		<div class="search-col">
+			<span class="h3">Категория: <span>РАДИАТОРЫ</span></span>
+			<div class="sc-items">
+			<a class="sc-item" href="">
+					<div class="img">
+						<img src="./assets/img/cart/i1.png" alt="">
+					</div>
+					<span class="sc-item-title">РАДИАТОР 33-K 300x900</span>
+					<div class="sc-item-price-row">
+						<span class="sc-item-price">2950 <span>грн</span></span>
+					</div>
+				</a>
+				
 				<a class="sc-item" href="">
-						<div class="img">
-							<img src="./assets/img/cart/i1.png" alt="">
-						</div>
-						<span class="sc-item-title">РАДИАТОР 33-K 300x900</span>
-						<div class="sc-item-price-row">
-							<span class="sc-item-price">2950 <span>грн</span></span>
-						</div>
-					</a>
-					
-					<a class="sc-item" href="">
-						<div class="img">
-							<img src="./assets/img/cart/i1.png" alt="">
-						</div>
-						<span class="sc-item-title">РАДИАТОР 33-K 300x900</span>
-						<div class="sc-item-price-row">
-							<span class="sc-item-price">2950 <span>грн</span></span>
-						</div>
-					</a>
-					<a class="sc-item" href="">
-						<div class="img">
-							<img src="./assets/img/cart/i1.png" alt="">
-						</div>
-						<span class="sc-item-title">РАДИАТОР 33-K 300x900</span>
-						<div class="sc-item-price-row">
-							<span class="sc-item-price-old">3100 грн</span>
-							<span class="sc-item-price">2950 <span>грн</span></span>
-						</div>
-					</a>
-					
-					<a class="sc-item" href="">
-						<div class="img">
-							<img src="./assets/img/cart/i1.png" alt="">
-						</div>
-						<span class="sc-item-title">РАДИАТОР 33-K 300x900</span>
-						<div class="sc-item-price-row">
-							<span class="sc-item-price-old">3100 грн</span>
-							<span class="sc-item-price">2950 <span>грн</span></span>
-						</div>
-					</a>
-
-				</div>
+					<div class="img">
+						<img src="./assets/img/cart/i1.png" alt="">
+					</div>
+					<span class="sc-item-title">РАДИАТОР 33-K 300x900</span>
+					<div class="sc-item-price-row">
+						<span class="sc-item-price">2950 <span>грн</span></span>
+					</div>
+				</a>
+				<a class="sc-item" href="">
+					<div class="img">
+						<img src="./assets/img/cart/i1.png" alt="">
+					</div>
+					<span class="sc-item-title">РАДИАТОР 33-K 300x900</span>
+					<div class="sc-item-price-row">
+						<span class="sc-item-price-old">3100 грн</span>
+						<span class="sc-item-price">2950 <span>грн</span></span>
+					</div>
+				</a>
+				
+				<a class="sc-item" href="">
+					<div class="img">
+						<img src="./assets/img/cart/i1.png" alt="">
+					</div>
+					<span class="sc-item-title">РАДИАТОР 33-K 300x900</span>
+					<div class="sc-item-price-row">
+						<span class="sc-item-price-old">3100 грн</span>
+						<span class="sc-item-price">2950 <span>грн</span></span>
+					</div>
+				</a>
 			</div>
 		</div>
 	</div>
+</div>

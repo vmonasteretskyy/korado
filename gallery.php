@@ -23,11 +23,11 @@ $titledescr = "Вдохновитесь подборкой интерьеров 
 			</div>
 
 			<div class="ctlg-n-el">
-				<img class="ctlg-n-el-img" src="./assets/img/catalog/news/n2.jpg" alt="">
+				<img class="ctlg-n-el-img" src="./assets/img/main/bg2-2.jpg" alt="">
 				<div class="ctlg-n-el-content icon-lens">
 					<h4>New Radik VKM8 — решение для любого соединения</h4>
 				</div>
-				<a class="fabo" data-fancybox="gallery" href="./assets/img/catalog/news/n2.jpg" data-caption="New Radik VKM8 — решение для любого соединения"></a>
+				<a class="fabo" data-fancybox="gallery" href="./assets/img/main/bg2-2.jpg" data-caption="New Radik VKM8 — решение для любого соединения"></a>
 			</div>
 
 			<div class="ctlg-n-el">

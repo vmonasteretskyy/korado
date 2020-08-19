@@ -3,19 +3,22 @@
 		<h2>Калькулятор</h2>
 		<p>Мы создали умный фильтр, чтобы вы могли легко и быстро подобрать правильное оборудование</p>
 	</div>
-	<div class="swiper-container calc-swiper-js">
-		<div class="swiper-pagination calc-pagination-js">
-			<div class="wrap">
-				<div class="calc-pag-elem active">Рекомендуемое применение</div>
-				<div class="calc-pag-elem">Площадь обогреваемого помещения</div>
-				<div class="calc-pag-elem">Размеры радиатора</div>
-				<div class="calc-pag-elem">Цветовая гамма радиатора</div>
-				<div class="calc-pag-elem">Тип панельного радиатора</div>
-				<div class="calc-pag-elem">Тип лицевой панели</div>
-				<div class="calc-pag-elem">Тип подключения</div>
-				<div class="calc-pag-elem">Монтаж</div>
+		<div class="calc-pagination-js-wrap">
+			<div class="swiper-pagination calc-pagination-js">
+				<div class="wrap">
+					<div class="calc-pag-elem active">Рекомендуемое применение</div>
+					<div class="calc-pag-elem">Площадь обогреваемого помещения</div>
+					<div class="calc-pag-elem">Размеры радиатора</div>
+					<div class="calc-pag-elem">Цветовая гамма радиатора</div>
+					<div class="calc-pag-elem">Тип панельного радиатора</div>
+					<div class="calc-pag-elem">Тип лицевой панели</div>
+					<div class="calc-pag-elem">Тип подключения</div>
+					<div class="calc-pag-elem">Монтаж</div>
+				</div>
 			</div>
+			<div class="calc-pagination-js-wrap-after"></div>
 		</div>
+	<div class="swiper-container calc-swiper-js">
 
 		<div class="swiper-wrapper">
 

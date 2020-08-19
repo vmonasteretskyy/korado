@@ -60,10 +60,15 @@
 		flex-shrink: 0;
 		font-size: 1.5714rem;
 		line-height: 1.4;
-		margin-bottom: 1.8rem;
+		margin-bottom: 1.5rem;
 	}
 	.nvs-bar {
-		bottom: 6vh;
+		/* bottom: 6vh; */
+		bottom: 1rem;
+	}
+	.main-wrap-text p {
+		max-height: 6rem;
+		overflow: hidden;
 	}
 	.nvsf4:before,
 	.nvsf5:before {

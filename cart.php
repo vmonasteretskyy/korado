@@ -29,9 +29,6 @@
 					<span>История заказов</span>
 				</a>
 				<a class="pl-elem" href="">
-					<span>Использовать промокод</span>
-				</a>
-				<a class="pl-elem" href="">
 					<span>Выход</span>
 				</a>
 			</div>
@@ -83,9 +80,15 @@
 
 			</div>
 			<div class="pcart-under">
-				<div class="pcart-under-price">
-					<span class="pcart-total-text">Всего:</span>
-					<span class="pcart-total-price"><span class="ptpjs"></span> <span>грн</span></span>
+				<div class="pcart-under-row">
+					<div class="pcart-promo-wrap">
+						Ввести промокод
+						<input type="text" name="promo">
+					</div>
+					<div class="pcart-under-price">
+						<span class="pcart-total-text">Всего:</span>
+						<span class="pcart-total-price"><span class="ptpjs"></span> <span>грн</span></span>
+					</div>
 				</div>
 				<div class="pcart-under-btns">
 					<a class="btn default" href="">Вернуться к покупкам</a>

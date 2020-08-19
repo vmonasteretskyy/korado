@@ -3,7 +3,7 @@
 		<h2>Калькулятор</h2>
 		<p>Мы создали умный фильтр, чтобы вы могли легко и быстро подобрать правильное оборудование</p>
 	</div>
-	<div class="swiper-container calc-swiper-js">
+	<div class="calc-pagination-js-wrap">
 		<div class="swiper-pagination calc-pagination-js">
 			<div class="wrap">
 				<div class="calc-pag-elem active">Рекомендуемое применение</div>
@@ -16,6 +16,8 @@
 				<div class="calc-pag-elem">Мощность нагревательного ТЭНа полотенцесушителя</div>
 			</div>
 		</div>
+	</div>
+	<div class="swiper-container calc-swiper-js">
 
 		<div class="swiper-wrapper">
 

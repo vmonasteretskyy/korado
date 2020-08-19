@@ -29,9 +29,6 @@
 					<span>История заказов</span>
 				</a>
 				<a class="pl-elem" href="">
-					<span>Использовать промокод</span>
-				</a>
-				<a class="pl-elem" href="">
 					<span>Выход</span>
 				</a>
 			</div>
@@ -54,6 +51,14 @@
 					<div class="clear-input"></div>
 				</div>
 				<button type="submit" class="btn black">Войти</button>
+				<div class="form-actions-row">
+					<label class="fcbl far-text">
+						<input class="cb" type="checkbox" name="remember">
+						<div class="cbm icon-ok"></div>
+						Запомнить меня
+					</label>
+					<a class="far-text" href="">Забыли пароль?</a>
+				</div>
 			</form>
 			<span class="or">или</span>
 			<a class="btn green" href="">Создать учетную запись</a>
